@@ -1,0 +1,34 @@
+
+<div class="wvu-hero wvu-hero--<r:site:id />">
+  <div class="wvu-hero__container">
+    <div class="wvu-hero__copy <r:edit_mode_only>wvu-hero__copy--edit-mode</r:edit_mode_only>">
+      <h1><span><r:editable_region name="wvu-hero__header" type="simple">Header Goes Here</r:editable_region></span></h1>
+      <p><r:editable_region name="wvu-hero__text" type="simple">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</r:editable_region></p>
+      <r:page:if_has_content_for region="wvu-hero__action-item-url">
+        <a href="<r:page:content name="wvu-hero__action-item-url" />" class="button button--white <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="wvu-hero__action-item-text" /></a>
+      </r:page:if_has_content_for>
+      <r:edit_mode_only>
+        <p class="button"><r:editable_region name="wvu-hero__action-item-text" type="simple">Action Item Text</r:editable_region></p>
+        <p><r:editable_region name="wvu-hero__action-item-url" type="simple">URL for action item goes here. If you don't want the hero unit to show up at all, delete the content in this editable region.</r:editable_region></p>
+      </r:edit_mode_only>
+    </div>
+
+    <r:page:if_has_content_for region="wvu-hero__photo" always_show_in_edit_mode="true">
+      <div class="wvu-hero__photo <r:edit_mode_only>wvu-hero__photo--edit-mode</r:edit_mode_only>">
+        <div class="wvu-hero__photo-container wvu-hero__photo-container--has-video-<r:page:data name="hero_has_video" />">
+          <r:editable_region name="wvu-hero__photo">
+            <img src="http://placehold.it/960x640" />
+          </r:editable_region>
+        </div>
+        <r:page:if_has_content_for region="wvu-hero__photo-caption" always_show_in_edit_mode="true">
+          <div class="wvu-hero__photo-caption">
+            <r:editable_region name="wvu-hero__photo-caption">
+              Photo caption goes here.
+            </r:editable_region>
+          </div>
+        </r:page:if_has_content_for>
+      </div>
+    </r:page:if_has_content_for>
+
+  </div>
+</div>
