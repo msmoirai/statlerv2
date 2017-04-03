@@ -4,55 +4,100 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
   <head>
     <r:comment><!-- meta charset gets set automatically by CleanSlate --></r:comment>
-    <title><r:page:first_non_blank_attr names="title, name" /> | <r:site_name /> | West Virginia University</title>
+    <r:page:if_site_default>
+      <title><r:site:name /> at West Virginia University</title>
+      <link rel="canonical" href="http://<r:site:domain />">
+    </r:page:if_site_default>
+    <r:page:unless_site_default>
+      <title><r:page:first_non_blank_attr names="alternate_name, name" /> | <r:site_name /> | West Virginia University</title>
+      <link rel="canonical" href="<r:page:url />" >
+    </r:page:unless_site_default>
     <meta name="description" content="<r:page:meta_description />" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="<r:site:data name="google_site_verification" />" />
+
+    <meta property="og:title" content="<r:site_name /> | <r:page:first_non_blank_attr names="alternate_name, name" />" />
+    <meta property="og:description" content="<r:page:meta_description />" />
+    <r:set_var name="thumbnailurl">
+      <r:page:slug />-thumbnail
+    </r:set_var>
+    <r:files:each limit="1" labels="{$thumbnailurl}" types="image" random="true">
+      <meta property="og:image" content="<r:file:image_url size="1200x630" />" />
+      <meta name="twitter:image" content="<r:page:">
+    </r:files:each>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="<r:page:url />" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="<r:site_name />">
+    <meta name="twitter:creator" content="<r:site:data name="twitter_handle" />">
+    <meta name="twitter:title" content="<r:page:first_non_blank_attr names="alternate_name, name" />">
+    <meta name="twitter:description" content="<r:page:meta_description />">
+
     <r:include_stylesheet name="styles" />
 
-    <!--[if lt IE 9]>
-      <r:include_stylesheet name="ie8" />
-    <![endif]-->
-
-    <r:comment><!-- HTML5 Shiv 3.7.2 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed, inlined because: http://goo.gl/Qhqlkb --></r:comment>
-    <!--[if lt IE 9]>
-      <script>
-        !function(a,b){function c(a,b){var c=a.createElement("p"),d=a.getElementsByTagName("head")[0]||a.documentElement;return c.innerHTML="x<style>"+b+"</style>",d.insertBefore(c.lastChild,d.firstChild)}function d(){var a=t.elements;return"string"==typeof a?a.split(" "):a}function e(a,b){var c=t.elements;"string"!=typeof c&&(c=c.join(" ")),"string"!=typeof a&&(a=a.join(" ")),t.elements=c+" "+a,j(b)}function f(a){var b=s[a[q]];return b||(b={},r++,a[q]=r,s[r]=b),b}function g(a,c,d){if(c||(c=b),l)return c.createElement(a);d||(d=f(c));var e;return e=d.cache[a]?d.cache[a].cloneNode():p.test(a)?(d.cache[a]=d.createElem(a)).cloneNode():d.createElem(a),!e.canHaveChildren||o.test(a)||e.tagUrn?e:d.frag.appendChild(e)}function h(a,c){if(a||(a=b),l)return a.createDocumentFragment();c=c||f(a);for(var e=c.frag.cloneNode(),g=0,h=d(),i=h.length;i>g;g++)e.createElement(h[g]);return e}function i(a,b){b.cache||(b.cache={},b.createElem=a.createElement,b.createFrag=a.createDocumentFragment,b.frag=b.createFrag()),a.createElement=function(c){return t.shivMethods?g(c,a,b):b.createElem(c)},a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+d().join().replace(/[\w\-:]+/g,function(a){return b.createElem(a),b.frag.createElement(a),'c("'+a+'")'})+");return n}")(t,b.frag)}function j(a){a||(a=b);var d=f(a);return!t.shivCSS||k||d.hasCSS||(d.hasCSS=!!c(a,"article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}")),l||i(a,d),a}var k,l,m="3.7.2",n=a.html5||{},o=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,p=/^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,q="_html5shiv",r=0,s={};!function(){try{var a=b.createElement("a");a.innerHTML="<xyz></xyz>",k="hidden"in a,l=1==a.childNodes.length||function(){b.createElement("a");var a=b.createDocumentFragment();return"undefined"==typeof a.cloneNode||"undefined"==typeof a.createDocumentFragment||"undefined"==typeof a.createElement}()}catch(c){k=!0,l=!0}}();var t={elements:n.elements||"abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output picture progress section summary template time video",version:m,shivCSS:n.shivCSS!==!1,supportsUnknownElements:l,shivMethods:n.shivMethods!==!1,type:"default",shivDocument:j,createElement:g,createDocumentFragment:h,addElements:e};a.html5=t,j(b)}(this,document);
-      </script>
-    <![endif]-->
-
   </head>
-  <body class="<r:page:template:name /> page-<r:page:id /> page-<r:page:slug /> <r:edit_mode_only>edit-mode</r:edit_mode_only>">
+
+  <body class="<r:page:template:name /> page--<r:page:id /> page--<r:page:slug /> <r:edit_mode_only>page--edit-mode page--hide-instructions-<r:site:data name="hide_instructions" /></r:edit_mode_only>">
 
     <a class="wvu-skip-nav" href="#maincontent">Skip to main content</a>
 
-    <r:partial name="patterns/wvu-masthead--everything" />
+    <r:if expr="{{ NOT(BLANK(slot_00_masthead)) }}">
+      <r:set_var name="patternNameMasthead">
+        patterns/wvu-<r:site:data name="slot_00_masthead" />
+      </r:set_var>
+      <r:partial name="{$patternNameMasthead}" />
+    </r:if>
 
-    <r:partial name="patterns/wvu-nav" />
+    <r:if expr="{{ NOT(BLANK(slot_00_nav)) }}">
+      <r:set_var name="patternNameNav">
+        patterns/wvu-<r:site:data name="slot_00_nav" />
+      </r:set_var>
+      <r:partial name="{$patternNameNav}" />
+    </r:if>
 
     <r:comment><!-- What are layouts and <r:yield />? http://goo.gl/DFAsPv --></r:comment>
     <r:yield />
 
-    <div class="wvu-container">
-      <r:partial name="patterns/wvu-footer" />
-    </div>
+    <r:partial name="patterns/wvu-slots--sitewide" />
 
-    <script async src="https://fast.fonts.net/jsapi/3f7b1335-4c99-4404-92cf-3ba0e32e8f17.js"></script> <r:comment><!-- Helvetica Neue Light & Bold Condensed web font, valid for *.wvu.edu, *.wvutech.edu, & localhost --></r:comment>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="https://code.wvu.edu/public/vendor/jquery/1.11.1/jquery.min.js"><\/script>')</script>
-    <r:include_javascript name="vendor/responsive-nav, responsive-nav--custom, vendor/fontfaceobserver-1.5.1, fontfaceobserver__custom, vendor/wvu-nav-dropdowns" />
+    <r:if value1="{$has_standard_footer}" value2="false" operator="!=">
+      <r:partial name="patterns/wvu-footer" />
+    </r:if>
+
+    <r:edit_mode_only>
+      <div class="wvu-instructions">
+        <p><strong>Instructions for Footer:</strong> Put your organization&rsquo;s contact info here.</p>
+      </div>
+    </r:edit_mode_only>
+
+    <r:set_var name="jqueryDefer">
+      <r:site:data name="jquery_defer" />
+    </r:set_var>
+
+    <r:if expr="{{ NOT(BLANK(jquery_defer_page)) }}">
+      <r:set_var name="jqueryDefer">
+        <r:page:data name="jquery_defer_page" />
+      </r:set_var>
+    </r:if>
+
+    <r:if value1="{$jqueryDefer}" value2="false" operator="=">
+      <script src="https://fast.fonts.net/jsapi/3f7b1335-4c99-4404-92cf-3ba0e32e8f17.js"></script> <r:comment><!-- Helvetica Neue Light & Bold Condensed web font, valid for *.wvu.edu, *.wvutech.edu, & localhost --></r:comment>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="https://code.wvu.edu/public/vendor/jquery/1.11.1/jquery.min.js"><\/script>')</script>
+      <r:include_javascript name="all" />
+    </r:if>
+
+    <r:if value1="{$jqueryDefer}" value2="false" operator="!=">
+      <script src="https://fast.fonts.net/jsapi/3f7b1335-4c99-4404-92cf-3ba0e32e8f17.js" defer></script> <r:comment><!-- Helvetica Neue Light & Bold Condensed web font, valid for *.wvu.edu, *.wvutech.edu, & localhost --></r:comment>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+      <script>window.jQuery || document.write('<script src="https://code.wvu.edu/public/vendor/jquery/1.11.1/jquery.min.js" defer><\/script>')</script>
+      <r:include_javascript name="all" defer="true" />
+    </r:if>
 
     <r:yield name="page_js">
       <r:content />
     </r:yield>
-
-    <r:partial name="layouts/browser-update-org--v2" theme="Code" />
-
-    <r:comment><!-- Fix IE 8 and below so that media queries get supported --></r:comment>
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
-    <![endif]-->
 
   </body>
 </html>

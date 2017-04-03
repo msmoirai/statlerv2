@@ -1,0 +1,149 @@
+---
+layout: default
+custom_data_attributes:
+- agenda_id
+- alternate_url
+- backpage_has_sidebar
+- backpage_has_subnav
+- backpage_header
+- backpage_header_badge
+- bgcolor_adverts
+- bgcolor_backpage
+- bgcolor_calendar_widget
+- bgcolor_diptych
+- bgcolor_diptych_2
+- bgcolor_diptych_3
+- bgcolor_featurettes
+- bgcolor_featurettes_2
+- bgcolor_gallery
+- bgcolor_lede_text
+- bgcolor_media_object
+- bgcolor_pentaptych
+- bgcolor_pentaptych_2
+- bgcolor_pentaptych_3
+- bgcolor_polyptych
+- bgcolor_profiles
+- bgcolor_profiles_index
+- bgcolor_quadriptych
+- bgcolor_quadriptych_2
+- bgcolor_quadriptych_3
+- bgcolor_quicklinks
+- bgcolor_social_media
+- bgcolor_super_nav
+- bgcolor_testimonials
+- bgcolor_triptych
+- bgcolor_triptych_2
+- bgcolor_triptych_3
+- bgcolor_video
+- calendar_url_page
+- directory_id
+- featurettes_id
+- featurettes_2_id
+- hero_has_video
+- hero_text_alignment
+- hero_vignetting
+- jquery_defer_page
+- link_text
+- polyptych_items
+- profile_quote
+- profile_quote_author
+- profiles_id
+- rss_url
+- search_action
+- search_index_id
+- show_instructions
+- slot_01
+- slot_02
+- slot_03
+- slot_04
+- slot_05
+- slot_06
+- slot_07
+- slot_07
+- slot_08
+- slot_09
+- slot_10
+- staff_directory_id
+- testimonials_id
+- thumbnail_alt
+- thumbnail_url_sq
+---
+
+<r:set_var name="backpage_header" value="{$backpage_header}" default="true">
+  <r:page:data name="backpage_header" />
+</r:set_var>
+
+<r:if v1="{$backpage_header}" v2="true" op="=">
+  <r:partial name="patterns/wvu-backpage-header" />
+</r:if>
+
+<div class="wvu-container">
+
+  <main id="maincontent" class="main <r:if v1="{$backpage_has_sidebar}" v2="false" op="=">main--wide</r:if> <r:edit_mode_only>main--edit-mode</r:edit_mode_only>">
+
+    <div class="wvu-profile__contact-and-photo">
+      <div class="wvu-profile__photo">
+        <r:editable_region name="wvu-profile__photo">
+          Add a profile photo.
+        </r:editable_region>
+      </div> <!-- /.wvu-profile__photo -->
+      <div class="wvu-profile__meta-info">
+        <p class="wvu-profile__phone-icon">
+         <r:editable_region name="wvu-profile__phone" type="simple">
+           Enter the person&rsquo;s phone number.
+         </r:editable_region>
+        </p>
+        <p class="wvu-profile__email">
+          <r:edit_mode_only>
+             <r:editable_region name="wvu-profile__email-3" type="simple">
+               Enter the person&rsquo;s email address.
+             </r:editable_region>
+           </r:edit_mode_only>
+           <a class="edit-mode" href="mailto:<r:page:content name="wvu-profile__email-3" />"><r:page:content name="wvu-profile__email-3" /></a>
+        </p>
+      </div> <!-- /.wvu-profile__meta-info -->
+    </div>
+
+    <div class="wvu-profile__content">
+
+      <div class="wvu-profile__meta-info">
+        <h2 class="wvu-profile__job-title wvu-h5">
+          <r:edit_mode_only>
+            <r:editable_region name="wvu-profile__job-title" type="simple">
+             Enter the person&rsquo;s job title or whatever subhead should go under their name.
+            </r:editable_region>
+          </r:edit_mode_only>
+        </h2>
+      </div> <!-- /.wvu-profile__meta-info -->
+
+      <p>
+        <r:editable_region name="wvu-profile__short-description" type="simple">
+          Enter a brief description of the person. This will be pulled into the profile index page(s). Only enter a sentence or two in this region.
+        </r:editable_region>
+      </p>
+
+      <r:edit_mode_only>
+        <p class="wvu-profile__button"><div class="button"><r:editable_region name="wvu-profile__button-text-2" type="simple" scope="site">Read Full Bio</r:editable_region></div></p>
+      </r:edit_mode_only>
+
+      <r:page:if_has_content_for region="wvu-profile__quote" always_show_in_edit_mode="true">
+        <p>
+          <r:editable_region name="wvu-profile__quote" type="simple">
+            Enter a quote for the person. This will be pulled into the profile index page(s). Only enter a sentence or two in this region.
+          </r:editable_region>
+        </p>
+      </r:page:if_has_content_for>
+
+      <r:editable_region name="main">
+        <p>Enter the extended description here.</p>
+      </r:editable_region>
+
+    </div>
+
+  </main><!-- /.main -->
+
+  <r:partial name="patterns/wvu-sidebar" />
+
+</div> <!-- /.wvu-container -->
+
+<r:partial name="patterns/wvu-backpage-partials--bottom" />

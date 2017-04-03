@@ -1,0 +1,176 @@
+<r:set_var name="pageDepth">
+  <r:page:depth />
+</r:set_var>
+
+<r:set_var name="pageSlug">
+  <r:page:slug />
+</r:set_var>
+
+<r:if value1="{$pageDepth}" value2="3" op="=">
+  <r:set_var name="pageSlug">
+    <r:page:parent:slug />
+  </r:set_var>
+</r:if>
+
+<div class="wvu-background-color-changer">
+  <div class="wvu-background-color-changer__container">
+
+    <ul>
+      <li class="wvu-gold background">wvu-gold</li>
+      <li class="wvu-blue background">wvu-blue</li>
+      <li class="wvu-white background">wvu-white</li>
+      <li class="wvu-dune background">wvu-dune</li>
+      <li class="wvu-limed-spruce background">wvu-limed-spruce</li>
+      <li class="wvu-gray-chateau background">wvu-gray-chateau</li>
+      <li class="wvu-pine-cone background">wvu-pine-cone</li>
+      <li class="wvu-schooner background">wvu-schooner</li>
+      <li class="wvu-tide background">wvu-tide</li>
+      <li class="wvu-smalt background">wvu-smalt</li>
+      <li class="wvu-endeavor background">wvu-endeavor</li>
+      <li class="wvu-morning-glory background">wvu-morning-glory</li>
+      <li class="wvu-judge-gray background">wvu-judge-gray</li>
+      <li class="wvu-reef-gold background">wvu-reef-gold</li>
+      <li class="wvu-tangerine background">wvu-tangerine</li>
+      <li class="wvu-eden background">wvu-eden</li>
+      <li class="wvu-xanadu background">wvu-xanadu</li>
+      <li class="wvu-summer-green background">wvu-summer-green</li>
+      <li class="wvu-well-read background">wvu-well-read</li>
+      <li class="wvu-trinidad background">wvu-trinidad</li>
+      <li class="wvu-candelight background">wvu-candelight</li>
+    </ul>
+
+  </div>
+</div>
+
+<r:content_for name="page_js">
+  <script type="text/javascript">
+
+    $('li.wvu-gold').click(switchGold);
+    $('li.wvu-blue').click(switchBlue);
+    $('li.wvu-dune').click(switchDune);
+    $('li.wvu-white').click(switchWhite);
+    $('li.wvu-limed-spruce').click(switchLimedSpruce);
+    $('li.wvu-gray-chateau').click(switchGrayChateau);
+    $('li.wvu-pine-cone').click(switchPineCone);
+    $('li.wvu-schooner').click(switchSchooner);
+    $('li.wvu-tide').click(switchTide);
+    $('li.wvu-smalt').click(switchSmalt);
+    $('li.wvu-endeavor').click(switchEndeavor);
+    $('li.wvu-morning-glory').click(switchMorningGlory);
+    $('li.wvu-judge-gray').click(switchJudgeGray);
+    $('li.wvu-reef-gold').click(switchReefGold);
+    $('li.wvu-tangerine').click(switchTangerine);
+    $('li.wvu-eden').click(switchEden);
+    $('li.wvu-xanadu').click(switchXanadu);
+    $('li.wvu-summer-green').click(switchSummerGreen);
+    $('li.wvu-well-read').click(switchWellRead);
+    $('li.wvu-trinidad').click(switchTrinidad);
+    $('li.wvu-candelight').click(switchCandelight);
+
+    function switchGold() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-gold background');
+    }
+
+    function switchBlue() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-blue background');
+    }
+
+    function switchDune() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-dune background');
+    }
+
+    function switchWhite() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-white background');
+    }
+
+    function switchLimedSpruce() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-limed-spruce background');
+    }
+
+    function switchGrayChateau() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-gray-chateau background');
+    }
+
+    function switchPineCone() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-pine-cone background');
+    }
+
+    function switchSchooner() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-schooner background');
+    }
+
+    function switchTide() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-tide background');
+    }
+
+    function switchSmalt() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-smalt background');
+    }
+
+    function switchEndeavor() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-endeavor background');
+    }
+
+    function switchMorningGlory() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-morning-glory background');
+    }
+
+    function switchJudgeGray() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-judge-gray background');
+    }
+
+    function switchReefGold() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-reef-gold background');
+    }
+
+    function switchTangerine() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-tangerine background');
+    }
+
+    function switchEden() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-eden background');
+    }
+
+    function switchXanadu() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-xanadu background');
+    }
+
+    function switchSummerGreen() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-summer-green background');
+    }
+
+    function switchWellRead() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-well-read background');
+    }
+
+    function switchTrinidad() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-trinidad background');
+    }
+
+    function switchCandelight() {
+      $('.<r:var name="pageSlug" />').removeClass('background wvu-gold wvu-blue wvu-white wvu-dune wvu-limed-spruce wvu-gray-chateau wvu-pine-cone wvu-schooner wvu-tide wvu-smalt wvu-endeavor wvu-morning-glory wvu-judge-gray wvu-reef-gold wvu-tangerine wvu-eden wvu-xanadu wvu-summer-green wvu-well-read wvu-trinidad wvu-candelight');
+      $('.<r:var name="pageSlug" />').addClass('wvu-candelight background');
+    }
+
+  </script>
+</r:content_for>

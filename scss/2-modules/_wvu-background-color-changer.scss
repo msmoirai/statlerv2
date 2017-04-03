@@ -1,0 +1,44 @@
+.wvu-background-color-changer {
+  @include u-wvu-container-padding();
+  ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding-left: 0;
+    li {
+      cursor: pointer;
+      font-size: .8em;
+      height: 3em;
+      line-height: 1em;
+      margin-right: 3px;
+      padding: .5em;
+    }
+  }
+}
+
+// Layout
+// ===================================
+
+.wvu-background-color-changer {
+  @include outer-container();
+}
+
+.wvu-background-color-changer {
+  ul {
+    li {
+      @include mq($bp-medium) {
+        @include span-columns(4);
+        @include omega(3n);
+      }
+      @include mq($bp-medium) {
+        @include omega-reset(3n);
+        @include span-columns(2.4);
+        @include omega(5n);
+      }
+      @include mq($bp-xlarge) {
+        @include omega-reset(5n);
+        @include span-columns(1.7142);
+        @include omega(7n);
+      }
+    }
+  }
+}

@@ -18,8 +18,19 @@ h5, .wvu-h5,
 h6, .wvu-h6 {
   color: $pms-432-c;
   clear: both;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
+
+.main {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2em;
+  }
+}
+
 
 h1, .wvu-h1 { font-size: 3em; line-height: 1.08333333em; width: 100%; margin-top: 0; margin-bottom: .5em; color: $pms-432-c;
   @include mq($bp-large) { font-size: 4em; }
@@ -42,18 +53,7 @@ h1, .wvu-h1 { font-size: 3em; line-height: 1.08333333em; width: 100%; margin-top
 .wvu-shout--wvu-blue { color: $wvu-blue; }
 .wvu-shout--white { color: #fff; }
 
-@mixin wvu-shout {
-  line-height: $wvu-shout-line-height; font-family: $wvu-shout-fallback; text-transform: uppercase; font-weight: normal;
-  .fonts-loaded & { font-family: $wvu-shout; }
-}
 
-@mixin wvu-subhead {
-  line-height: $helvetica-neue-bold-line-height; font-weight: bold; text-transform: none;
-}
-
-@mixin wvu-traditional-audience {
-  line-height: $wvu-traditional-audience-line-height; font-family: $wvu-traditional-audience; font-weight: normal; text-transform: none;
-}
 
 h2, .wvu-h2 { font-size: 2.4em; line-height: 1.08333333em; }
 
@@ -83,20 +83,11 @@ p, li, blockquote, h1, h2, h3, h4, h5, h6, pre, a { max-width: $wvu-typography-l
 
 blockquote, .wvu-blockquote {
   border-left: 2px solid $base-border-color;
-  color: $base-font-color;
   margin: $base-spacing 0;
   padding-left: $base-spacing / 2;
 }
 
 ul, ol { margin-bottom: 18px; }
-
-@mixin wvu-typography-anchor-tag  {
-  a { color: $wvu-base-link-color; text-decoration: underline;
-    &:visited { color: $wvu-visited-link-color; text-decoration: none; }
-    &:active { text-decoration: none; }
-    &:hover { color: $wvu-hover-link-color; text-decoration: underline; }
-  } //a
-} //@wvu-typography-anchor-tag
 
 // This if statement assumes = true, unless variable is explicitly set to `false`.
 @if $wvu-use-typography-anchor {
@@ -117,7 +108,6 @@ em, i, cite, q { font-style: italic; }
 
 ul,
 ol {
-
   &%default-ul {
     list-style-type: disc;
     margin-bottom: $base-spacing / 2;
@@ -174,4 +164,34 @@ address {
 
 .wvu-text--uppercase {
   text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &.wvu-header-divider {
+    border-top: 1px solid tint($black, 90%);
+    margin-top: 1em;
+    padding-top: 1em;
+  }
+}
+
+ul {
+  &.wvu-slashes {
+    list-style-type: none;
+    padding-left: 0;
+    li {
+      padding-left: 2em;
+      background: url(https://patterns.wvu.edu/images/diagonal-gold.svg) no-repeat 0 0px;
+      background-size: 20px;
+      margin-left: 0;
+    }
+  }
+  &.wvu-unstyled {
+    list-style-type: none;
+    padding-left: 0;
+  }
+}
+
+.wvu-lede--small {
+  font-size: 1.5em;
+  max-width: 29em;
 }

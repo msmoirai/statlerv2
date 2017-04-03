@@ -1,0 +1,26 @@
+<r:set_var name="adverts_labels">
+  <r:page:slug />,advert
+</r:set_var>
+
+<div class="wvu-adverts wvu-adverts--<r:site:id /> <r:page:content name="so-background-color-class--advertsAnywhere" /> background">
+  <div class="wvu-adverts__container">
+
+    <r:root>
+
+      <r:descendants labels="{$adverts_labels}" labels_match="all" by="title" order="asc">
+        <div class="wvu-adverts__adverts wvu-adverts__adverts--<r:count />">
+          <r:each>
+            <div class="wvu-adverts__advertisement wvu-adverts__advertisement--<r:page:slug />">
+              <div class="wvu-adverts__ad-text">
+                <a href="<r:page:content name="wvu-adverts__url" />"><span><r:page:first_non_blank_attr names="alternate_name,name" /></span></a>
+              </div>
+              <a href="<r:page:content name="wvu-adverts__url" />"><r:page:content name="wvu-adverts__image" /></a>
+            </div>
+          </r:each>
+        </div>
+      </r:descendants>
+
+    </r:root>
+
+  </div>
+</div>

@@ -13,6 +13,14 @@ $pms-warm-gray-11: #6E6259;
 $pms-warm-gray-7: #968C83;
 $pms-warm-gray-3: #BFB8AF;
 
+$wvu-white: #F9F9F9;
+$wvu-dune: $black;
+$wvu-limed-spruce: $pms-432-c;
+$wvu-gray-chateau: $pms-429-c;
+$wvu-pine-cone: $pms-warm-gray-11;
+$wvu-schooner: $pms-warm-gray-7;
+$wvu-tide: $pms-warm-gray-3;
+
 // Accent
 $pms-286-c: #0033A0;
 $pms-300-c: #005EB8;
@@ -27,267 +35,133 @@ $pms-180-c: #BE3A34;
 $pms-166-c: #E35205;
 $pms-115-c: #FDDA24;
 
-// Primary
-.u-wvu-blue { color: $wvu-blue; border-color: $wvu-blue;
-  &.background { color: white; background-color: $wvu-blue; -webkit-font-smoothing: antialiased;}
-}
+$wvu-smalt: $pms-286-c;
+$wvu-endeavor: $pms-300-c;
+$wvu-morning-glory: $pms-629-c;
+$wvu-judge-gray: $pms-7554-c;
+$wvu-reef-gold: $pms-7557-c;
+$wvu-tangerine: $pms-144-c;
+$wvu-eden: $pms-7476-c;
+$wvu-xanadu: $pms-5625-c;
+$wvu-summer-green: $pms-558-c;
+$wvu-well-read: $pms-180-c;
+$wvu-trinidad: $pms-166-c;
+$wvu-candelight: $pms-115-c;
 
-@mixin wvu-blue-background {
-  color: white; background-color: $wvu-blue;
-  -webkit-font-smoothing: antialiased;
-}
+// Dark backgrounds
 
-.u-wvu-gold { color: $wvu-gold; border-color: $wvu-gold;
-  &.background { color: $wvu-blue; background-color: $wvu-gold; }
-}
-
-@mixin wvu-gold-background {
-  color: $wvu-blue; background-color: $wvu-gold;
-}
-
-//  Secondary
-.u-black { color: $black;
-  &.background { color: white; background-color: $black; -webkit-font-smoothing: antialiased;
-    h1, h2, h3, h4, h5, h6, a { color: white; }
-    .button { border-color: white; }
-    a {
-      &:hover { color: $black; }
+@each $color, $text-color in (blue, $wvu-blue),
+                             (dune, $wvu-dune),
+                             (limed-spruce, $wvu-limed-spruce),
+                             (pine-cone, $wvu-pine-cone),
+                             (schooner, $wvu-schooner),
+                             (smalt, $wvu-smalt),
+                             (endeavor, $wvu-endeavor),
+                             (eden, $wvu-eden),
+                             (xanadu, $wvu-xanadu),
+                             (reef-gold, $wvu-reef-gold),
+                             (well-read, $wvu-well-read),
+                             (judge-gray, $wvu-judge-gray),
+                             (trinidad, $wvu-trinidad) {
+  .wvu-#{$color} {
+    color: $text-color;
+    border-color: $text-color;
+    &.background {
+      $text-color-gradient: shade($text-color, 5%);
+      color: white;
+      background-color: $text-color;
+      @include background-image(linear-gradient($text-color-gradient, $text-color));
+      -webkit-font-smoothing: antialiased;
+      h1, h2, h3, h4, h5, h6, a, .button {
+        color: white;
+        a {
+          color: white;
+        }
+      }
+      .button {
+        border-color: white;
+        &:hover {
+          background-color: white;
+          color: $text-color;
+        }
+      }
     }
   }
 }
 
-@mixin black-background {
-  color: white; background-color: $black; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: white; }
-  .button { border-color: white; }
-  a {
-    &:hover { color: $black; }
-  }
-}
+// Light backgrounds
 
-.u-pms-432-c { color: $pms-432-c; border-color: $pms-432-c;
-  &.background { color: white; background-color: $pms-432-c; -webkit-font-smoothing: antialiased;
-    h1, h2, h3, h4, h5, h6, a { color: white; }
-    .button { border-color: white; }
-    a {
-      &:hover { color: $pms-432-c; background: white; }
+@each $color, $text-color in (gold, $wvu-gold),
+                             (white, $wvu-white),
+                             (gray-chateau, $wvu-gray-chateau),
+                             (tide, $wvu-tide),
+                             (morning-glory, $wvu-morning-glory),
+                             (tangerine, $wvu-tangerine),
+                             (candelight, $wvu-candelight),
+                             (summer-green, $wvu-summer-green) {
+  .wvu-#{$color} {
+    color: $text-color;
+    border-color: $text-color;
+    &.background {
+      $text-color-gradient: shade($text-color, 5%);
+      color: $wvu-dune;
+      background-color: $text-color;
+      @include background-image(linear-gradient($text-color-gradient, $text-color));
+      -webkit-font-smoothing: antialiased;
+      h1, h2, h3, h4, h5, h6, a, .button {
+        color: $wvu-dune;
+        a {
+          color: $wvu-dune;
+        }
+      }
+      .button {
+        border-color: $wvu-dune;
+        &:hover {
+          background-color: $wvu-dune;
+          color: $text-color;
+        }
+      }
     }
   }
 }
 
-@mixin pms-432-c-background {
-  color: white; background-color: $pms-432-c; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: white; }
-  .button { border-color: white; }
-  a {
-    &:hover { color: $pms-432-c; background: white; }
+.wvu-gold-pattern {
+  &.background {
+    @include wvu-gold-background();
+    background-color: $wvu-gold;
+    background-image: url(https://admissions.wvu.edu/images/wvu-pattern-background--gold.png);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
-.u-pms-429-c { color: $pms-429-c; border-color: $pms-429-c;
-  &.background { color: $black; background-color: $pms-429-c;
-    h1, h2, h3, h4, h5, h6, a { color: $black; }
-    hr { border-bottom-color: $pms-432-c; }
-  }
-}
-
-@mixin pms-429-c-background {
-  color: $black; background-color: $pms-429-c;
-  h1, h2, h3, h4, h5, h6, a { color: $black; }
-  hr { border-bottom-color: $pms-432-c; }
-}
-
-.u-pms-warm-gray-11 { color: $pms-warm-gray-11; border-color: $pms-warm-gray-11;
-  &.background { color: white; background-color: $pms-warm-gray-11; -webkit-font-smoothing: antialiased;
-    h1, h2, h3, h4, h5, h6, a { color: white; }
-    a {
-      &:hover { color: $pms-warm-gray-11; background: white; }
+$i: 100;
+@while $i > 0 {
+  @each $color, $text-color in (gray-chateau, $wvu-gray-chateau),
+                               (tide, $wvu-tide),
+                               (dune, $wvu-dune),
+                               (limed-spruce, $wvu-limed-spruce),
+                               (pine-cone, $wvu-pine-cone),
+                               (schooner, $wvu-schooner) {
+    .wvu-#{$color}-tint-#{$i} {
+      color: tint($text-color, $i);
+      border-color: tint($text-color, $i);
+      &.background {
+        color: $wvu-dune;
+        background-color: tint($text-color, $i);
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+    .wvu-#{$color}-shade-#{$i} {
+      color: shade($text-color, $i);
+      border-color: shade($text-color, $i);
+      &.background {
+        color: white;
+        background-color: shade($text-color, $i);
+        -webkit-font-smoothing: antialiased;
+      }
     }
   }
-}
-
-@mixin pms-warm-gray-11-background {
-  color: white; background-color: $pms-warm-gray-11; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: white; }
-  a {
-    &:hover { color: $pms-warm-gray-11; background: white; }
-  }
-}
-
-.u-pms-warm-gray-7 { color: $pms-warm-gray-7; border-color: $pms-warm-gray-7;
-  &.background { color: white; background-color: $pms-warm-gray-7; -webkit-font-smoothing: antialiased;
-    h1, h2, h3, h4, h5, h6, a { color: white; }
-    a {
-      &:hover { color: $pms-warm-gray-7; background: white; }
-    }
-  }
-}
-
-@mixin pms-warm-gray-7-background {
-  color: white; background-color: $pms-warm-gray-7; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: white; }
-  a {
-    &:hover { color: $pms-warm-gray-7; background: white; }
-  }
-}
-
-.u-pms-warm-gray-3 { color: $pms-warm-gray-3; border-color: $pms-warm-gray-3;
-  &.background { color: $black; background-color: $pms-warm-gray-3;
-    h1, h2, h3, h4, h5, h6, a { color: $black; }
-  }
-}
-
-@mixin pms-warm-gray-3-background {
-  color: $black; background-color: $pms-warm-gray-3;
-  h1, h2, h3, h4, h5, h6, a { color: $black; }
-  a {
-    &:hover { color: $pms-warm-gray-3; background: white; }
-  }
-}
-
-// Tertiary
-.u-pms-286-c { color: $pms-286-c; border-color: $pms-286-c;
-  &.background { color: white; background-color: $pms-286-c; -webkit-font-smoothing: antialiased;}
-}
-
-@mixin pms-286-c-background {
-  color: white; background-color: $pms-286-c; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: white; }
-  a { text-decoration: underline;
-    &:hover { color: $pms-629-c; };
-  }
-}
-
-.u-pms-300-c { color: $pms-300-c; border-color: $pms-300-c;
-  &.background { color: white; background-color: $pms-300-c; -webkit-font-smoothing: antialiased;}
-}
-
-@mixin pms-300-c-background {
-  color: white; background-color: $pms-300-c; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: white; }
-  a { text-decoration: underline;
-    &:hover { color: $pms-629-c; };
-  }
-}
-
-.u-pms-629-c { color: $pms-629-c; border-color: $pms-629-c;
-  &.background { color: $wvu-blue; background-color: $pms-629-c;
-    h1, h2, h3, h4, h5, h6 { color: $wvu-blue; }
-  }
-}
-
-@mixin pms-629-c-background {
-  color: $wvu-blue; background-color: $pms-629-c;
-  h1, h2, h3, h4, h5, h6, a { color: $wvu-blue; }
-  a { text-decoration: underline;
-    &:hover { color: $pms-300-c; };
-  }
-}
-
-.u-pms-7554-c { color: $pms-7554-c; border-color: $pms-7554-c;
-  &.background { color: white; background-color: $pms-7554-c; -webkit-font-smoothing: antialiased;}
-}
-
-@mixin pms-7554-c-background {
-  color: white; background-color: $pms-7554-c; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: white; }
-  a { text-decoration: underline;
-    &:hover { color: $pms-7557-c; };
-  }
-}
-
-.u-pms-7557-c { color: $pms-7557-c; border-color: $pms-7557-c;
-  &.background { color: white; background-color: $pms-7557-c; -webkit-font-smoothing: antialiased;}
-}
-
-@mixin pms-7557-c-background {
-  color: white; background-color: $pms-7557-c; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: white; }
-  a { text-decoration: underline;
-    &:hover { color: $pms-7554-c; };
-  }
-}
-
-.u-pms-144-c { color: $pms-144-c; border-color: $pms-144-c;
-  &.background { color: white; background-color: $pms-144-c; -webkit-font-smoothing: antialiased;}
-}
-
-@mixin pms-144-c-background {
-  color: white; background-color: $pms-144-c; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: white; }
-  a { text-decoration: underline;
-    &:hover { color: $pms-7476-c; };
-  }
-}
-
-.u-pms-7476-c { color: $pms-7476-c; border-color: $pms-7476-c;
-  &.background { color: white; background-color: $pms-7476-c; -webkit-font-smoothing: antialiased;}
-}
-
-@mixin pms-7476-c-background {
-  color: white; background-color: $pms-7476-c; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: $white; }
-  a { text-decoration: underline;
-    &:hover { color: $pms-5625-c; };
-  }
-}
-
-.u-pms-5625-c { color: $pms-5625-c; border-color: $pms-5625-c;
-  &.background { color: white; background-color: $pms-5625-c; -webkit-font-smoothing: antialiased;}
-}
-
-@mixin pms-5625-c-background {
-  color: white; background-color: $pms-5625-c; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: white; }
-  a { text-decoration: underline;
-    &:hover { color: $pms-558-c; };
-  }
-}
-
-.u-pms-558-c { color: $pms-558-c; border-color: $pms-558-c;
-  &.background { color: white; background-color: $pms-558-c; -webkit-font-smoothing: antialiased;}
-}
-
-@mixin pms-558-c-background {
-  color: white; background-color: $pms-558-c; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: white; }
-  a { text-decoration: underline;
-    &:hover { color: $pms-5625-c; };
-  }
-}
-
-.u-pms-180-c { color: $pms-180-c; border-color: $pms-180-c;
-  &.background { color: white; background-color: $pms-180-c; -webkit-font-smoothing: antialiased;}
-}
-
-@mixin pms-180-c-background {
-  color: white; background-color: $pms-180-c; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: white; }
-  a { text-decoration: underline;
-    &:hover { color: $pms-115-c; };
-  }
-}
-
-.u-pms-166-c { color: $pms-166-c; border-color: $pms-166-c;
-  &.background { color: white; background-color: $pms-166-c; -webkit-font-smoothing: antialiased;}
-}
-
-@mixin pms-166-c-background {
-  color: white; background-color: $pms-166-c; -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4, h5, h6, a { color: white; }
-  a { text-decoration: underline;
-    &:hover { color: $pms-115-c; };
-  }
-}
-
-.u-pms-115-c { color: $pms-115-c; border-color: $pms-115-c;
-  &.background { color: black; background-color: $pms-115-c; }
-}
-
-@mixin pms-115-c-background {
-  color: $black; background-color: $pms-115-c;
-  h1, h2, h3, h4, h5, h6, a { color: $black; }
-  a { text-decoration: underline;
-    &:hover { color: $pms-166-c; };
-  }
+  $i: $i - 10;
 }

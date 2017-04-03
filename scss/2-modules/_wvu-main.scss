@@ -1,0 +1,17 @@
+// Layout
+// ===============================
+
+.main {
+  @include mq($bp-medium) { @include span-columns(9); }
+}
+
+.main--wide {
+  @include mq($bp-medium) {
+    @include span-columns(12);
+  }
+  &.main--edit-mode {
+    @include mq($bp-medium) {
+      @include span-columns(9);
+    }
+  }
+}

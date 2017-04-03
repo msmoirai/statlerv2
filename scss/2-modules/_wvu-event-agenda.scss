@@ -1,0 +1,30 @@
+.wvu-event-agenda {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $helvetica-neue-light;
+    font-weight: normal;
+    margin-top: 0;
+    text-align: center;
+  }
+  table {
+    margin-bottom: 3em;
+  }
+}
+
+.wvu-event-agenda__container {
+  @include u-wvu-container-padding();
+}
+
+.main {
+  .wvu-event-agenda {
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
+  }
+}
+
+// Layout
+// ===============================
+
+.wvu-event-agenda__container {
+  @include outer-container();
+}

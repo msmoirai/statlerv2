@@ -1,0 +1,37 @@
+
+
+<div class="wvu-event-agenda wvu-event-agenda--<r:site:id />">
+  <div class="wvu-event-agenda__container">
+    <h2><r:page:first_non_blank_attr names="alternate_name,name" /></h2>
+
+    <r:get_page id="{$agenda_id}">
+      <r:children:each>
+
+        <h3><r:page:first_non_blank_attr names="alternate_name,name" /></h3>
+
+        <table>
+
+          <r:children:each>
+            <tr>
+              <td>
+                <strong><r:page:content name="start-time" /> - <r:page:content name="end-time" /></strong>
+              </td>
+              <td>
+                <strong><r:page:name /></strong><br>
+                <r:page:content name="description" />
+              </td>
+            </tr>
+          </r:children:each>
+
+        </table>
+      </r:children:each>
+    </r:get_page>
+
+  </div>
+</div>
+
+<r:edit_mode_only>
+  <div class="wvu-instructions">
+    <p><strong>Instructions for Event Agenda:</strong> Takes an <code>agenda_id</code> page data attribute, then loops through the referenced page&rsquo;s children and grabs agenda info. You can organize child pages according to day, then event. Child pages should use the "Agenda Item" template. Always include a page for each day, even if the event only lasts one day.</p>
+  </div>
+</r:edit_mode_only>
