@@ -7,8 +7,8 @@
 }
 
 .wvu-footer__container {
-  
-  padding:2em
+  @include u-wvu-container-padding();
+  padding: 2em;
 }
 
 .wvu-contact { margin-bottom: 18px;
