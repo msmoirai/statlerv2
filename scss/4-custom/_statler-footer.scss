@@ -15,21 +15,3 @@
 } //.statler-give
 
 .statler-contact, .statler-give, .wvu-contact { float: left; padding-bottom: 13px; }
-
-
-// ~Tablet+
-@media (min-width: $grid-mq-tablet) {
-  .statler-contact, .statler-give { margin-left: 0; margin-right: 0; width: 50%; }
-  .statler-contact { float: left;
-    ul, p { margin-bottom: 0; }
-  } //.statler-contact
-  .statler-give { float: right;
-    ul { float: right; }
-  } //.statler-give
-} // /(min-width: $grid-mq-tablet)
-
-// Media query for higher pixel density displays, eg iPhone 4, Android, etc
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
-
-
-} // /hi-res-mq
