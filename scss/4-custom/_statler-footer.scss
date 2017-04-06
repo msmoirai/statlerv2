@@ -1,0 +1,49 @@
+// Footer styles
+//==================================================
+
+.wvu-footer { float: left; font-size: .75em; }
+
+.wvu-contact { margin-bottom: 18px;
+  p { margin-top: 0; margin-bottom: 0; }
+} //.wvu-contact
+
+.statler-contact { clear: left;
+  ul, p { margin: 0; padding: 0; margin-bottom: 5px; }
+  li { list-style-type: none; display: inline; }
+} //.statler-contact
+.wvu-links li { list-style-type: none; display: inline; }
+.statler-contact li:before, .wvu-links li:before { content: '|'; padding-right: 3px; }
+.statler-contact li:first-child:before, .wvu-links li:first-child:before { content: ''; padding-right: 0; }
+
+.statler-give {
+  ul { clear: both; margin-top: 0; margin-bottom: 0; padding-left: 0; list-style-type: none; }
+  li { display: inline; margin: 0; }
+} //.statler-give
+
+.wvu-social { padding: 3px 0; float: left;
+  li { float: left; }
+  a { height: 24px; margin: 0; float: left; width: 24px; padding-left: 0; padding-top: 5px; @include image-replace-h5bp; }
+  li:last-child a { margin-right: 0; }
+} //.wvu-social
+
+.statler-contact, .statler-give, .wvu-contact { float: left; padding-bottom: 13px; }
+
+
+// ~Tablet+
+@media (min-width: $grid-mq-tablet) {
+  .wvu-footer { padding: 10px; width: 100%; }
+  .wvu-contact { width: 100%; float: left; }
+  .statler-contact, .statler-give { margin-left: 0; margin-right: 0; width: 50%; }
+  .statler-contact { float: left;
+    ul, p { margin-bottom: 0; }
+  } //.statler-contact
+  .statler-give { float: right;
+    ul { float: right; }
+  } //.statler-give
+} // /(min-width: $grid-mq-tablet)
+
+// Media query for higher pixel density displays, eg iPhone 4, Android, etc
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+
+
+} // /hi-res-mq
