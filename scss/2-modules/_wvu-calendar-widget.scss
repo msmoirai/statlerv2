@@ -11,7 +11,7 @@
     .eventDay { display: block; font-size: 1.5em; line-height: .8em; clear: both; }
     .eventInfo { float: left; width: 86%; display: inline-block;}
     .eventTime { font-weight: bold; }
-    .eventName { display: block; }
+    .eventName { display: block; border-left: 1em;}
   }
   &.wvu-calendar--flex {
     @include mq($bp-medium) {
