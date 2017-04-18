@@ -2,12 +2,12 @@
 //==================================================
 
 
-.statler-contact, .statler-links { clear: left;
+.statler-contact,{ clear: left;
   ul, p { margin: 0; padding: 0; margin-bottom: 5px; font-size: .8em;}
   li { list-style-type: none; display: inline; }
 } //.statler-contact
-.statler-contact li:before, .statler-links li:before, .wvu-links li:before { content: '|'; padding-right: 3px; }
-.statler-contact li:first-child:before, .statler-links li:first-child:before, .wvu-links li:first-child:before { content: ''; padding-right: 0; }
+.statler-contact li:before, .wvu-links li:before { content: '|'; padding-right: 3px; }
+.statler-contact li:first-child:before,  .wvu-links li:first-child:before { content: ''; padding-right: 0; }
 
 .statler-give {
   ul { clear: both; margin-top: 0; margin-bottom: 0; padding-left: 0; list-style-type: none; }
