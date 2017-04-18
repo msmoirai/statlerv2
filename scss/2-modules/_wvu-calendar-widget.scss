@@ -4,14 +4,14 @@
 
 .wvu-calendar {
   padding-left: 0;
-  li { margin-bottom: 0.5em; display: inline-block; width: 100%;
-    .eventDate { float: left; margin-right: 4%; width: 10%; text-align: center; padding-bottom: 6px; border-radius: 6px; display: inline-block;
+  li { margin-bottom: 0.5em; display: inline-block; width: 33%;
+    .eventDate { float: left;  width: 10%; text-align: center; padding-bottom: 6px; border-radius: 6px; display: inline-block;
     }
     .eventMonth { font-size: .8em; text-transform: uppercase; }
     .eventDay { display: block; font-size: 1.5em; line-height: .8em; clear: both; }
-    .eventInfo { float: left; width: 86%; display: inline-block;}
+    .eventInfo { float: left; width: 86%; display: inline-block; border-left: solid 3px; padding-left: 1em;}
     .eventTime { font-weight: bold; }
-    .eventName { display: block; border-left: 1em;}
+    .eventName { display: block; }
   }
   &.wvu-calendar--flex {
     @include mq($bp-medium) {
@@ -107,17 +107,7 @@
   }
 }
 
-.wvu-calendar { padding-left: 0;
-  li { margin-bottom: 0.5em; display: inline-block; width: 100%;
-    .eventDate { float: left; margin-right: 4%; width: 10%; text-align: center; padding-bottom: 6px; border-radius: 6px;
-    }
-    .calEventMonth { font-size: .8em; text-transform: uppercase; }
-    .calEventDay { display: block; font-size: 1.5em; line-height: .8em; clear: both; }
-    .eventInfo { float: left; width: 86%;}
-    .eventTime { font-weight: bold; }
-    .eventName { display: block; }
-  }
-}
+
 
 .wvu-calendar-widget--flex { padding-left: 0;
   li { padding-right: 1em; }
