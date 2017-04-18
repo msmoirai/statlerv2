@@ -4,7 +4,7 @@
 
 .wvu-calendar {
   padding-left: 0;
-  li { margin-bottom: 0.5em; display: inline-block; width: 33%;
+  li { margin-bottom: 0.5em; display: inline-block; width: 33%; vertical-align: top;
     .eventDate { float: left;  width: 10%; text-align: center; padding-bottom: 6px; border-radius: 6px; display: inline-block;
     }
     .eventMonth { font-size: .8em; text-transform: uppercase; }
@@ -24,6 +24,10 @@
       }
     }
   }
+}
+
+bracket-link {
+  font-size:1.25rem;
 }
 
 .wvu-calendar-widget__container {
