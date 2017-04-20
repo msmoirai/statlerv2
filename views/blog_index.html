@@ -70,9 +70,19 @@ custom_data_attributes:
 - thumbnail_url_sq
 ---
 
-<r:partial name="patterns/wvu-backpage-partials--top" />
+<r:set_var name="bgurl">
+  <r:page:slug />-header-background
+</r:set_var>
+
+<r:set_var name="ifAllStories">
+  <r:page:slug />
+</r:set_var>
 
 <div class="wvu-container">
+
+
+
+
 
   <r:comment><!-- NOTE: Set how many blog posts you'd like to show per page. Eg: default="10" --></r:comment>
   <r:set_var name="limit" value="{$limit}" default="10"/>
@@ -92,47 +102,67 @@ custom_data_attributes:
 
         <div class="wvu-articles">
           <r:each>
+          <div class="wvu-articles__thumbnail_mobile">
+            <a href="<r:article:path />">
+              <r:partial name="custom-patterns/wvu-thumbnail-checker" />
+            </a>
+          </div>
+            <article class="wvu-article" itemscope="" itemtype="http://schema.org/BlogPosting" role="article">
 
+              <div class="wvu-articles__thumbnail">
+                <r:page:if_has_content_for region="meta-external-link">
+                  <a href="<r:page:content name="meta-external-link" />">
+                    <r:partial name="custom-patterns/wvu-thumbnail-checker" />
+                  </a>
+                </r:page:if_has_content_for>
+                <r:page:unless_has_content_for region="meta-external-link">
+                  <a href="<r:article:path />">
+                    <r:partial name="custom-patterns/wvu-thumbnail-checker" />
+                  </a>
+                </r:page:unless_has_content_for>
+                &nbsp;
+              </div>
 
-   <div class="wvu-articles__thumbnail_mobile">
-     <a href="<r:article:path />">
-       <r:partial name="custom-patterns/wvu-thumbnail-checker" />
-     </a>
-   </div>
-     <article class="wvu-article" itemscope="" itemtype="http://schema.org/BlogPosting" role="article">
+              <div class="wvu-article__body-and-link">
 
-       <div class="wvu-articles__thumbnail">
-         <r:page:if_has_content_for region="meta-external-link">
-           <a href="<r:page:content name="meta-external-link" />">
-             <r:partial name="custom-patterns/wvu-thumbnail-checker" />
-           </a>
-         </r:page:if_has_content_for>
-         <r:page:unless_has_content_for region="meta-external-link">
-           <a href="<r:article:path />">
-             <r:partial name="custom-patterns/wvu-thumbnail-checker" />
-           </a>
-         </r:page:unless_has_content_for>
+                <h3 class="wvu-article__title" itemprop="headline">
+                  <r:page:if_has_content_for region="meta-external-link">
+                    <a href="<r:page:content name="meta-external-link" />">
+                      <r:page:first_non_blank_attr names="title" />
+                    </a>
+                  </r:page:if_has_content_for>
+                  <r:page:unless_has_content_for region="meta-external-link">
+                    <a href="<r:article:path />">
+                      <r:page:first_non_blank_attr names="title" />
+                    </a>
+                  </r:page:unless_has_content_for>
+                </h3>
 
-       </div>
-
-       <div class="wvu-article__body-and-link">
-
-              <h2 class="wvu-article__title" itemprop="headline"><a href="<r:article:path />"><r:article:name /></a></h2>
-              <p class="wvu-article__meta">
-                <r:article:author_full_name /> |
-                <time class="wvu-article__date" itemprop="datePublished" datetime="<r:date_format format="iso8601" value="{article:published_at}" />"><r:date_format format="%A, %B %d, %Y" value="{article:published_at}" /></time>
-              </p> <!-- /.wvu-article__meta -->
-              <div class="wvu-article__body" itemprop="articleBody">
-                <r:select_html css_selector="p" limit="2">
-                  <r:article:content name="article-body" />
-                </r:select_html>
-              </div> <!-- /.wvu-article__body -->
-              <p><a href="<r:article:path />">Read Full Article</a></p>
+                <p class="wvu-article__meta">
+                  <time class="wvu-article__date" itemprop="datePublished" datetime="<r:date_format format="iso8601" value="{article:published_at}" />"><r:date_format format="%A, %B %d, %Y" value="{article:published_at}" /></time>
+                </p> <!-- /.wvu-article__meta -->
+                <div class="wvu-article__body" itemprop="articleBody">
+                  <r:select_html css_selector="p" limit="1">
+                    <r:page:meta_description name="article-body" />
+                  </r:select_html>
+                </div> <!-- /.wvu-article__body -->
+                <p>
+                  <r:page:if_has_content_for region="meta-external-link">
+                    <a class="button button--wvu-blue" href="<r:page:content name="meta-external-link" />">
+                      Read More
+                    </a>
+                  </r:page:if_has_content_for>
+                  <r:page:unless_has_content_for region="meta-external-link">
+                    <a class="button button--wvu-blue" href="<r:article:path />">
+                      Read More
+                    </a>
+                  </r:page:unless_has_content_for>
+                </p>
+              </div>
             </article> <!-- /.wvu-article -->
-          </div><!-- /.wvu-article__body-and-link -->
-
           </r:each>
         </div> <!-- /.wvu-articles -->
+
       </r:if_articles>
 
       <r:pagination>
