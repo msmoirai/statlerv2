@@ -99,71 +99,15 @@ custom_data_attributes:
       <r:comment><!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb --></r:comment>
 
       <r:if_articles>
-
         <div class="wvu-articles">
           <r:each>
-          <div class="wvu-articles__thumbnail_mobile">
-            <a href="<r:article:path />">
-              <r:partial name="custom-patterns/wvu-thumbnail-checker" />
-            </a>
-          </div>
             <article class="wvu-article" itemscope="" itemtype="http://schema.org/BlogPosting" role="article">
-
-              <div class="wvu-articles__thumbnail">
-                <r:page:if_has_content_for region="meta-external-link">
-                  <a href="<r:page:content name="meta-external-link" />">
-                    <r:partial name="custom-patterns/wvu-thumbnail-checker" />
-                  </a>
-                </r:page:if_has_content_for>
-                <r:page:unless_has_content_for region="meta-external-link">
-                  <a href="<r:article:path />">
-                    <r:partial name="custom-patterns/wvu-thumbnail-checker" />
-                  </a>
-                </r:page:unless_has_content_for>
-                &nbsp;
-              </div>
-
-              <div class="wvu-article__body-and-link">
-
-                <h3 class="wvu-article__title" itemprop="headline">
-                  <r:page:if_has_content_for region="meta-external-link">
-                    <a href="<r:page:content name="meta-external-link" />">
-                      <r:page:first_non_blank_attr names="title" />
-                    </a>
-                  </r:page:if_has_content_for>
-                  <r:page:unless_has_content_for region="meta-external-link">
-                    <a href="<r:article:path />">
-                      <r:page:first_non_blank_attr names="title" />
-                    </a>
-                  </r:page:unless_has_content_for>
-                </h3>
-
-                <p class="wvu-article__meta">
-                  <time class="wvu-article__date" itemprop="datePublished" datetime="<r:date_format format="iso8601" value="{article:published_at}" />"><r:date_format format="%A, %B %d, %Y" value="{article:published_at}" /></time>
-                </p> <!-- /.wvu-article__meta -->
-                <div class="wvu-article__body" itemprop="articleBody">
-                  <r:select_html css_selector="p" limit="1">
-                    <r:page:meta_description name="article-body" />
-                  </r:select_html>
-                </div> <!-- /.wvu-article__body -->
-                <p>
-                  <r:page:if_has_content_for region="meta-external-link">
-                    <a class="button button--wvu-blue" href="<r:page:content name="meta-external-link" />">
-                      Read More
-                    </a>
-                  </r:page:if_has_content_for>
-                  <r:page:unless_has_content_for region="meta-external-link">
-                    <a class="button button--wvu-blue" href="<r:article:path />">
-                      Read More
-                    </a>
-                  </r:page:unless_has_content_for>
-                </p>
-              </div>
+              <r:partial name="custom-patterns/article-content" />
             </article> <!-- /.wvu-article -->
           </r:each>
         </div> <!-- /.wvu-articles -->
-
       </r:if_articles>
+      
       <r:pagination>
               <ul class="wvu-pagination">
                 <li class="wvu-pagination__older <r:if_last_page>wvu-pagination__disabled</r:if_last_page>"><a href="<r:next_url />" rel="next">&larr; Older Stories</a></li>
@@ -178,7 +122,6 @@ custom_data_attributes:
           <div class="articles__filter-by">
             <h3>Stories By Topic</h3>
             <ul>
-              <li><a href="/stories">All</a></li>
               <li><a href=http://statler.sandbox.wvu.edu/news?tags=che>Chemical Engineering</a></li>
               <li><a href=http://statler.sandbox.wvu.edu/news?tags=cee>Civil and Environmental Engineering</a></li>
               <li><a href=http://statler.sandbox.wvu.edu/news?tags=freshman>Freshman Engineering</a></li>
@@ -194,7 +137,7 @@ custom_data_attributes:
             </ul>
           </div>
 
-          <h3>WVUToday Stories By Month</h3>
+          <h3>Stories By Month</h3>
               <r:blog:archive:monthly ul_class="wvu-blog-archive" count_class="wvu-blog-archive__count" />
 
         </aside> <!-- /.wvu-sidebar -->

@@ -1,0 +1,25 @@
+<div class="article__body">
+
+  <div class="article__image">
+    <a href="<r:article:path />">
+      <r:article:content name="article-media__first" />
+    </a>
+  </div> <!-- /.article__image -->
+
+  <div class="article__info">
+
+    <h2 class="wvu-article__title wvu-article__title--with-margin-top">
+      <a href="<r:article:path />">
+      <r:article:name />
+      </a>
+    </h2>
+
+    <r:select_html css_selector="p" limit="1">
+      <p class="wvu-lede-tiny"><r:article:content name="article-lede" /></p>
+    </r:select_html>
+
+    <r:article:content name="read-full-article" />
+    <a href="<r:article:path />" class="button">Read Full Article</a>
+  </div> <!-- /.article__info -->
+
+</div> <!-- /.wvu-article__body -->
