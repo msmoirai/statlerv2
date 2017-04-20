@@ -1,0 +1,102 @@
+---
+layout: default
+---
+
+    <r:content_for name="header-extras">
+      <r:partial name="custom-patterns/randomize-hero-image" />
+      <r:partial name="custom-patterns/sharethis" />
+    </r:content_for>
+
+<r:partial name="custom-patterns/news-header" />
+
+<r:partial name="custom-patterns/statler-recruitment" />
+
+<div class="wvu-container">
+
+  <main class="main-back" role="main">
+    <a name="maincontent" tabindex="-1"></a>
+
+  <h1><r:article:name /></h1>
+
+      <div class="statler-article__featured-media">
+
+        <r:editable_region name="article-media__first" >
+          <img src="http://statler.sandbox.wvu.edu/files/2ce04ceb-78eb-469e-9b3c-2874a24b63a6/876x493?cb=1449698045" alt="This is an image of the flying WV logo used when a media article has no media accompanying it.">
+        </r:editable_region>
+
+<r:page:if_has_content_for region="article-media__caption" always_show_in_edit_mode="true">
+        <p class="statler-article__featured-media-caption">
+          <r:edit_mode_only>Enter the featured image caption</r:edit_mode_only>
+          <r:editable_region name="article-media__caption" />
+        </p>
+</r:page:if_has_content_for>
+        </div>
+
+<r:page:if_has_content_for region="article-media__location" always_show_in_edit_mode="true">
+        <div class="statler-article__location">
+          <r:edit_mode_only>Enter the location of your article, use the character modal in the menu to add an em dash<br></r:edit_mode_only>
+          <r:editable_region name="article-media__location" />
+        </div>
+</r:page:if_has_content_for>
+
+        <p class="statler-article__lede">
+          <r:edit_mode_only><br>Enter the story lede</r:edit_mode_only>
+          <r:editable_region name="article-lede" />
+        </p>
+
+        <div class="statler-article__copy">
+          <p>
+            <r:edit_mode_only>Enter the rest of the story copy</r:edit_mode_only>
+            <r:editable_region name="article-copy" />
+          </p>
+        </div>
+
+  <r:partial name="custom-patterns/share-tool" />
+
+  <div class="article-credits">
+    <p><strong>-WVU-</strong></p>
+
+    <p>
+    <r:edit_mode_only>Enter the Author's initials below in the format of initials/mm/dd/yy (ex. mcd/01/01/16)</r:edit_mode_only>
+      <r:editable_region name="author-initials" class="statler-author-initials"/>
+    </p>
+
+    <p>For more information on news and events in the West&nbsp;Virginia&nbsp;University Benjamin&nbsp;M.&nbsp;Statler&nbsp;College of Engineering&nbsp;and&nbsp;Mineral&nbsp;Resources:</p>
+
+    <p><strong>Email</strong>: <a href="mailto:engineeringwv@mail.wvu.edu">EngineeringWV@mail.wvu.edu</a></p>
+
+    <p><strong>Phone contacts</strong>:<br>
+    College Relations office: 304-293-4086<br>
+    Office of the Dean: 304-293-4157<br>
+    Other College administrative and department offices: <a href="http://www.statler.wvu.edu/about/administration">Administration</a></p>
+
+    <p><a href="http://www.statler.wvu.edu">HOME</a></p>
+
+  </div>
+
+  </main>
+  <r:edit_mode_only>
+    Use this sidebar to place additional media associated with the story - this text is only visible in edit mode
+  </r:edit_mode_only>
+
+<r:page:if_has_content_for region="article-media__second" always_show_in_edit_mode="true">
+  <aside class="wvu-sidebar" role="complementary">
+      <h3 class="wvu-h6">Media</h3>
+      <ul class="article-media__sidebar">
+        <li><r:edit_mode_only>Insert Image</r:edit_mode_only><r:editable_region name="article-media__second" /><br>
+        <r:edit_mode_only>Insert Image Caption</r:edit_mode_only><r:editable_region name="article-media__second-caption" /></li>
+
+        <li><r:edit_mode_only>Insert Image</r:edit_mode_only><r:editable_region name="article-media__third" /><br><r:edit_mode_only>Insert Image Caption</r:edit_mode_only><r:editable_region name="article-media__third-caption" /></li>
+
+        <li><r:edit_mode_only>Insert Image</r:edit_mode_only><r:editable_region name="article-media__fourth" /><br><r:edit_mode_only>Insert Image Caption</r:edit_mode_only><r:editable_region name="article-media__fourth-caption" /></li>
+
+        <li><r:edit_mode_only>Insert Image</r:edit_mode_only><r:editable_region name="article-media__fifth" /><br><r:edit_mode_only>Insert Image Caption</r:edit_mode_only><r:editable_region name="article-media__fifth-caption" /></li>
+      </ul>
+  </aside> <!-- /.wvu-sidebar -->
+</r:page:if_has_content_for>
+
+</div>
+
+<r:partial name="custom-patterns/statler-events-quadtych" />
+
+<r:partial name="custom-patterns/statler-mobile-recruitment" />
