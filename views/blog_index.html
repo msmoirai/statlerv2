@@ -96,7 +96,7 @@ custom_data_attributes:
 
    <div class="wvu-articles__thumbnail_mobile">
      <a href="<r:article:path />">
-       <r:partial name="custom-patterns/wvutoday-thumbnail-checker" />
+       <r:partial name="custom-patterns/wvu-thumbnail-checker" />
      </a>
    </div>
      <article class="wvu-article" itemscope="" itemtype="http://schema.org/BlogPosting" role="article">
@@ -104,12 +104,12 @@ custom_data_attributes:
        <div class="wvu-articles__thumbnail">
          <r:page:if_has_content_for region="meta-external-link">
            <a href="<r:page:content name="meta-external-link" />">
-             <r:partial name="custom-patterns/wvutoday-thumbnail-checker" />
+             <r:partial name="custom-patterns/wvu-thumbnail-checker" />
            </a>
          </r:page:if_has_content_for>
          <r:page:unless_has_content_for region="meta-external-link">
            <a href="<r:article:path />">
-             <r:partial name="custom-patterns/wvutoday-thumbnail-checker" />
+             <r:partial name="custom-patterns/wvu-thumbnail-checker" />
            </a>
          </r:page:unless_has_content_for>
 
