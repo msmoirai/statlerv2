@@ -119,29 +119,7 @@ custom_data_attributes:
 
   <aside class="wvu-sidebar">
     <div class="wvu-sub-nav">
-      <div class="article__related-stories">
-        <h3>Related:</h3>
-        <r:blog:articles limit="5" tags="{article:tags}" exclude_ids="{article:id}">
-          <r:if_articles>
-            <ul>
-              <r:each>
-                <li>
-                  <r:page:if_has_content_for region="meta-external-link">
-                  <a href="<r:page:content name="meta-external-link" />">
-                    <r:page:first_non_blank_attr names="title" />
-                  </a>
-                </r:page:if_has_content_for>
-                <r:page:unless_has_content_for region="meta-external-link">
-                  <a href="<r:article:path />">
-                    <r:page:first_non_blank_attr names="title" />
-                  </a>
-                </r:page:unless_has_content_for>
-              </li>
-              </r:each>
-            </ul>
-          </r:if_articles>
-        </r:blog:articles>
-      </div>
+      
       <div class="article_by-topic">
       <h3>Stories by Topic</h3>
     <ul>
