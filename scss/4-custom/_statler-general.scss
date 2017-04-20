@@ -32,7 +32,7 @@
   @include mq($bp-medium) { @include span-columns(2.5); }
 }
 .article-media__sidebar
-li {
+ul li {
 		border-bottom: 0px;
 	}
 .pagetitle{
