@@ -1,0 +1,8 @@
+.wvu-blog-archive__count {
+  &:before {
+    content: "(";
+  }
+  &:after {
+    content: ")";
+  }
+}
