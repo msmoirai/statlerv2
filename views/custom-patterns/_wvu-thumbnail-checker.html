@@ -1,0 +1,6 @@
+<r:if expr="{{ NOT(BLANK(thumbnail_url)) }}">
+  <img src="https://<r:site:domain />/files/<r:page:data name="thumbnail_url" />/1200x630.jpg" alt="<r:page:data name="thumbnail_alt" />" />
+</r:if>
+<r:if expr="{{ BLANK(thumbnail_url) }}">
+  <img src="https://<r:site:domain />/files/<r:page:content name="meta-thumbnail-url" />/1200x630.jpg" alt="<r:page:content name="meta-thumbnail-alt" />" />
+</r:if>
