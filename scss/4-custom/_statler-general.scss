@@ -2,7 +2,7 @@
 	list-style: none;
 }
 .main-back {
-  @include mq($bp-medium) { @include span-columns(9.5); }
+  @include mq($bp-medium) { @include span-columns(7.5); }
 }
 .wvu-sidebar {
 
@@ -36,7 +36,7 @@
   }
 .imagescol{
   width: 100%;
-  @include mq($bp-medium) { @include span-columns(4); }  
+  @include mq($bp-medium) { @include span-columns(4); }
   }
 .contentcol{
   width: 100%;
@@ -70,7 +70,7 @@
   width: 100%;
   h1{
   }
-  @include mq($bp-medium) { @include span-columns(6); }  
+  @include mq($bp-medium) { @include span-columns(6); }
     margin-right: 0 !important;
 
   }
