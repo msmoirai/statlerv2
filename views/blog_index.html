@@ -164,45 +164,37 @@ custom_data_attributes:
         </div> <!-- /.wvu-articles -->
 
       </r:if_articles>
-
       <r:pagination>
-        <ul class="wvu-pagination">
-          <li class="wvu-pagination__older <r:if_last_page>wvu-pagination__disabled</r:if_last_page>"><a href="<r:next_url />" rel="next">&larr; Older Articles</a></li>
-          <li class="wvu-pagination__newer <r:if_first_page>wvu-pagination__disabled</r:if_first_page>"><a href="<r:previous_url />" rel="prev">Newer Articles &rarr;</a></li>
-        </ul>
-      </r:pagination>
-    </r:blog:articles>
-  </main> <!-- /.main -->
+              <ul class="wvu-pagination">
+                <li class="wvu-pagination__older <r:if_last_page>wvu-pagination__disabled</r:if_last_page>"><a href="<r:next_url />" rel="next">&larr; Older Stories</a></li>
+                <li class="wvu-pagination__newer <r:if_first_page>wvu-pagination__disabled</r:if_first_page>"><a href="<r:previous_url />" rel="prev">Newer Stories &rarr;</a></li>
+              </ul>
+            </r:pagination>
+          </r:blog:articles>
+        </main> <!-- /.main -->
 
-  <aside class="wvu-sidebar">
-    <div class="wvu-sub-nav">
+        <aside class="wvu-sidebar">
 
-      <div class="article_by-topic">
-      <h3>Stories by Topic</h3>
-    <ul>
-      <li><a href=http://statler.sandbox.wvu.edu/news?tags=che>Chemical Engineering</a></li>
-      <li><a href=http://statler.sandbox.wvu.edu/news?tags=cee>Civil and Environmental Engineering</a></li>
-      <li><a href=http://statler.sandbox.wvu.edu/news?tags=freshman>Freshman Engineering</a></li>
-      <li><a href=http://statler.sandbox.wvu.edu/news?tags=grad>Graduate</a></li>
-      <li><a href=http://statler.sandbox.wvu.edu/news?tags=imse>Industrial and Management Systems Engineering</a></li>
-      <li><a href=http://statler.sandbox.wvu.edu/news?tags=lane>Lane Department of Computer Science and Electrical Engineering</a></li>
-      <li><a href=http://statler.sandbox.wvu.edu/news?tags=mae>Mechanical and Aerospace Engineering</a></li>
-      <li><a href=http://statler.sandbox.wvu.edu/news?tags=mindext>Mining and Industrial Extension</a></li>
-      <li><a href=http://statler.sandbox.wvu.edu/news?tags=mine>Mining Engineering</a></li>
-      <li><a href=http://statler.sandbox.wvu.edu/news?tags=pnge>Petroleum and Natural Gas Engineering</a></li>
-      <li><a href=http://statler.sandbox.wvu.edu/news?tags=research>Research</a></li>
-      <li><a href=http://statler.sandbox.wvu.edu/news?tags=undergrad>Undergraduate</a></li>
-    </ul>
-  </div>
-  <div class="article_by-date">
-      <h3>Stories by Date</h3>
-      <r:blog:archive:monthly ul_class="wvu-blog-archive" count_class="wvu-blog-archive__count" />
-</div>
+          <div class="articles__filter-by">
+            <h3>Stories By Topic</h3>
+            <ul>
+              <li><a href="/stories">All</a></li>
+              <li><a href=http://statler.sandbox.wvu.edu/news?tags=che>Chemical Engineering</a></li>
+              <li><a href=http://statler.sandbox.wvu.edu/news?tags=cee>Civil and Environmental Engineering</a></li>
+              <li><a href=http://statler.sandbox.wvu.edu/news?tags=freshman>Freshman Engineering</a></li>
+              <li><a href=http://statler.sandbox.wvu.edu/news?tags=grad>Graduate</a></li>
+              <li><a href=http://statler.sandbox.wvu.edu/news?tags=imse>Industrial and Management Systems Engineering</a></li>
+              <li><a href=http://statler.sandbox.wvu.edu/news?tags=lane>Lane Department of Computer Science and Electrical Engineering</a></li>
+              <li><a href=http://statler.sandbox.wvu.edu/news?tags=mae>Mechanical and Aerospace Engineering</a></li>
+              <li><a href=http://statler.sandbox.wvu.edu/news?tags=mindext>Mining and Industrial Extension</a></li>
+              <li><a href=http://statler.sandbox.wvu.edu/news?tags=mine>Mining Engineering</a></li>
+              <li><a href=http://statler.sandbox.wvu.edu/news?tags=pnge>Petroleum and Natural Gas Engineering</a></li>
+              <li><a href=http://statler.sandbox.wvu.edu/news?tags=research>Research</a></li>
+              <li><a href=http://statler.sandbox.wvu.edu/news?tags=undergrad>Undergraduate</a></li>
+            </ul>
+          </div>
 
 
+        </aside> <!-- /.wvu-sidebar -->
 
-    </div> <!-- /.wvu-sub-nav -->
-    <a href="<r:page:url format="rss" />">Articles RSS Feed</a>
-  </aside> <!-- /.wvu-sidebar -->
-
-</div> <!-- /.wvu-container -->
+      </div> <!-- /.wvu-container -->
