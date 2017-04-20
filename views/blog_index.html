@@ -112,11 +112,11 @@ custom_data_attributes:
              <r:partial name="custom-patterns/wvutoday-thumbnail-checker" />
            </a>
          </r:page:unless_has_content_for>
-         &nbsp;
+
        </div>
 
        <div class="wvu-article__body-and-link">
-            <article class="wvu-article" itemscope="" itemtype="http://schema.org/BlogPosting" role="article">
+
               <h2 class="wvu-article__title" itemprop="headline"><a href="<r:article:path />"><r:article:name /></a></h2>
               <p class="wvu-article__meta">
                 <r:article:author_full_name /> |
@@ -130,6 +130,7 @@ custom_data_attributes:
               <p><a href="<r:article:path />">Read Full Article</a></p>
             </article> <!-- /.wvu-article -->
           </div><!-- /.wvu-article__body-and-link -->
+
           </r:each>
         </div> <!-- /.wvu-articles -->
       </r:if_articles>
