@@ -1,0 +1,112 @@
+.academics li{
+	list-style: none;
+}
+.main-back {
+  @include mq($bp-medium) { @include span-columns(9.5); }
+}
+.wvu-sidebar {
+
+  ul{
+  	list-style: none;
+  	font-weight: 600;
+		text-decoration: none;
+  	padding: 0 0;
+    li {
+        border-bottom: 1px solid #ccc;
+        padding: 0;
+        &:last-child{
+          border-bottom: none;
+        }
+        ul{padding: 0; border-left: 3px solid #005eb8;}
+      }
+  	a{
+  		text-decoration: none;
+  		display: block;
+      padding: 16px 0 16px 8px;
+      width: 100%;
+      margin: 0px 0 0px 0;
+      color: $wvu-blue;
+    	&:hover{background-color: $wvu-gold;}
+      }
+    }
+  @include mq($bp-medium) { @include span-columns(2.5); }
+}
+.pagetitle{
+  width: 100%;
+  }
+.imagescol{
+  width: 100%;
+  @include mq($bp-medium) { @include span-columns(4); }  
+  }
+.contentcol{
+  width: 100%;
+  @include mq($bp-medium) { @include span-columns(8); }
+  }
+.full{
+  width: 100%;
+  @include mq($bp-medium) { @include span-columns(12); }
+  }
+
+.icon{
+    &:after{
+      content: "";
+      width: 32px;
+      height: 32px;
+      display: inline-block;
+      position: relative;
+      top: 10px;
+      left: 10px;
+    }
+}
+.pdf-icon{
+    &:after{
+        background: url(/images/icons/pdf-icon.png);
+    }
+}
+.dept-news{
+  width: 100%;
+}
+.recent-news{
+  width: 100%;
+  h1{
+  }
+  @include mq($bp-medium) { @include span-columns(6); }  
+    margin-right: 0 !important;
+
+  }
+.archive-links{
+  width: 100%;
+  text-align: left;
+  float: left;
+  @include mq($bp-medium) { @include span-columns(6); }
+  text-align: right;
+  margin-right: 0 !important;
+  }
+ul.manual{
+  margin-bottom: 0;
+}
+li.manual-last{
+  border-bottom: 1px solid #cccccc !important;
+}
+.dept_address{
+  width: 50%;
+  float: right;
+}
+
+.wvu-sub-nav ul li a.current {
+    cursor: default;
+    background-color: $wvu-blue;
+    color: white;
+    &:after{
+      content: "";
+      display: inline-block;
+      left: 10px;
+      top: 2px;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid white;
+      position: relative;
+      }
+  }
