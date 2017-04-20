@@ -1,0 +1,105 @@
+.wvu-blog-index__headline {
+  margin-top: -4em;
+  margin-left: -.75em;
+}
+@media (min-width: 768px) {
+
+  .wvu-blog-index__headline {
+    margin-top: -2em;
+    margin-left: -.70em;
+  }
+
+}
+@media (min-width: 1200px) {
+
+  .wvu-blog-index__headline {
+    margin-top: -2em;
+    margin-left: .4em;
+  }
+
+}
+.wvu-articles {
+  .wvu-article__title {
+    font-size: 1.5em;
+    margin-top: 0;
+    a {
+      color: #0033A0;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #0033A0;
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #0033A0;
+      text-decoration: none;
+    }
+    a:visited:hover {
+      color: #0033A0;
+      text-decoration: underline;
+    }
+    a:focus {
+      color: #0033A0;
+      text-decoration: underline;
+    }
+    a:active {
+      color: #0033A0;
+      text-decoration: underline;
+    }
+  }
+  .wvu-article__body {
+    font-size: 1em;
+    line-height: 1.75em;
+  }
+  article {
+    border-bottom: 1px solid #eee;
+    &:last-child {
+      border-bottom: 0px;
+    }
+  }
+  .wvu-articles__files img {
+    max-width: 16px;
+  }
+  .wvu-articles__thumbnail {
+    display: none;
+  }
+  .wvu-articles__thumbnail_mobile {
+    @include span-columns(8);
+  }
+  .wvu-articles__thumbnail_mobile {
+    margin-top: 3em;
+  }
+  @media (min-width: 768px) {
+    .wvu-articles__thumbnail_mobile {
+      @include span-columns(6);
+    }
+    .wvu-article__title {
+      font-size: 1.75em;
+    }
+    .wvu-article__body {
+      font-size: 1.25em;
+      line-height: 1.5em;
+    }
+  }
+  @media (min-width: 1200px) {
+    .wvu-article__title {
+      font-size: 2em;
+    }
+    .wvu-articles__thumbnail_mobile {
+      display: none;
+    }
+    .wvu-articles__thumbnail {
+      @include span-columns(4);
+    }
+    .wvu-article__title-and-meta {
+      @include span-columns(4);
+    }
+    .wvu-article__body-and-link {
+      @include span-columns(8);
+    }
+  }
+}
+
+.wvu-article__meta {
+  margin-bottom: 1em;
+}
