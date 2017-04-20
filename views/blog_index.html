@@ -89,6 +89,29 @@ custom_data_attributes:
       <r:comment><!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb --></r:comment>
 
       <r:if_articles>
+      <div class="wvu-articles">
+   <r:each>
+   <div class="wvu-articles__thumbnail_mobile">
+     <a href="<r:article:path />">
+       <r:partial name="custom-patterns/wvutoday-thumbnail-checker" />
+     </a>
+   </div>
+     <article class="wvu-article" itemscope="" itemtype="http://schema.org/BlogPosting" role="article">
+
+       <div class="wvu-articles__thumbnail">
+         <r:page:if_has_content_for region="meta-external-link">
+           <a href="<r:page:content name="meta-external-link" />">
+             <r:partial name="custom-patterns/wvutoday-thumbnail-checker" />
+           </a>
+         </r:page:if_has_content_for>
+         <r:page:unless_has_content_for region="meta-external-link">
+           <a href="<r:article:path />">
+             <r:partial name="custom-patterns/wvutoday-thumbnail-checker" />
+           </a>
+         </r:page:unless_has_content_for>
+         &nbsp;
+       </div>
+       
         <div class="wvu-articles">
           <r:each>
             <article class="wvu-article" itemscope="" itemtype="http://schema.org/BlogPosting" role="article">
@@ -119,7 +142,7 @@ custom_data_attributes:
 
   <aside class="wvu-sidebar">
     <div class="wvu-sub-nav">
-      
+
       <div class="article_by-topic">
       <h3>Stories by Topic</h3>
     <ul>
