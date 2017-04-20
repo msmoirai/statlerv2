@@ -1,0 +1,59 @@
+.share__container{
+  width: 100%;
+  border-bottom: 1px solid #a2aaad;
+  border-top: 1px solid #a2aaad;
+  margin: 2rem 0 2rem 0;
+  padding: 0 0 1.5rem 0;
+  clear: both;
+  @include mq($bp-medium) {
+    border-bottom: 1px solid #a2aaad;
+    border-top: 1px solid #a2aaad;
+    margin: 2rem 0;
+    padding: 1rem 0;
+  }
+}
+.share__tool{
+  p{
+  	font-size: 1rem;
+  	font-style: italic;
+  	display: block;
+  	}
+  .share__icon{
+  	display: inline-block;
+    img{
+  	  height: 48px;
+  	  width: 48px;
+  	  margin: 0 1rem 0 0;
+  	  @include mq($bp-medium) {
+  	    height: 32px;
+  	    width: 32px;
+  	    margin: 0 0.5rem 0 0;
+  	  }
+  	}
+  }
+}
+
+.st_facebook_custom {
+	background: url("../images/icon-facebook-32x32.svg") no-repeat scroll left top transparent;
+	padding:0px 16px 0 0;
+}
+
+.st_twitter_custom {
+	background: url("../images/icon-facebook-32x32.svg") no-repeat scroll left top transparent;
+	padding:0px 16px 0 0;
+}
+
+.st_linkedin_custom {
+	background: url("../images/icon-facebook-32x32.svg") no-repeat scroll left top transparent;
+	padding:0px 16px 0 0;
+}
+
+.st_email_custom {
+	background: url("../images/icon-facebook-32x32.svg") no-repeat scroll left top transparent;
+	padding:0px 16px 0 0;
+}
+
+.st_print_custom {
+	background: url("../images/icon-facebook-32x32.svg") no-repeat scroll left top transparent;
+	padding:0px 16px 0 0;
+}
