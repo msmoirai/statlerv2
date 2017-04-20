@@ -89,8 +89,11 @@ custom_data_attributes:
       <r:comment><!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb --></r:comment>
 
       <r:if_articles>
-      <div class="wvu-articles">
-   <r:each>
+
+        <div class="wvu-articles">
+          <r:each>
+
+
    <div class="wvu-articles__thumbnail_mobile">
      <a href="<r:article:path />">
        <r:partial name="custom-patterns/wvutoday-thumbnail-checker" />
@@ -111,9 +114,8 @@ custom_data_attributes:
          </r:page:unless_has_content_for>
          &nbsp;
        </div>
-       
-        <div class="wvu-articles">
-          <r:each>
+
+       <div class="wvu-article__body-and-link">
             <article class="wvu-article" itemscope="" itemtype="http://schema.org/BlogPosting" role="article">
               <h2 class="wvu-article__title" itemprop="headline"><a href="<r:article:path />"><r:article:name /></a></h2>
               <p class="wvu-article__meta">
@@ -127,6 +129,7 @@ custom_data_attributes:
               </div> <!-- /.wvu-article__body -->
               <p><a href="<r:article:path />">Read Full Article</a></p>
             </article> <!-- /.wvu-article -->
+          </div><!-- /.wvu-article__body-and-link -->
           </r:each>
         </div> <!-- /.wvu-articles -->
       </r:if_articles>
