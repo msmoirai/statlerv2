@@ -1,0 +1,25 @@
+.article__body{
+	@include span-columns(12);
+		border-bottom: 1px solid;
+	    margin-bottom: .5rem;
+	    padding-bottom: 1rem;
+	    @include mq($bp-medium){border-bottom: none;}
+}
+.article__image{
+	margin-top: 20px;
+	@include span-columns(12);
+	@include mq($bp-medium){
+		@include span-columns(4);
+		margin-top: 30px;
+	}
+}
+.article__info{
+	@include span-columns(12);
+	p .wvu-lede-small{
+		max-width: 100%;
+	}
+	@include mq($bp-medium){
+		@include span-columns(8);
+	}
+	&:last-child{ border: none; }
+}
