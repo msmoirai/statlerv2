@@ -36,14 +36,17 @@
         font-size:3em;
         margin:0;padding:0;
     }
+    right-h1{
+        color:white;
+        padding-bottom: 25px;
+    }
+
     p{
         font-family:$base-font-family;
         font-weight:bold;
         margin:0;padding:0;
     }
-    .event-button {
-      padding-top: 20px;
-    }
+
     form{
         margin-top:30px;
         max-width:400px;
