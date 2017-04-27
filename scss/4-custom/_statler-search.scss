@@ -1,0 +1,119 @@
+.statler-search{
+    overflow:auto;
+    background-color:#efae12;
+    /** background-image:url($flying-wv); **/
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    padding-top:30px;
+    padding-bottom:30px;
+    .search-left{
+        clear:both;
+        float:left;
+        width:50%;
+        padding:60px;
+        padding-left:0;
+        padding-right:0;
+        padding-left:85px;
+    }
+    .search-left-inner{
+        float:right;
+
+        max-width:545px;
+        width:100%;
+    }
+    .search-right{
+
+        float:left;
+        background-color: white;
+        width:50%;
+        padding:60px;
+    }
+    h1{
+        font-family: $wvu-shout;
+        text-transform: uppercase;
+        color:$wvu-blue;
+        font-size:3em;
+        margin:0;padding:0;
+    }
+    p{
+        font-family:$base-font-family;
+        font-weight:bold;
+        margin:0;padding:0;
+    }
+    form{
+        margin-top:30px;
+        max-width:400px;
+    }
+    label{
+        margin:0;
+    }
+    input{
+        height:45px;
+        border-radius:0px;
+        border-width:2px;
+        float:left;
+    }
+    input.form-search__field--majors{
+        border-color:white;
+    }
+    input.form-search__submit--majors, input.form-search__submit--careers{
+        background-color:$wvu-blue;
+        border:none;
+        height:45px;
+        max-width:65px;
+        margin-left:0;
+        margin-right:0;
+        float:left;
+        background-position:50% 50%;
+        &:hover{
+            background-color:#333333;
+        }
+    }
+    input#q{
+        float:left;
+        overflow: hidden;
+        width:100%;
+    }
+    // careers
+    input.form-search__field--careers{
+        border-width:2px;
+        border-color:$wvu-blue;
+        background-color:white;
+    }
+}
+
+@include mq($bp-large, false, max) {
+    .statler-search{
+        .search-left{
+            padding-left:40px;
+            padding-right:40px;
+        }
+        form#form-search--careers, form#form-search--majors{
+            //width:300px;
+
+        }
+    }
+}
+
+@include mq($bp-small, false, max) {
+    .statler-search{
+        padding-bottom:0;
+        padding-top:0;
+        .search-right{
+            clear:both;
+            width:100%;
+            padding-left:40px;
+            padding-right:40px;
+
+        }
+        .search-left{
+            width:100%;
+
+        }
+        form#form-search--careers, form#form-search--majors{
+            //width:300px;
+
+        }
+    }
+}
