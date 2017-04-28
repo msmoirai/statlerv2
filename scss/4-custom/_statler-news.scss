@@ -4,6 +4,7 @@
 
 .statler-news-grid__solo{
   width: 50%;
+  float: left;
   padding-right: 1.5rem;
   font-size: 1.2rem;
   p{
@@ -22,12 +23,22 @@
 
 .statler-news-grid__more {
 width: 25%;
+float: left;
 padding-right: 1.5rem;
+ul{
+  list-style-type: none;
+  padding-left: 0;
+}
 
 }
 
 .statler-news-grid__brief {
 width: 25%;
+float: left;
+ul{
+  list-style-type: none;
+  padding-left: 0;
+}
 
 }
 
