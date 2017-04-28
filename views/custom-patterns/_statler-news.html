@@ -6,65 +6,65 @@
 
       <div class="statler-news-grid__all">
 
-        
-      <div class="statler-news-grid__solo">
-    <ul class="statler-sub-article">
-      <r:blog id="46184"> <r:comment><!-- Change to your blog's page ID --></r:comment>
-        <r:articles:each tags="top" limit="1"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
-            <li>
-              <div class="statler-sub-story" role="article">
-                    <div class="statler-sub-article__body">
 
-                          <a href="<r:article:path />">
-                            <r:article:content name="article-media__first" />
-                          </a>
+        <div class="statler-news-grid__solo">
+          <ul class="statler-sub-article">
+            <r:blog id="46184"> <r:comment><!-- Change to your blog's page ID --></r:comment>
+              <r:articles:each tags="top" limit="1"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
+                  <li>
+                    <div class="statler-sub-story" role="article">
+                          <div class="statler-sub-article__body">
 
-                      <h2 class="statler-sub-story wvu-h3"><a href="<r:article:path />"><r:article:name /></a></h2>
+                                <a href="<r:article:path />">
+                                  <r:article:content name="article-media__first" />
+                                </a>
 
-
-
-            </div> <!-- /.wvu-article__body -->
-
-            </div>
-
-          </li>
-
-        </r:articles:each>
-      </r:blog>
-    </ul><!--/.statler-sub-article-->
-  </div><!--end news-grid__solo-->
-
-<div class="statler-news-grid__more"
-    <ul class="statler-sub-article">
-      <r:blog id="46184"> <r:comment><!-- Change to your blog's page ID --></r:comment>
-        <r:articles:each tags="featured" limit="4"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
-            <li>
-              <div class="statler-sub-story" role="article">
-                    <div class="statler-sub-article__body">
-
-                          <a href="<r:article:path />">
-                            <r:article:content name="article-media__first" />
-                          </a>
-
-                      <h2 class="statler-sub-story wvu-h5"><a href="<r:article:path />"><r:article:name /></a></h2>
+                            <h2 class="statler-sub-story wvu-h3"><a href="<r:article:path />"><r:article:name /></a></h2>
 
 
 
-            </div> <!-- /.wvu-article__body -->
+                          </div> <!-- statler-sub-article__body -->
 
-            </div>
+                  </div><!-- statler-sub-story -->
 
-          </li>
+                </li>
 
-        </r:articles:each>
-      </r:blog>
-    </ul><!--/.statler-sub-article-->
-  </div><!--end news-grid__more-->
+              </r:articles:each>
+            </r:blog>
+          </ul><!--/.statler-sub-article-->
+        </div><!--end news-grid__solo-->
+
+        <div class="statler-news-grid__more"
+            <ul class="statler-sub-article">
+              <r:blog id="46184"> <r:comment><!-- Change to your blog's page ID --></r:comment>
+                <r:articles:each tags="featured" limit="4"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
+                    <li>
+                      <div class="statler-sub-story" role="article">
+                            <div class="statler-sub-article__body">
+
+                                  <a href="<r:article:path />">
+                                    <r:article:content name="article-media__first" />
+                                  </a>
+
+                              <h2 class="statler-sub-story wvu-h5"><a href="<r:article:path />"><r:article:name /></a></h2>
+
+
+
+                            </div> <!-- /.statler-sub-article__body -->
+
+                        </div><!-- statler-sub-story -->
+
+                    </li>
+
+                </r:articles:each>
+              </r:blog>
+            </ul><!--/.statler-sub-article-->
+          </div><!--end news-grid__more-->
 
 
 
 
-  </div><!--end news-grid-->
-</div>
-  </div>
+      </div><!--end news-grid__all-->
+    </div><!-- end statler-news-grid -->
+  </div><!-- end wvu-container -->
 </div>
