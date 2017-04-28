@@ -15,7 +15,7 @@
   a{
     color: #005eb8;
   }
-  ul li{
+  ul{
     list-style-type: none;
     padding-left: 0;
   }
@@ -25,7 +25,7 @@
 width: 25%;
 float: left;
 padding-right: 1.5rem;
-ul li{
+li{
   list-style-type: none;
   padding-left: 0;
 }
@@ -35,7 +35,7 @@ ul li{
 .statler-news-grid__brief {
 width: 25%;
 float: left;
-ul li{
+li{
   list-style-type: none;
   padding-left: 0;
 }
