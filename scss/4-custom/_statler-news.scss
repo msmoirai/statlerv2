@@ -6,7 +6,7 @@
   width: 50%;
   float: left;
   padding-right: 1.5rem;
-  font-size: 1.2rem;
+
   margin-top: 0;
   p{
     margin-top: 1.5rem;
@@ -19,6 +19,7 @@
   ul{
     list-style-type: none;
     padding-left: 0;
+    margin-top: 0;
 
   }
 }
@@ -31,6 +32,8 @@ li{
   list-style-type: none;
   padding-left: 0;
   width: 50%;
+    float: left;
+    padding-right: 1em;
 }
 
 }
@@ -44,9 +47,7 @@ li{
 }
 
 }
-.statler-sub-article {
-  float: left;
-}
+
 
 .article_by-topic .article_by-date .articles__filter-by .wvu-blog-archive ul a{
   padding: 2px 0 2px 8px;
