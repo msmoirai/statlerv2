@@ -6,7 +6,6 @@
   width: 50%;
   float: left;
   padding-right: 1.5rem;
-
   margin-top: 0;
   p{
     margin-top: 1.5rem;
@@ -22,18 +21,26 @@
     margin-top: 0;
 
   }
+  h2{
+    font-size: 1.2em;
+  }
+}
+#top-story {
+  margin-top: 0;
 }
 
 .statler-news-grid__more {
 width: 50%;
 float: left;
-padding-right: 1.5rem;
+h2{
+  font-size: 1em;
+}
 li{
   list-style-type: none;
   padding-left: 0;
   width: 50%;
     float: left;
-    padding-right: 1em;
+    padding-left: 1em;
 }
 
 }
