@@ -13,6 +13,7 @@ custom_site_attributes:
   - apply_link_3_url
   - bgcolor_footer
   - bgcolor_statler_footer
+  - bgcolor_search
   - bgcolor_news
   - bgcolor_quicklinks_sitewide
   - bgcolor_supernav_sitewide
