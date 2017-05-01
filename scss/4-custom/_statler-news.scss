@@ -26,6 +26,7 @@
   }
   h2{
     font-size: 1.2em;
+    padding-bottom: 1em;
   }
 }
 
@@ -59,4 +60,25 @@ li{
 
 .article_by-topic .article_by-date .articles__filter-by .wvu-blog-archive ul a{
   padding: 2px 0 2px 8px;
+}
+
+.statler-article__featured-media-caption {
+    font-style: italic;
+    font-family: "IowanOldStyleW01-Roman", Georgia, Times, serif;
+}
+.statler-article__location {
+    font-style: italic;
+    font-family: "IowanOldStyleW01-Roman", Georgia, Times, serif;
+    color: #333f48;
+    font-size: .8em;
+    margin-top: 2em;
+
+}
+.statler-article__lede {
+    font-size: 1.4em;
+    font-family: "HelveticaNeueW01-45Ligh", "Helvetica Neue", Helvetica, "Helvetica LT Std", "Helvetica CY", Arial, "Lucida Grande", sans-serif;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+
+    margin-top: 0;
 }
