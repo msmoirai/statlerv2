@@ -4,7 +4,7 @@
 
 .wvu-calendar {
   padding-left: 0;
-  li { margin-bottom: 0.5em; display: inline-block; width: 33%; vertical-align: top;
+  li { margin-bottom: 0.5em; display: inline-block; width: 100%; vertical-align: top;
     .eventDate { float: left;  width: 10%; text-align: center; padding-bottom: 6px; border-radius: 6px; display: inline-block;
     }
     .eventMonth { font-size: .8em; text-transform: uppercase; }
@@ -12,7 +12,9 @@
     .eventInfo { float: left; width: 86%; display: inline-block; border-left: solid 3px; padding-left: 1em;}
     .eventTime { font-weight: bold; }
     .eventName { display: block; }
-
+    @include mq($bp-large) {
+      width: 33%;
+    }
 
   }
 
