@@ -19,21 +19,15 @@
 .statler-give {
   ul { clear: both; margin-top: 0; margin-bottom: 0; padding-left: 0; list-style-type: none; }
   li { display: inline; margin: 0; }
-  img { width: 50%;
-    @include mq($bp-small) {
-      width: 25%;   }
-    @include mq($bp-medium) {
-      width: 75%;   }
-    @include mq($bp-large) {
-      width: 100%;   }
-        }
+  img { width: 45%;}
+
 } //.statler-give
 
 
 .statler-contact, .statler-give, .statler-links { float: left; padding-bottom: 13px; }
 
 .statler-contact, .statler-give, .statler-links { margin-left: 0; margin-right: 0; width: 100%;
-  @include mq($bp-large) {
+  @include mq($bp-medium) {
     width: 33%;
   }
 }
