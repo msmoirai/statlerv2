@@ -16,4 +16,8 @@
 
 .statler-contact, .statler-give, .statler-links { float: left; padding-bottom: 13px; }
 
-.statler-contact, .statler-give, .statler-links { margin-left: 0; margin-right: 0; width: 33%; }
+.statler-contact, .statler-give, .statler-links { margin-left: 0; margin-right: 0; width: 100%; 
+  @include mq($bp-medium) {
+    width: 33%;
+  }
+}
