@@ -3,7 +3,10 @@
 
 
 .statler-news-grid__solo{
-  width: 50%;
+  width: 100%;
+  @include mq($bp-large) {
+    width: 50%;
+  }
   float: left;
   padding-right: 1.5rem;
   margin-top: 0;
@@ -32,17 +35,23 @@
 
 
 .statler-news-grid__more {
-width: 50%;
+width: 100%;
 float: left;
+@include mq($bp-large) {
+  width: 50%;
+}
 h2{
   font-size: 1em;
 }
 li{
   list-style-type: none;
   padding-left: 0;
-  width: 50%;
+  width: 100%;
     float: left;
     padding-left: 1em;
+    @include mq($bp-large) {
+      width: 50%;
+    }
 }
 
 }
