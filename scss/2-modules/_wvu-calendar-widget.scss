@@ -12,6 +12,15 @@
     .eventInfo { float: left; width: 86%; display: inline-block; border-left: solid 3px; padding-left: 1em;}
     .eventTime { font-weight: bold; }
     .eventName { display: block; }
+    @include mq($bp-medium) {
+          display: flex;
+          align-items: stretch;
+          flex-flow: row wrap;
+          li {
+            width: 33%;
+            padding: 0 1em 1em 0;
+          }
+        }
 
 
   }
