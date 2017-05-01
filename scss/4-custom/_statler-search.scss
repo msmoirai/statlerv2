@@ -110,7 +110,7 @@
     }
 }
 
-@include mq($bp-small, false, max) {
+@include mq($bp-medium, false, max) {
     .statler-search{
         padding-bottom:0;
         padding-top:0;

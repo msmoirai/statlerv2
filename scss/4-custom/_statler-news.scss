@@ -4,7 +4,7 @@
 
 .statler-news-grid__solo{
   width: 100%;
-  @include mq($bp-large) {
+  @include mq($bp-medium) {
     width: 50%;
   }
   float: left;
@@ -37,7 +37,7 @@
 .statler-news-grid__more {
 width: 100%;
 float: left;
-@include mq($bp-large) {
+@include mq($bp-medium) {
   width: 50%;
 }
 h2{
@@ -49,22 +49,14 @@ li{
   width: 100%;
     float: left;
     padding-left: 1em;
-    @include mq($bp-large) {
+    @include mq($bp-medium) {
       width: 50%;
     }
 }
 
 }
 
-.statler-news-grid__brief {
-width: 25%;
-float: left;
-li{
-  list-style-type: none;
-  padding-left: 0;
-}
 
-}
 
 
 .article_by-topic .article_by-date .articles__filter-by .wvu-blog-archive ul a{
