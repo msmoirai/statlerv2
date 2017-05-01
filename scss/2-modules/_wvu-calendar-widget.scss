@@ -13,12 +13,10 @@
     .eventTime { font-weight: bold; }
     .eventName { display: block; }
 
-    @include mq($bp-large) {
-      font-size: 33%;
-    }
+
   }
   &.wvu-calendar--flex {
-    @include mq($bp-medium) {
+    @include mq($bp-large) {
       display: flex;
       align-items: stretch;
       flex-flow: row wrap;
