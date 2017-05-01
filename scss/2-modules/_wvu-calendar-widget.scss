@@ -15,28 +15,8 @@
 
 
   }
-  &.wvu-calendar--flex {
-    @include mq($bp-small) {
-      display: flex;
-      align-items: stretch;
-      flex-flow: row wrap;
-      li {
-        width: 100%;
-        padding: 0 1em 1em 0;
-      }
-    }
-  }
-  &.wvu-calendar--flex {
-    @include mq($bp-medium) {
-      display: flex;
-      align-items: stretch;
-      flex-flow: row wrap;
-      li {
-        width: 33%;
-        padding: 0 1em 1em 0;
-      }
-    }
-  }
+
+
 }
 
 bracket-link {
