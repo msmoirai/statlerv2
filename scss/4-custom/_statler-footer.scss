@@ -7,7 +7,8 @@
   li { list-style-type: none; display: inline; }
 
   }
-} //.statler-contact
+ //.statler-contact
+
 .statler-contact li:before, .wvu-links li:before { content: '|'; padding-right: 3px; }
 .statler-contact li:first-child:before,  .wvu-links li:first-child:before { content: ''; padding-right: 0; }
 
@@ -24,15 +25,13 @@
   }
 }
 
-.statler-give{
-img{ width: 50%;
-  @include mq($bp-xsmall) {
-    width: 25%;
-  }
+.statler-give {
+img { width: 50%;
+  @include mq($bp-small) {
+    width: 25%;   }
   @include mq($bp-medium) {
-    width: 75%;
-  }
+    width: 75%;   }
   @include mq($bp-large) {
-    width: 100%;
-  }
+    width: 100%;   }
+      }
 }
