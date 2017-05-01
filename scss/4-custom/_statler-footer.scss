@@ -5,10 +5,7 @@
 .statler-contact,{ clear: left;
   ul, p { margin: 0; padding: 0; margin-bottom: 5px; font-size: .8em;}
   li { list-style-type: none; display: inline; }
-  img{width: 100%;
-    @include mq($bp-medium) {
-      width: 50%;
-    }
+
   }
 } //.statler-contact
 .statler-contact li:before, .wvu-links li:before { content: '|'; padding-right: 3px; }
@@ -24,5 +21,18 @@
 .statler-contact, .statler-give, .statler-links { margin-left: 0; margin-right: 0; width: 100%;
   @include mq($bp-medium) {
     width: 33%;
+  }
+}
+
+.statler-give{
+img{ width: 50%;
+  @include mq($bp-xsmall) {
+    width: 25%;
+  }
+  @include mq($bp-medium) {
+    width: 75%;
+  }
+  @include mq($bp-large) {
+    width: 100%;
   }
 }
