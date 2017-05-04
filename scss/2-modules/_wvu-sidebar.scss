@@ -2,5 +2,6 @@
 // =================================
 
 .wvu-sidebar {
-  @include mq($bp-medium) { @include span-columns(3); }
+  @include mq($bp-medium) { @include span-columns(3);
+  padding-top: 2em;}
 }
