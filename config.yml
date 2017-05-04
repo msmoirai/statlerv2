@@ -5,6 +5,7 @@ description: This is the WVU Brand Patterns theme built for CleanSlate. Original
 ## Attributes, Data and Variables
 custom_site_attributes:
   # For Google Search Console
+  - jobs_rss_url
   - apply_link_1
   - apply_link_1_url
   - apply_link_2
