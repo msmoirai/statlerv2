@@ -1,0 +1,40 @@
+.jobs { 
+	@include span-columns(12);
+	list-style-type: none;
+	margin: 0rem 0 3rem 0;
+	padding: 0;
+	border-top: 1px solid #a2aaad;
+	border-bottom: 1px solid #a2aaad;
+	li{
+		@include span-columns(12);
+		padding: 2rem 1rem;
+		margin: 0;
+		max-width: none;
+		border-bottom: 1px solid #a2aaad;
+		&:last-child{ border-bottom: none; }
+		&:nth-child(even){
+			background-color: #fcfcfc;
+		}
+		.job-title{
+			font-size: 2rem;
+			margin: 0 0 2rem 0;
+		}
+		.job-description{
+			margin: 0 0 2rem 0;
+			line-height: 1.8rem;
+			@include mq($bp-medium) { max-width: 45em; }
+		}
+		.job-share{
+		    p{ display: block;
+		      @include mq($bp-medium){ display: inline-block; padding-right: 1rem;}
+		  	}
+			img{
+			  display: inline-block;
+		  	  height: 48px;
+  			  width: 48px;
+			  margin: 0 0.5rem 0 0;
+			  @include mq($bp-medium) { height: 32px; width: 32px;}
+			}
+		}
+	}
+}
