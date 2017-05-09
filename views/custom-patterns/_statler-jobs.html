@@ -14,8 +14,8 @@
       <r:editable_region name="manual-job-posts"><p>Put manual listing here?</p></r:editable_region>
 
       <r:children:each limit="{$limit}" labels="job" by="name" order="ASC" with_template="job-article">
-          <link><r:article:path/></link>
-      
+        <h2 class="wvu-profile__name"><a href="<r:page:url />"><r:page:name /></a></h2>
+
 
       </r:children:each>
 
