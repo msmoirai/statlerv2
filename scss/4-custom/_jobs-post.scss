@@ -1,11 +1,11 @@
 .jobs {
 	@include span-columns(12);
 	list-style-type: none;
-	margin: 0rem 0 3rem 0;
-	padding: 0;
-	border-top: 1px solid #a2aaad;
-	border-bottom: 1px solid #a2aaad;
 	
+	padding: 0;
+
+	border-bottom: 1px solid #a2aaad;
+
 	li{
 		@include span-columns(12);
 		padding: 2rem 1rem;
