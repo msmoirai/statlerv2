@@ -13,12 +13,12 @@
       </r:editable_region>
       <r:xslt_transform url="{$jobs_rss_url}" xslt_file="/util/rss_1.xslt" />
 
-      <r:editable_region name="manual-job-posts" />
+      <r:editable_region name="manual-job-posts"><p>Put manual listing here?</p></r:editable_region>
 
       <r:children:each limit="{$limit}" labels="{$tags}" by="name" order="ASC" with_template="job-article">
-        <profile>
-          <name><r:page:content name="wvu-profile__name" /></name>
-        </profile>
+
+          <r:page:content name="wvu-profile__name" />
+
       </r:children:each>
     </main>
 
