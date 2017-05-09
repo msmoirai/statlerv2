@@ -17,7 +17,16 @@
         <xsl:value-of select="title"/>
       </a>
       </h2>
-
+      <div class="job-description">
+        <xsl:value-of disable-output-escaping="yes" select="description"/>
+      </div>
+      <a class="button button--blue">
+        <xsl:attribute name="href">
+          <xsl:value-of select="link"/>
+        </xsl:attribute>
+          View this Job
+      </a>
     </li>
   </xsl:template>
 </xsl:stylesheet>
+
