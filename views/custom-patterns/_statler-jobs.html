@@ -14,6 +14,12 @@
       <r:xslt_transform url="{$jobs_rss_url}" xslt_file="/util/rss_1.xslt" />
 
       <r:editable_region name="manual-job-posts" />
+
+      <r:children:each limit="{$limit}" labels="{$tags}" by="name" order="ASC" with_template="job-article">
+        <profile>
+          <name><r:page:content name="wvu-profile__name" /></name>
+        </profile>
+      </r:children:each>
     </main>
 
     <r:partial name="patterns/wvu-sidebar" />
