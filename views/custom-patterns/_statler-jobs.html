@@ -13,7 +13,7 @@
       </r:editable_region>
 
       <ul class="jobs">
-        <r:children:each limit="{$limit}" labels="job" by="name" order="ASC" with_template="job-article">
+        <r:children:each limit="{$limit}"  by="name" order="ASC" with_template="job-article">
           <li>
             <h2 class="job-title"><a href="<r:page:url />"><r:page:name /></a></h2>
           </li>
