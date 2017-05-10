@@ -1,0 +1,52 @@
+<r:if v1="{$backpage_main}" v2="false" op="!=">
+
+  <div class="wvu-container">
+
+  <div class="wvu-container">
+
+    <r:partial name="custom-patterns/secondary-nav" />
+
+    <main id="maincontent" class="<r:page:data name="bgcolor_backpage" /> background main <r:if v1="{$backpage_has_sidebar}" v2="false" op="=">main--wide</r:if> <r:edit_mode_only>main--edit-mode</r:edit_mode_only>">
+
+
+      <div class="wvu-profile__meta-info">
+        <h2 class="wvu-profile__job-title wvu-h5">
+        <r:edit_mode_only>Enter the person's job title or whatever subhead should go under their name.</r:edit_mode_only>
+         <r:editable_region name="wvu-profile__job-title" type="simple" />
+        </h2>
+      </div> <!-- /.wvu-profile__meta-info -->
+
+      <p>
+      <r:edit_mode_only>Enter the description here.</r:edit_mode_only>
+        <r:editable_region name="main" />
+      </p>
+
+    </main><!-- /.main -->
+
+    <aside class="wvu-sidebar">
+      <div class="wvu-profile__photo">
+        <r:editable_region name="wvu-profile__photo" />
+      </div> <!-- /.wvu-profile__photo -->
+      <div class="wvu-profile__meta-info">
+        <p class="wvu-profile__phone-icon">
+         <r:editable_region name="wvu-profile__phone" type="simple" />
+        </p>
+        <p class="wvu-profile__email">
+         <r:editable_region name="wvu-profile__email" />
+        </p>
+        <p class="wvu-profile__location">
+         <r:editable_region name="wvu-profile__location" />
+        </p>
+        <p class="wvu-profile__website">
+         <r:editable_region name="wvu-profile__website" />
+        </p>
+      </div> <!-- /.wvu-profile__meta-info -->
+    </aside>
+     <r:partial name="patterns/wvu-sidebar" />
+
+
+  </div> <!-- /.wvu-container -->
+
+
+
+</r:if>
