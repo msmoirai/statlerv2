@@ -82,12 +82,6 @@ custom_data_attributes:
 
   <main class="main__wvu-profile-individual">
 
-    <h1 class="wvu-profile__name">
-      <r:editable_region name="wvu-profile__name" type="simple">
-        <r:page:name />
-      </r:editable_region>
-    </h1>
-
     <div class="wvu-profile__meta-info">
       <h2 class="wvu-profile__job-title wvu-h5">
       <r:edit_mode_only>Enter the person's job title or whatever subhead should go under their name.</r:edit_mode_only>
@@ -121,7 +115,7 @@ custom_data_attributes:
       </p>
     </div> <!-- /.wvu-profile__meta-info -->
   </aside>
-
+   <r:partial name="patterns/wvu-sidebar" />
 </div> <!-- /.wvu-container -->
 
 <!-- Slots 04 - 10 -->
