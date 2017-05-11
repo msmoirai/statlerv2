@@ -1,0 +1,157 @@
+---
+layout: default
+custom_data_attributes:
+ - backpage_header_badge
+ - header_background
+ - subnav_start_depth
+ - thumbnail_url
+---
+
+<r:set_var name="backpage_header" value="{$backpage_header}" default="true">
+  <r:page:data name="backpage_header" />
+</r:set_var>
+
+<r:set_var name="department_list">
+Accounting,
+BrickStreet Center for Innovation and Entrepreneurship,
+Bureau of Business and Economic Research,
+Business Learning Resource Center,
+Business Office,
+Center for Career Development,
+Center for Chinese Business,
+Center for Executive Education,
+Center for Free Enterprise,
+Communications and Marketing,
+Dean's Office,
+Development,
+Economics,
+Finance,
+Global Supply Chain Management,
+Graduate Programs,
+Hospitality and Tourism Management,
+Information Technology,
+Management,
+Management Information Systems,
+Marketing,
+Robbins Center for Global Business and Strategy,
+Undergraduate Programs
+</r:set_var>
+
+<r:set_var name="dname" value="{$dname}" default="" />
+<r:set_var name="xml_url">http://infostations.wvu.edu/webform/WFBUE.xml?dname=<r:var name="dname" /></r:set_var>
+
+<r:if v1="{$backpage_header}" v2="true" op="=">
+  <r:partial name="custom-patterns/so-backpage-header" />
+</r:if>
+
+<div class="wvu-container">
+
+  <main id="maincontent" class="main <r:if v1="{$backpage_has_sidebar}" v2="false" op="=">main--wide</r:if> <r:edit_mode_only>main--edit-mode</r:edit_mode_only>">
+
+    <r:partial name="custom-patterns/so-page-meta" />
+
+    <r:edit_mode_only>
+      <p><strong>Main body text:</strong></p>
+    </r:edit_mode_only>
+
+    <r:editable_region name="main">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </r:editable_region>
+
+    <r:if expr="{{ NOT(BLANK(dname)) }}">
+      <h1><r:var name="dname" /></h1>
+    </r:if>
+
+    <r:xslt_transform url="{$xml_url}">
+      <?xml version="1.0" encoding="UTF-8"?>
+      <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+      <xsl:output method="html"/>
+        <xsl:template match="/">
+          <ul class="wvu-profile">
+            <r:if expr="{{ NOT(BLANK(dname)) }}">
+              <xsl:variable name="dname"><r:var name="dname" /></xsl:variable>
+              <xsl:apply-templates select="//event[PrimaryDepartment = $dname or SecondaryDepartment = $dname or TertiaryDepartment = $dname]"/>
+            </r:if>
+
+            <r:if expr="{{ BLANK(dname) }}">
+              <xsl:apply-templates select="//event"/>
+            </r:if>
+          </ul>
+        </xsl:template>
+
+        <xsl:template match="event">
+          <li class="wvu-profile__individual">
+
+            <div class="wvu-profile__individual-photo">
+              <a>
+                <xsl:attribute name="href">/faculty-staff/directory/profile?pid=<xsl:value-of select="ProfileID" /></xsl:attribute>
+                <img>
+                  <xsl:attribute name="src"><xsl:value-of select="ProfileImage" /></xsl:attribute>
+                </img>
+              </a>
+            </div> <!-- /.wvu-profile__individual-photo -->
+
+            <div class="wvu-profile__individual-info">
+              <h2 class="wvu-profile__name">
+                <a class="wvu-profile__name-link" href="<r:page:url />">
+                  <xsl:attribute name="href">/faculty-staff/directory/profile?pid=<xsl:value-of select="ProfileID" /></xsl:attribute>
+                  <xsl:value-of select="DisplayName" />
+                </a>
+              </h2>
+
+              <p class="wvu-profile__job-title1"><xsl:value-of select="PrimaryTitle" />, <xsl:value-of select="PrimaryDepartment" /></p>
+
+              <xsl:if test="normalize-space(SecondaryDepartment) != ''">
+                <p class="wvu-profile__job-title2"><xsl:value-of select="SecondaryTitle" />, <xsl:value-of select="SecondaryDepartment" /></p>
+              </xsl:if>
+
+              <xsl:if test="normalize-space(TertiaryDepartment) != ''">
+                <p class="wvu-profile__job-title3"><xsl:value-of select="TertiaryTitle" />, <xsl:value-of select="TertiaryDepartment" /></p>
+              </xsl:if>
+
+              <p class="wvu-profile__phone-icon">
+                <a class="wvu-profile__phone">
+                  <xsl:attribute name="href">tel:<xsl:value-of select="Phone" /></xsl:attribute>
+                  <xsl:value-of select="Phone" />
+                </a>
+              </p>
+              <p class="wvu-profile__email">
+                <a class="wvu-profile__phone">
+                  <xsl:attribute name="href">mailto:<xsl:value-of select="Email" /></xsl:attribute>
+                  <xsl:value-of select="Email" />
+                </a>
+              </p>
+              <p class="wvu-profile__room">
+                <xsl:if test="normalize-space(SecondaryRoomNumber) != ''">
+                  <span><xsl:value-of select="SecondaryRoomNumber" /></span>
+                  <span style="margin-left: 7px;"><xsl:value-of select="SecondaryBuildingName" /></span>
+                </xsl:if>
+
+                <xsl:if test="normalize-space(SecondaryRoomNumber) = ''">
+                  <span><xsl:value-of select="RoomNumber" /></span>
+                  <span style="margin-left: 7px;"><xsl:value-of select="BuildingName" /></span>
+                </xsl:if>
+              </p>
+            </div> <!-- /.wvu-profile__individual-info -->
+
+          </li> <!-- /.wvu-profile__individual -->
+        </xsl:template>
+      </xsl:stylesheet>
+    </r:xslt_transform>
+
+  </main>
+
+  <aside class="wvu-sidebar">
+    <div class="wvu-sub-nav">
+      <ul class="nav-secondary">
+        <li><a href="?dname=">All Departments</a></li>
+        <r:loop:each items="{$department_list}">
+          <li>
+            <a href="?dname=<r:item />"><r:item /></a>
+          </li>
+        </r:loop:each>
+      </ul>
+    </div>
+  </aside>
+
+</div> <!-- /.wvu-container -->
