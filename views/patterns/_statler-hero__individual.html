@@ -1,0 +1,22 @@
+<div class="wvu-hero wvu-hero--<r:site:id /> <r:if value1="{$hero_text_alignment}" value2="right" operator="=">wvu-hero--right</r:if> wvu-hero--big-photo" style="background-image: url(<r:page:content name"statler-hero__bg"><r:file:image_url size="1780x580" /></r:files:each>);">
+  <div class="wvu-hero__container wvu-hero__container--vignetting-<r:page:data name="hero_vignetting" />">
+    <div class="wvu-hero__copy <r:edit_mode_only>wvu-hero__copy--edit-mode</r:edit_mode_only>">
+      <h1><span><r:editable_region name="wvu-hero__header" type="simple">Header Goes Here</r:editable_region></span></h1>
+      <p><r:editable_region name="wvu-hero__text" type="simple">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</r:editable_region></p>
+<p><r:editable_region name="statler-hero__bg" type="simple">Hero Image URL Goes Here</r:editable_region></p>
+      <r:page:if_has_content_for region="wvu-hero__action-item-url">
+        <a href="<r:page:content name="wvu-hero__action-item-url" />" class="button button--white <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="wvu-hero__action-item-text" /></a>
+      </r:page:if_has_content_for>
+      <r:edit_mode_only>
+        <p class="button"><r:editable_region name="wvu-hero__action-item-text" type="simple">Action Item Text</r:editable_region></p>
+        <p><r:editable_region name="wvu-hero__action-item-url" type="simple">URL for action item goes here. If you don't want the hero unit to show up at all, delete the content in this editable region.</r:editable_region></p>
+      </r:edit_mode_only>
+    </div>
+  </div>
+</div>
+
+<r:edit_mode_only>
+  <div class="wvu-instructions">
+    <p><strong>Instructions for Hero:</strong> This is where you feature your most important content and user action. It requires marketing copy for a headline and brief description, a call to action, and a photo. If you cannot provide all of these items, consider omitting this section. See our <a href="http://brand.wvu.edu/brand-guide/voice">guidelines for marketing copy</a> and <a href="http://brand.wvu.edu/brand-guide/graphic-language/photo">using photos</a>. If you want to use a large background image, upload your own background image. Label the image with the page slug of the page that contains the hero and a &ldquo;-hero-background&rdquo; suffix. For example, if the hero is being used on the Home page, label the photo with &ldquo;home-hero-background&rdquo;.</p>
+  </div>
+</r:edit_mode_only>
