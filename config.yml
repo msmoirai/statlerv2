@@ -15,7 +15,7 @@ custom_site_attributes:
   - bgcolor_footer
   - bgcolor_statler_footer
   - bgcolor_search
-  - bgcolor_news
+  - bgcolor_statler_news
   - bgcolor_quicklinks_sitewide
   - bgcolor_supernav_sitewide
   - bgcolor_video_sitewide
