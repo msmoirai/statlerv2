@@ -2,7 +2,7 @@
   <r:page:slug />-hero-background
 </r:set_var>
 
-<div class="wvu-hero wvu-hero--<r:site:id /> <r:if value1="{$hero_text_alignment}" value2="right" operator="=">wvu-hero--right</r:if> wvu-hero--big-photo" style="background-image: url(<r:page:content name"statler-hero__bg"><r:file:image_url size="1780x580" /></r:page:content>);">
+<div class="wvu-hero wvu-hero--<r:site:id /> <r:if value1="{$hero_text_alignment}" value2="right" operator="=">wvu-hero--right</r:if> wvu-hero--big-photo" style="background-image: url(<r:files:each labels="{$bgurl}" limit="1" types="image" random="true"><r:file:image_url size="1780x580" /></r:files:each>);">
   <div class="wvu-hero__container wvu-hero__container--vignetting-<r:page:data name="hero_vignetting" />">
     <div class="wvu-hero__copy <r:edit_mode_only>wvu-hero__copy--edit-mode</r:edit_mode_only>">
       <h1><span><r:editable_region name="wvu-hero__header" type="simple">Header Goes Here</r:editable_region></span></h1>
@@ -13,7 +13,6 @@
       <r:edit_mode_only>
         <p class="button"><r:editable_region name="wvu-hero__action-item-text" type="simple">Action Item Text</r:editable_region></p>
         <p><r:editable_region name="wvu-hero__action-item-url" type="simple">URL for action item goes here. If you don't want the hero unit to show up at all, delete the content in this editable region.</r:editable_region></p>
-          <p><r:editable_region name="statler-hero__bg" type="simple">URL for background image goes here. </r:editable_region></p>
       </r:edit_mode_only>
     </div>
   </div>
