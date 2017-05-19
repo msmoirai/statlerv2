@@ -1,0 +1,20 @@
+
+
+
+<r:children:each with_template="traveler" limit="1" random="true">
+
+<div class="profiles__photo seven columns">
+  <r:page:content name="profiles__photo" />
+</div> <!-- /.profiles__individual -->
+
+<div class="profiles__individual-description nine columns">
+  <h3><r:page:content name="profiles__individual_name" /> <span class="pipe transparent">|</span> <span class="profiles__individual-description__country"><r:page:content name="profiles__individual_country" /></span></h3>
+  <p><r:page:content name="profiles__individual_description" /></p>
+  <a class="profiles__btn btn" href="<r:page:content name="profiles__url" />">More Info</a>
+</div> <!-- /.profiles__individual-description -->
+</r:children:each>
+
+<r:edit_mode_only>
+  <div class="wvu-instructions">
+    <p></p></div>
+</r:edit_mode_only>
