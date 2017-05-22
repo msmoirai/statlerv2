@@ -2,8 +2,8 @@
 
 
 <r:children:each with_template="traveler" limit="1" random="true">
-
-<div class="wvu-container statler-international <r:site:data name="bgcolor_statler_international" /> background">
+<div class="statler-international <r:site:data name="bgcolor_statler_international" /> background">
+<div class="wvu-container">
 <div class="international-photo international-image">
   <r:page:content name="profiles__photo" />
 </div> <!-- /.profiles__individual -->
@@ -14,6 +14,7 @@
   <a class="button button--black" href="<r:page:content name="profiles__url" />">More Info</a>
 </div> <!-- /.profiles__individual-description -->
 </div><!-- wvu-container end -->
+</div>
 </r:children:each>
 
 <r:edit_mode_only>
