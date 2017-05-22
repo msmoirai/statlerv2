@@ -3,14 +3,14 @@
 
 <r:children:each with_template="traveler" limit="1" random="true">
 
-<div class="wvu-container">
-<div class="profiles__photo seven columns">
+<div class="wvu-container statler-international">
+<div class="international-photo">
   <r:page:content name="profiles__photo" />
 </div> <!-- /.profiles__individual -->
 
-<div class="profiles__individual-description nine columns">
+<div class="international-profile">
   <h3><r:page:name /> <span class="pipe transparent">|</span> <span class="profiles__individual-description__country"><r:page:content name="profiles__individual_country" /></span></h3>
-  <p><r:page:content name="profiles__individual_description" /></p>
+  <p><r:page:content name="profiles__individual_lede" /></p>
   <a class="button button--black" href="<r:page:content name="profiles__url" />">More Info</a>
 </div> <!-- /.profiles__individual-description -->
 </div><!-- wvu-container end -->
