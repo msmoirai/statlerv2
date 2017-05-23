@@ -23,15 +23,20 @@
         font-size: 6.2em;
         }
     }
+    a{
+      color:white;
+    }
+    a:visited {
+      color:white;
+    }
 
 }
 .image-bar-background__container {
-	max-width: 1560px;
+	max-width: 75em;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    padding-left: 1em;
-    padding-right: 1em;
+
     @include mq($bp-medium){
     	padding-left: 1em;
     	padding-right: 1em;
