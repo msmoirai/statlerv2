@@ -1,3 +1,11 @@
-<div class="<blue background">
-  <r:partial name="custom-patterns/statler-image-bar" />
+<r:children:each with_template="image-bar" limit="0" random="true">
+<div class="image-bar-background" style="background-image: url(<r:page:content name="statler__image-bar-background-label"><r:file:image_url size="1780x580" /></r:page:content>);">
+  <div class="image-bar-background__container">
+      <a href="<r:page:content name="statler__image-bar-url" />">
+      <h1><r:page:content name="statler__image-bar" /></h1>
+    </a>
+
+    
+  </div><!-- End Back Page Header Container -->
+</div><!-- End Back Page Header -->
 </div>
