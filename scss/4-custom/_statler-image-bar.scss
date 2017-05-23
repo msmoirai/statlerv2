@@ -1,0 +1,43 @@
+.image-bar-background{
+	background-color: #002855;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+	h1 {
+    .fonts-loaded & { font-family: $wvu-shout; }
+    font-family: $wvu-shout-fallback;
+    color: white;
+    font-size: 3em;
+    line-height: 0.80487em;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-shadow: 1px 1px 1px #000000;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+    @include mq($bp-medium){
+        margin-bottom: 1rem;
+        margin-top: 13rem;
+        font-size: 6.2em;
+        }
+    }
+
+}
+.image-bar-background__container {
+	max-width: 1560px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-left: 1em;
+    padding-right: 1em;
+    @include mq($bp-medium){
+    	padding-left: 1em;
+    	padding-right: 1em;
+    }
+    @include mq($bp-large){
+    	padding-left: 1em;
+    	padding-right: 1em;
+    }
+}
