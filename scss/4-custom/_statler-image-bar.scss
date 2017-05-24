@@ -36,5 +36,8 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
+		@include mq($bp-medium, false, max) {
+			padding-left: 1em;
+		}
 
 }
