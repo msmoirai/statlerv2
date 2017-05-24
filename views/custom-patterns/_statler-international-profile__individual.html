@@ -52,15 +52,16 @@
         <h3><r:editable_region name="wvu-sub-nav__label" type="simple">Sub-Nav</r:editable_region></h3>
       </r:edit_mode_only>
 
-      
-      <div class="wvu-sub-nav">
+
+    <div class="wvu-sub-nav">
         <ul class="nav-secondary">
-          <r:children:each by="name" order="ASC" with_template="traveler" limit="0" random="false">
+          <r:children:each with_template="traveler" >
             <li>
-              <a class="button button--black" href="<r:page:url />"><r:page:name /></a>
+              <a href="<r:page:url />"><r:page:name /></a>
             </li>
           </r:children:each>
-        </ul></div> <!-- /.wvu-sub-nav -->
+        </ul>
+      </div> <!-- /.wvu-sub-nav -->
     </r:if>
 
     <r:page:if_has_content_for region="wvu-sidebar-content-2" always_show_in_edit_mode="true">
