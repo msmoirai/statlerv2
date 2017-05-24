@@ -51,9 +51,16 @@
       <r:edit_mode_only>
         <h3><r:editable_region name="wvu-sub-nav__label" type="simple">Sub-Nav</r:editable_region></h3>
       </r:edit_mode_only>
+
+      
       <div class="wvu-sub-nav">
-        <r:ancestor_menu start_depth="2" max_depth="3" ul_class="nav-secondary" active_class="nav-secondary--current-page" open_class="nav-secondary--open" />
-      </div> <!-- /.wvu-sub-nav -->
+        <ul class="nav-secondary">
+          <r:children:each by="name" order="ASC" with_template="traveler" limit="0" random="false">
+            <li>
+              <a class="button button--black" href="<r:page:url />"><r:page:name /></a>
+            </li>
+          </r:children:each>
+        </ul></div> <!-- /.wvu-sub-nav -->
     </r:if>
 
     <r:page:if_has_content_for region="wvu-sidebar-content-2" always_show_in_edit_mode="true">
