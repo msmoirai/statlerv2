@@ -18,18 +18,17 @@
     margin-bottom: 3rem;
     margin-top: 3rem;
     @include mq($bp-medium){
-        margin-bottom: 1rem;
-        margin-top: 4rem;
+        margin-bottom: 3rem;
+        margin-top: 3rem;
         font-size: 6.2em;
         }
-        a{
-          color:white;
-        }
-        a:visited {
-          color:white;
-        }
     }
-
+		a{
+			color:white;
+		}
+		a:visited {
+			color:white;
+		}
 
 }
 .image-bar-background__container {
