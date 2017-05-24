@@ -10,8 +10,8 @@
     .fonts-loaded & { font-family: $wvu-shout; }
     font-family: $wvu-shout-fallback;
     color: white;
-    font-size: 3em;
-    line-height: 0.80487em;
+    font-size: 4em;
+    line-height: 1em;
     text-transform: uppercase;
     font-weight: normal;
     text-shadow: 1px 1px 1px #000000;
@@ -20,7 +20,7 @@
     @include mq($bp-medium){
         margin-bottom: 3rem;
         margin-top: 3rem;
-        font-size: 6.2em;
+        font-size: 4em;
         }
     }
 		a{
