@@ -111,3 +111,41 @@ li.manual-last{
       position: relative;
       }
   }
+
+	//-- 3 Col List
+	.u-tri-list.u-tri-list { // Specificity, gah!
+	  padding-left: 0;
+	  margin-left: 0;
+	} //.u-link-list
+
+	.u-tri-list {
+	  list-style-type: none;
+	  margin-top: 10px;
+	  margin-bottom: 30px;
+	  li {
+	    margin-top: 1rem;
+	    margin-bottom: 1.5rem;
+	    ul {
+	      display: block;
+	      li{
+	        display: list-item;
+	        float: none;
+	        width: 100%;
+	        list-style: initial;
+	        margin-bottom: 1rem;
+	        } //.u-link-list li
+	    } //.u-link-list ul
+	    &:last-child{border-bottom: none;}
+	    @include mq($bp-medium) {
+	      @include span-columns(6);
+	      @include omega(2n);
+	      border-bottom: none;
+	      margin-bottom: 2rem;
+	    } //mq
+	    @include mq($bp-xlarge) {
+	      @include u-omega-reset(2n);
+	      @include span-columns(4);
+	      @include omega(3n);
+	    } //mq
+	  } //li
+	}
