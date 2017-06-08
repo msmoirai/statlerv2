@@ -131,6 +131,9 @@ li.manual-last{
 	        width: 100%;
 	        list-style: initial;
 	        margin-bottom: 1rem;
+					h2 {
+						font-size: 2em;
+					}
 	        } //.u-link-list li
 	    } //.u-link-list ul
 	    &:last-child{border-bottom: none;}
