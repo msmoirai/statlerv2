@@ -143,7 +143,7 @@ li.manual-last{
 	      margin-bottom: 2rem;
 	    } //mq
 	    @include mq($bp-xlarge) {
-	      @include u-omega-reset(2n);
+	      @include omega-reset(2n);
 	      @include span-columns(4);
 	      @include omega(3n);
 	    } //mq
