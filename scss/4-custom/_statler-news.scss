@@ -125,10 +125,13 @@ li{
     max-width: 33em;
     margin-top: 2em 0;
     color: #E35205;
+    a a:visited {
+      color: #E35205;
+    }
 }
 
-.statler-article__lede
-p:first-child:first-letter {
+.statler-article__lede {
+  p:first-child:first-letter {
     float: left;
     line-height: 0.80487em;
     font-family: "HelveticaNeueW01-97Blac", "Helvetica W01 Bold", Helvetica, Arial, sans-serif;
@@ -136,4 +139,12 @@ p:first-child:first-letter {
     font-weight: normal;
     font-size: 6em;
     padding-right: 20px;
+  }
+}
+.statler-article__copy{
+p{
+  color: #555;
+  line-height: 1.75em;
+  font-size: 1em;
+}
 }
