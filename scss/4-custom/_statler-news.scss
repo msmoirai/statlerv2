@@ -52,7 +52,13 @@ li{
     @include mq($bp-medium) {
       width: 50%;
       padding-left: 1em;
+      margin-top: 0;
     }
+}
+ul{
+  @include mq($bp-medium){
+    margin-top:0;
+  }
 }
 
 }
