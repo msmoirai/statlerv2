@@ -125,12 +125,12 @@ li{
     max-width: 33em;
     margin-top: 2em 0;
     color: #E35205;
-    a a:visited {
+    a, a:visited {
       color: #E35205;
     }
 }
 
-.statler-article__lede.p:first-child:first-letter {
+p.statler-article__lede:first-child:first-letter {
     float: left;
     line-height: 0.80487em;
     font-family: "HelveticaNeueW01-97Blac", "Helvetica W01 Bold", Helvetica, Arial, sans-serif;
