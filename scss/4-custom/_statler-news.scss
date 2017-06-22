@@ -118,10 +118,22 @@ li{
 
 }
 .statler-article__lede {
-    font-size: 1.4em;
-    font-family: "HelveticaNeueW01-45Ligh", "Helvetica Neue", Helvetica, "Helvetica LT Std", "Helvetica CY", Arial, "Lucida Grande", sans-serif;
+    font-size: 1.5em;
+    font-family: "IowanOldStyleW01-Roman", Georgia, Times, serif;
     line-height: 1.5em;
-    margin-bottom: 1em;
+
     max-width: 33em;
-    margin-top: 0;
+    margin-top: 2em 0;
+    color: #E35205;
+}
+
+.statler-article__lede
+p:first-child:first-letter {
+    float: left;
+    line-height: 0.80487em;
+    font-family: "HelveticaNeueW01-97Blac", "Helvetica W01 Bold", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 6em;
+    padding-right: 20px;
 }
