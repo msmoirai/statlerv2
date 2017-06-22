@@ -6,10 +6,16 @@
 }
 
 .form-search__search-type {
-  label {
-    float: left; margin: 0 1em 0 .5em;
-  }
-  input { float: left; position: relative; top: 3px; }
+    legend {
+        position: absolute;
+        left: -9999999em;
+    }
+    label {
+        float: left; margin: 0 1em 0 .5em;
+    }
+    input {
+        float: left; position: relative; top: 3px;
+    }
 }
 
 .wvu-search__search-bar { padding-top: 2.1em; font-size: .8em;
