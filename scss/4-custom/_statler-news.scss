@@ -98,9 +98,14 @@ li{
 
 .statler-article__title {
   h1{
+    font-family: "HelveticaNeueW01-97Blac", "Helvetica W01 Bold", Helvetica, Arial, sans-serif;
+    color: #2C2A29;
+    line-height: 0.80487em;
+    text-transform: uppercase;
+    font-weight: normal;
     font-size: 2em;
     @include mq($bp-large) {
-      font-size: 4em;
+      font-size: 5em;
     }
   }
 }
