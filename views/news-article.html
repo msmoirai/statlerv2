@@ -165,12 +165,12 @@ custom_data_attributes:
                 <li>
                   <r:page:if_has_content_for region="meta-external-link">
                   <a href="<r:page:content name="meta-external-link" />">
-                    <r:page:first_non_blank_attr names="title" />
+                    <r:page:article:name />
                   </a>
                 </r:page:if_has_content_for>
                 <r:page:unless_has_content_for region="meta-external-link">
                   <a href="<r:article:path />">
-                    <r:page:first_non_blank_attr names="title" />
+                    <r:article:name />
                   </a>
                 </r:page:unless_has_content_for>
               </li>
