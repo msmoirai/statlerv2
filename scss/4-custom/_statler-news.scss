@@ -111,7 +111,7 @@ li{
 }
 .statler-article__location {
     font-style: italic;
-    font-family: "IowanOldStyleW01-Roman", Georgia, Times, serif;
+    font-family: "Helvetica Neue",Helvetica,"Helvetica LT Std","Helvetica CY",Arial,"Lucida Grande",sans-serif;
     color: #333f48;
     font-size: .8em;
     margin-top: 2em;
@@ -121,7 +121,7 @@ li{
     font-size: 1.5em;
     font-family: "IowanOldStyleW01-Roman", Georgia, Times, serif;
     line-height: 1.5em;
-
+-webkit-font-smoothing:antialiased;
     max-width: 33em;
     margin-top: 2em 0;
     color: #E35205;
@@ -141,9 +141,9 @@ p.statler-article__lede:first-letter {
 
 }
 .statler-article__copy{
-p{
+  font-family: "IowanOldStyleW01-Roman", Georgia, Times, serif;
   color: #555;
   line-height: 1.75em;
   font-size: 1em;
-}
+
 }
