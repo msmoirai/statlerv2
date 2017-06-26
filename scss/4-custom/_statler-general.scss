@@ -29,7 +29,7 @@
     	&:hover{background-color: $wvu-gold;}
       }
     }
-  @include mq($bp-medium) { @include span-columns(2.5); } 
+  @include mq($bp-medium) { @include span-columns(2.5); }
 }
 
 .pagetitle{
@@ -153,4 +153,16 @@ li.manual-last{
 	      @include omega(3n);
 	    } //mq
 	  } //li
+	}
+
+	.wvu-gold {
+	  color: #eaaa02;
+	}
+
+	.button--wvu-gold {
+		color: #eaaa02;
+		border: 2px solid #eaaa02;
+		.button--wvu-gold:visited {
+    color: #eaaa02;
+}
 	}
