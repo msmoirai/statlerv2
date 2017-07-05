@@ -155,14 +155,7 @@ li.manual-last{
 	  } //li
 	}
 
-	.wvu-gold {
-	  color: #eaaa02;
-	}
-
-	.button--wvu-gold {
-		color: #eaaa02;
-		border: 2px solid #eaaa02;
-		.button--wvu-gold:visited {
-    color: #eaaa02;
-}
-	}
+	.wvu-alert { color: $alert-color }
+	.wvu-error { color: $error-color }
+	.wvu-notice { color: $notice-color }
+	.wvu-success { color: $success-color }

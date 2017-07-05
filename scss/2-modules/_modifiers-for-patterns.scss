@@ -19,7 +19,7 @@
     &:hover { color: $pms-300-c; }
     &:visited { color: $wvu-blue; }
   }
-  .wvu-masthead__link { color: $wvu-blue;
+  .wvu-masthead__link { color: $wvu-blue; background-color: $wvu-gold;
     &:hover { color: $wvu-base-link-color; }
   }
   .wvu-masthead__college-link a { background: $wvu-blue; color: white; }
@@ -34,7 +34,7 @@
   .wvu-masthead__logo { color: $wvu-blue;
     &:hover { color: $pms-300-c; }
   }
-  .wvu-masthead__link { color: $wvu-blue;
+  .wvu-masthead__link { color: $wvu-blue; background-color: white;
     &:hover { color: $wvu-base-link-color; }
   }
   .wvu-masthead__college-link a { background: $wvu-gold; }
@@ -360,7 +360,7 @@
     &:hover { color: $pms-300-c; }
     &:visited { color: white; }
   }
-  .wvu-masthead__link { color: white;
+  .wvu-masthead__link { color: white; background-color: $wvu-blue;
     &:hover { color: shade(white, 10%); }
   }
   .wvu-masthead__college-link a { background: $wvu-gold; color: $wvu-blue; }
