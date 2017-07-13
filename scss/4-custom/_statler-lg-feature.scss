@@ -1,0 +1,25 @@
+.statler-lg-feature {
+    background-color: #EAAA00;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    min-height: 36em;
+  }
+
+  .statler-lg-feature__container {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4em 0 4.3em 0;
+}
+
+.statler-lg-feature__copy h2 {
+    color: #002855;
+    font-family: "IowanOldStyleW01-Roman", Georgia, Times, serif;
+}
+
+.statler-lg-feature__copy p {
+    color: #333F48;
+}
