@@ -23,3 +23,12 @@
 .statler-lg-feature__copy p {
     color: #333F48;
 }
+
+.rcm-careers__copy {
+    float: right;
+    display: block;
+    margin-right: 2.35765%;
+    @include mq($bp-medium) {
+      width: 48.82117%;
+    }
+}
