@@ -14,13 +14,14 @@
 
 .double-section h2 {
     font-family: "HelveticaNeueW01-97Blac", "Helvetica Neue", Helvetica, "Helvetica LT Std", "Helvetica CY", Arial, "Lucida Grande", sans-serif;
-    color: #002855;
+    color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 3em;
+    font-size: 1.75em;
+    padding: 0.5em;
 }
 
-.double-section__header {
+.double-section__header p {
     font-size: 1.75em;
     font-family: "HelveticaNeueW01-45Ligh","Helvetica Neue",Helvetica,"Helvetica LT Std","Helvetica CY",Arial,"Lucida Grande",sans-serif;
     font-weight: normal;
