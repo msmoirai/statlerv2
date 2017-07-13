@@ -11,7 +11,9 @@
       </r:editable_region>
     </div>
 
+<r:page:if_has_content_for region="wvu-action-hero__url" always_show_in_edit_mode="true">
     <a href="<r:page:content name="wvu-action-hero__url" />" class="button button--wvu-blue-fill <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="wvu-action-hero__button-text" /></a>
+</r:page:if_has_content_for>
     <r:edit_mode_only>
       <a class="button"><r:editable_region name="wvu-action-hero__button-text" type="simple">Button Text</r:editable_region></a>
       <p>
