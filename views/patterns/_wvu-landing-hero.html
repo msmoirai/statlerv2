@@ -1,0 +1,36 @@
+<r:set_var name="bgurl">
+  <r:page:slug />-hero-background
+</r:set_var>
+
+<div class="wvu-admin-hero wvu-admin-hero--<r:site:id />" style="background-image: url(<r:files:each labels="{$bgurl}" limit="1" types="image" random="true"><r:file:image_url size="1780x580" /></r:files:each>);">
+  <div class="wvu-admin-hero__container wvu-admin-hero__container--vignetting-<r:page:data name="hero_vignetting" />">
+    <div class="wvu-admin-hero__copy <r:page:unless_has_content_for region="wvu-admin-hero__links">wvu-admin-hero__copy--wide</r:page:unless_has_content_for>">
+      <h1><r:editable_region name="wvu-admin-hero__h1" type="simple">Header text goes here.</r:editable_region></h1>
+      <p><r:editable_region name="wvu-admin-hero__p" type="simple">Optional paragraph text goes here.</r:editable_region></p>
+      <r:page:if_has_content_for region="wvu-hero__action-item-url">
+        <a href="<r:page:content name="wvu-hero__action-item-url" />" class="button button--white <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="wvu-hero__action-item-text" /></a>
+      </r:page:if_has_content_for>
+      <r:edit_mode_only>
+        <p class="button"><r:editable_region name="wvu-hero__action-item-text" type="simple">Action Item Text</r:editable_region></p>
+        <p><r:editable_region name="wvu-hero__action-item-url" type="simple">URL for action item goes here. If you don't want the hero unit to show up at all, delete the content in this editable region.</r:editable_region></p>
+      </r:edit_mode_only>
+    </div>
+    <r:page:if_has_content_for region="wvu-admin-hero__links" always_show_in_edit_mode="true">
+      <div class="wvu-admin-hero__links">
+        <r:editable_region name="wvu-admin-hero__links">
+          <ul>
+            <li><a href="#">Action 1</a></li>
+            <li><a href="#">Action 2</a></li>
+            <li><a href="#">Action 3</a></li>
+          </ul>
+        </r:editable_region>
+      </div>
+    </r:page:if_has_content_for>
+  </div>
+</div>
+
+<r:edit_mode_only>
+  <div class="wvu-instructions">
+    <p><strong>Instructions for Admin Hero:</strong> This is meant for an intro paragraph and 3-4 action items to the right. Use it more for administrative sites that do not need fancy marketing visuals.</p>
+  </div>
+</r:edit_mode_only>
