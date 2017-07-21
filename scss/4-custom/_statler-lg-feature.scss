@@ -2,13 +2,22 @@
     background-repeat: no-repeat;
   }
 
-  .statler-lg-feature__container {
+  .statler-lg-feature-left__container {
     max-width: 68em;
     padding: 4em 0 4.3em 0;
     @include mq($bp-medium) {
       width: 48.82117%;
       margin-left: 52%;
     }
+}
+
+.statler-lg-feature-right__container {
+  max-width: 68em;
+  padding: 4em 0 4.3em 0;
+  @include mq($bp-medium) {
+    width: 48.82117%;
+    margin-right: 52%;
+  }
 }
 
 .statler-lg-feature__copy h2 {

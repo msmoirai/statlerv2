@@ -1,0 +1,31 @@
+<div class="statler-search">
+
+    <div class="search-left">
+        <div class="search-left-inner">
+          <h1><r:editable_region name="statler-action-blue-title" scope="site" /></h1>
+          <r:page:if_has_content_for region="wvu-hero__action-item-url">
+            <a href="<r:page:content name="statler__action-item-url" />" class="button button--white event-button <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="statler__action-item-text" /></a>
+          </r:page:if_has_content_for>
+          <r:edit_mode_only>
+
+            <p class="button"><r:editable_region name="statler__action-item-text" type="simple">Action Item Text</r:editable_region></p>
+            <p><r:editable_region name="statler__action-item-url" type="simple"></r:editable_region></p>
+          </r:edit_mode_only>
+        </div>
+    </div>
+
+    <div class="search-right" style="background-image: url(<r:files:each labels="event" limit="1" types="image" random="true"><r:file:image_url size="1780x580" /></r:files:each>);">
+
+          <h1><r:editable_region name="statler-action-blue-title" scope="site" /></h1>
+          <r:page:if_has_content_for region="wvu-hero__action-item-url">
+            <a href="<r:page:content name="statler__action-item-url" />" class="button button--white event-button <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="statler__action-item-text" /></a>
+          </r:page:if_has_content_for>
+          <r:edit_mode_only>
+
+            <p class="button"><r:editable_region name="statler__action-item-text" type="simple">Action Item Text</r:editable_region></p>
+            <p><r:editable_region name="statler__action-item-url" type="simple"></r:editable_region></p>
+          </r:edit_mode_only>
+
+    </div>
+
+</div>
