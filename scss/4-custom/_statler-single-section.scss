@@ -1,0 +1,37 @@
+.single-section {
+    background: url(http://www.statler.wvu.edu/files/4a686b2f-f522-4f99-b3de-fa7a8e477a47/700x236?cb=1452272290) 50% 50%;
+    background-size: cover;
+}
+
+.double-section-container {
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .5em 0;
+
+}
+
+.single-section-color {
+    background: rgba(44,42,41,.65);
+}
+
+
+.single-section h2 {
+    font-family: "HelveticaNeueW01-97Blac", "Helvetica Neue", Helvetica, "Helvetica LT Std", "Helvetica CY", Arial, "Lucida Grande", sans-serif;
+    color: #EAAA00;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 3em;
+
+    text-align: center;
+}
+
+.single-section__header p {
+    font-size: 1.75em;
+    font-family: "HelveticaNeueW01-45Ligh","Helvetica Neue",Helvetica,"Helvetica LT Std","Helvetica CY",Arial,"Lucida Grande",sans-serif;
+    font-weight: normal;
+    line-height: 1.08333em;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    color: white;
+}
