@@ -1,0 +1,58 @@
+.stats-layout {
+      background-color: #005EB8;
+  }
+  .main-number {
+      font-family: "HelveticaNeueW01-97Blac",Impact,"Helvetica Neue",Helvetica,"Helvetica LT Std","Helvetica CY",Arial,"Lucida Grande",sans-serif;
+      font-weight: 400;
+      line-height: .8;
+      font-size: 4rem;
+      margin-bottom: .75rem;
+      text-shadow: 0 0.125rem #002855;
+      color: #eaaa00;
+      -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  display: inline-block;
+  }
+  .secondary-number {
+      color: #9BD3DD;
+      display: inline-block;
+      font-family: "HelveticaNeueW01-97Blac",Impact,"Helvetica Neue",Helvetica,"Helvetica LT Std","Helvetica CY",Arial,"Lucida Grande",sans-serif;
+      font-weight: 400;
+      line-height: .8;
+      font-size: 4rem;
+      margin-bottom: .75rem;
+      text-shadow: 0 0.125rem #002855;
+  }
+  .text {
+      font-size: 1.5rem;
+      color: #fff;
+      line-height: .8em;
+      display: block;
+      -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+  .stat-container{
+      text-align: left;
+      padding-right: 4rem;
+      padding-bottom: 0;
+  display: flex;
+  border-right: none;
+      float: left;
+
+
+  }
+  .stat-layout{
+          display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  }
