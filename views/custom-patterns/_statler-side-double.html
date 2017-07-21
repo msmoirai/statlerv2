@@ -1,18 +1,18 @@
 <div class="statler-search">
 
-    <div class="search-left">
-        <div class="search-left-inner">
-        <h1><r:editable_region name="statler-search-title-1"/></h1>
-        <p><r:editable_region name="statler-search-desc-1"/></p>
-        <r:page:if_has_content_for region="left-side__action-item-url">
-          <a href="<r:page:content name="left-side__action-item-url" />" class="button button--white event-button <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="left-side__action-item-text" /></a>
-        </r:page:if_has_content_for>
-        <r:edit_mode_only>
-
-          <p class="button"><r:editable_region name="left-side__action-item-text" type="simple">Action Item Text</r:editable_region></p>
-          <p><r:editable_region name="left-side__action-item-url" type="simple"></r:editable_region></p>
-        </r:edit_mode_only>
-    </div>
+  <div class="search-left">
+      <div class="search-left-inner">
+      <h1><r:editable_region name="statler-search-title-1"/></h1>
+      <p><r:editable_region name="statler-search-desc-1"/></p>
+      <form id="form-search--majors" class="form-search form-search--majors" role="search" method="get" action="/future-students/majors" aria-label="Major Search">
+          <label class="form-search__label form-search__label--majors" for="q">
+              <span class="form-search__label-text form-search__text--majors">Search Majors</span>
+              <input id="q" class="form-search__field form-search__field--majors " type="search" placeholder="Search our majors..." maxlength="256" name="cquery">
+          </label>
+          <input class="form-search__submit form-search__submit--majors" type="submit" value="SearchMajor" name="submit">
+      </form>
+      </div>
+  </div>
 
 
 
