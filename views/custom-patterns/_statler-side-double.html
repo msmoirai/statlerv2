@@ -17,7 +17,8 @@
 
 
 
-    <div class="search-right" style="background-image: url(<r:files:each labels="alumni" limit="1" types="image" random="true"><r:file:image_url size="1780x580" /></r:files:each>);">
+    <div class="search-right" style="style="background-image: url(<r:page:content name="right__background-label"><r:file:image_url  /></r:page:content>);
+      background-color: <r:page:content name="right__background-color">
 
           <h1><r:editable_region name="statler-title-right"/></h1>
           <p><r:editable_region name="statler-desc-right"/></p>
@@ -28,6 +29,8 @@
 
             <p class="button"><r:editable_region name="right-side__action-item-text" type="simple">Action Item Text</r:editable_region></p>
             <p><r:editable_region name="right-side__action-item-url" type="simple"></r:editable_region></p>
+            <p><r:editable_region name="right__background-label" type="simple">Background Image URL</r:editable_region></p>
+            <p><r:editable_region name="right__background-color" type="simple">Background Color</r:editable_region></p>
           </r:edit_mode_only>
 
     </div>
