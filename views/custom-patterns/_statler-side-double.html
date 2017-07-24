@@ -5,7 +5,7 @@
       <h1><r:editable_region name="statler-search-title-1"/></h1>
       <p><r:editable_region name="statler-search-desc-1"/></p>
       <r:page:if_has_content_for region="left-side__action-item-url">
-        <a href="<r:page:content name="left-side__action-item-url" />" class="button button--wvu-blue-fill event-button <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="right-side__action-item-text" /></a>
+        <a href="<r:page:content name="left-side__action-item-url" />" class="button button--wvu-blue-fill event-button <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="left-side__action-item-text" /></a>
       </r:page:if_has_content_for>
       <r:edit_mode_only>
 
@@ -19,8 +19,8 @@
 
     <div class="search-right" style="background-image: url(<r:files:each labels="alumni" limit="1" types="image" random="true"><r:file:image_url size="1780x580" /></r:files:each>);">
 
-          <h1><r:editable_region name="statler-action-blue-title"/></h1>
-          <p><r:editable_region name="statler-search-desc-1"/></p>
+          <h1><r:editable_region name="statler-title-right"/></h1>
+          <p><r:editable_region name="statler-desc-right"/></p>
           <r:page:if_has_content_for region="right-side__action-item-url">
             <a href="<r:page:content name="right-side__action-item-url" />" class="button button--white event-button <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="right-side__action-item-text" /></a>
           </r:page:if_has_content_for>
