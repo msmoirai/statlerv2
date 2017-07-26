@@ -31,6 +31,12 @@
       top: -83px;
       z-index: -3;
     }
+
+      margin-top: .8em;
+      @include mq($bp-large) {
+        font-size: 6.2em;
+        max-width: 6em;
+
   }
   h1, p {
     text-shadow: 1px 1px 1px #000000;
