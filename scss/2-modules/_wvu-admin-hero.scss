@@ -35,7 +35,7 @@
       @include mq($bp-large) {
         font-size: 6.2em;
         max-width: 6em;
-
+      }
   }
   h1, p {
     text-shadow: 1px 1px 1px #000000;
@@ -110,12 +110,10 @@ $i: 90;
 }
 
 .wvu-admin-hero__copy {
-  @include mq($bp-medium) {
-    @include span-columns(6);
-  }
   margin-bottom: 2em;
   @include mq($bp-medium) {
     margin-bottom: 0;
+    @include span-columns(6);
   }
 }
 
