@@ -26,6 +26,7 @@
     font-size: 3em;
     @include so-gold-slash();
     &:before {
+      top: -83px;
       background-size: 433px;
       left: -240px;
       top: -124px;
@@ -112,8 +113,8 @@ $i: 90;
 .wvu-admin-hero__copy {
   margin-bottom: 2em;
   @include mq($bp-medium) {
-    margin-bottom: 0;
-    @include span-columns(6);
+    @include span-columns(7);
+
   }
 }
 
