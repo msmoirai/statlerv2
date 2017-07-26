@@ -27,9 +27,11 @@
     @include so-gold-slash();
     &:before {
       top: -83px;
-      background-size: 433px;
-      left: -240px;
-      top: -124px;
+      background-size: 292px;
+      left: -173px;
+      top: -83px;
+      z-index: -3;
+
     }
 
       margin-top: .8em;
