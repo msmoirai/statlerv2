@@ -41,14 +41,15 @@
 
   <body class="<r:page:template:name /> page--<r:page:id /> page--<r:page:slug /> <r:edit_mode_only>page--edit-mode page--hide-instructions-<r:site:data name="hide_instructions" /></r:edit_mode_only>">
 
-    <a class="wvu-skip-nav" href="#maincontent">Skip to main content</a>
+    <header>
+      <a class="wvu-skip-nav" href="#wvu-main-content">Skip to main content</a>
 
-    <r:if expr="{{ NOT(BLANK(slot_00_masthead)) }}">
-      <r:set_var name="patternNameMasthead">
-        patterns/wvu-<r:site:data name="slot_00_masthead" />
-      </r:set_var>
-      <r:partial name="{$patternNameMasthead}" />
-    </r:if>
+      <r:if expr="{{ NOT(BLANK(slot_00_masthead)) }}">
+        <r:set_var name="patternNameMasthead">
+          patterns/wvu-<r:site:data name="slot_00_masthead" />
+        </r:set_var>
+        <r:partial name="{$patternNameMasthead}" />
+      </r:if>
 
     <r:if expr="{{ NOT(BLANK(slot_00_nav)) }}">
       <r:set_var name="patternNameNav">
@@ -57,14 +58,18 @@
       <r:partial name="{$patternNameNav}" />
     </r:if>
 
-    <r:comment><!-- What are layouts and <r:yield />? http://goo.gl/DFAsPv --></r:comment>
-    <r:yield />
+    <main>
+      <r:comment><!-- What are layouts and <r:yield />? http://goo.gl/DFAsPv --></r:comment>
+      <r:yield />
 
-    <r:partial name="patterns/wvu-slots--sitewide" />
+      <r:partial name="patterns/wvu-slots--sitewide" />
+    </main>
 
-    <r:if value1="{$has_standard_footer}" value2="false" operator="!=">
-      <r:partial name="patterns/wvu-footer" />
-    </r:if>
+    <footer>
+      <r:if value1="{$has_standard_footer}" value2="false" operator="!=">
+        <r:partial name="patterns/wvu-footer" />
+      </r:if>
+    </footer>
 
     <r:edit_mode_only>
       <div class="wvu-instructions">
