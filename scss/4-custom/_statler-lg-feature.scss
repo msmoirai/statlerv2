@@ -6,6 +6,7 @@
   background-position: right 0px top 0px;
 }
   .statler-lg-feature-left__container {
+    background: radial-gradient(farthest-side at 90% 55%, transparent, #fff 131%);
     max-width: 68em;
     padding: 4em 2.7em 4.3em 2.7em;
     @include mq($bp-medium) {
@@ -16,6 +17,7 @@
 }
 
 .statler-lg-feature-right__container {
+  background: radial-gradient(farthest-side at 90% 55%, transparent, #fff 131%);
   max-width: 68em;
   padding: 4em 2.7em 4.3em 2.7em;
   @include mq($bp-medium) {

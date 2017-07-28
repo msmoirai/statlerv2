@@ -59,7 +59,7 @@
     position: relative;
     z-index: 3;
     font-size: 1em;
-    line-height: 1.5em;
+    line-height: 1em;
     /*!-- max-width: 24em; --!*/
 
     @include mq($bp-medium) {
