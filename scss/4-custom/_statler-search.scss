@@ -28,7 +28,10 @@
 
         max-width:38em;
         width:100%;
-        padding-right: 5em;
+        padding-right: 0;
+        @include mq($bp-medium) {
+          padding-right: 5em;
+        }
     }
     .search-right{
 
