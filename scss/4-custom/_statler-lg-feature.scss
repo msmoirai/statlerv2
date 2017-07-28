@@ -6,27 +6,28 @@
   background-position: right 0px top 0px;
 }
   .statler-lg-feature-left__container {
-    background: radial-gradient(farthest-side at 90% 55%, transparent, #fff 131%);
-    max-width: 68em;
+    background: radial-gradient(farthest-side at 90% 155%, transparent, #fff 131%);
+    width: 24rem;
     padding: 4em 2.7em 4.3em 2.7em;
+    max-width: 68em;
     @include mq($bp-medium) {
       width: 48.82117%;
       margin-left: 52%;
+      background: none;
     }
 
 }
 
 .statler-lg-feature-right__container {
   background: radial-gradient(farthest-side at 90% 155%, transparent, #fff 131%);
-width: 24rem;
-padding: 2em;
+  width: 24rem;
+  padding: 4em 2.7em 4.3em 2.7em;
   max-width: 68em;
 
   @include mq($bp-medium) {
     width: 48.82117%;
     margin-left: 12.5em;
-    padding: 4em 2.7em 4.3em 2.7em;
-    background: none;
+        background: none;
   }
 }
 
