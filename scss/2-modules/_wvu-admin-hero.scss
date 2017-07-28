@@ -55,12 +55,13 @@
   p {
     margin-bottom: 0em;
     margin-top: 0em;
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
     position: relative;
     z-index: 3;
     font-size: 1em;
     line-height: 1.5em;
-    max-width: 24em;
+    /*!-- max-width: 24em; --!*/
+
     @include mq($bp-medium) {
       font-size: 1.5em;
     }
