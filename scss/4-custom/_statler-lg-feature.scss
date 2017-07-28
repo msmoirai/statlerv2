@@ -21,13 +21,14 @@
 .statler-lg-feature-right__container {
   background: radial-gradient(farthest-side at 90% 155%, transparent, #fff 131%);
   width: 24rem;
-  padding: 4em 2.7em 4.3em 2.7em;
+  padding: 4em 2.7em 4.3em 2em;
   max-width: 68em;
 
   @include mq($bp-medium) {
     width: 48.82117%;
     margin-left: 12.5em;
         background: none;
+        padding-left: 0;
   }
 }
 
