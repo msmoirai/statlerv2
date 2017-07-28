@@ -27,6 +27,7 @@
     font-size: 3em;
     max-width: 7em;
     line-height: .80487em;
+    margin-bottom: .25em;
     text-transform: uppercase;
     font-weight: normal;
     @include so-gold-slash();
@@ -54,6 +55,7 @@
   p {
     margin-bottom: 0em;
     margin-top: 0em;
+    padding-bottom: 1em;
     position: relative;
     z-index: 3;
     font-size: 1em;
