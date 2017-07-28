@@ -13,14 +13,22 @@
   $flex-box-color: transparentize($base-font-color, 0);
   $flex-box-top-colors:
     $pms-629-c,
-    $pms-166-c,
+    $pms-286-c,
+    $wvu-blue;
+    $pms-300-c,
+    $pms-180-c,
+    $pms-115-c;
     $pms-7557-c,
+    $pms-166-c,
     $pms-558-c,
     $pms-429-c,
+    $pms-432-c,
     $pms-144-c,
+    $pms-5625-c,
     $pms-7554-c,
     $pms-7476-c,
     $wvu-gold;
+    $wvu-blue;
 
     @include clearfix;
     @include display(flex);
