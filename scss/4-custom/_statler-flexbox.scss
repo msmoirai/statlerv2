@@ -13,20 +13,19 @@
   $flex-box-color: transparentize($base-font-color, 0);
   $flex-box-top-colors:
     $pms-629-c,
-    $pms-286-c,
-    $wvu-blue,
-    $pms-300-c,
+    $pms-7557-c,
+    $pms-144-c,
+    $pms-7476-c,
     $pms-180-c,
     $pms-115-c,
-    $pms-7557-c,
+    $pms-286-c,
     $pms-166-c,
     $pms-558-c,
     $pms-429-c,
-    $pms-432-c,
-    $pms-144-c,
+    $pms-300-c,
     $pms-5625-c,
     $pms-7554-c,
-    $pms-7476-c,
+    $pms-432-c,
     $wvu-gold,
     $wvu-blue;
 
@@ -71,7 +70,7 @@
       z-index: 1;
     }
 
-    @for $i from 1 to 18 { // assign colors from $flex-box-top-colors list
+    @for $i from 1 to 17 { // assign colors from $flex-box-top-colors list
       &:nth-child(#{$i}) {
         $color-from-list: nth($flex-box-top-colors, $i);
         border-top: 6px solid $color-from-list;
