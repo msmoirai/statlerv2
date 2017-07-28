@@ -71,7 +71,7 @@
       z-index: 1;
     }
 
-    @for $i from 1 to 10 { // assign colors from $flex-box-top-colors list
+    @for $i from 1 to 18 { // assign colors from $flex-box-top-colors list
       &:nth-child(#{$i}) {
         $color-from-list: nth($flex-box-top-colors, $i);
         border-top: 6px solid $color-from-list;
