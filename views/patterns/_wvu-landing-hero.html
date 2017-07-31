@@ -2,6 +2,7 @@
   <r:page:slug />-hero-background
 </r:set_var>
 
+
 <div class="wvu-admin-hero wvu-admin-hero--<r:site:id />" style="background-image: url(<r:files:each labels="{$bgurl}" limit="1" types="image" random="true"><r:file:image_url size="1780x580" /></r:files:each>); vertical-align: bottom;">
   <div class="wvu-admin-hero__container wvu-admin-hero__container--vignetting-<r:page:data name="hero_vignetting" />">
     <div class="wvu-admin-hero__copy <r:page:unless_has_content_for region="wvu-admin-hero__links">wvu-admin-hero__copy--wide</r:page:unless_has_content_for>">
@@ -28,7 +29,8 @@
     </r:page:if_has_content_for>
   </div>
 </div>
-
+<div id="wvu-main-content" >
+</div><!-- /.main -->
 <r:edit_mode_only>
   <div class="wvu-instructions">
     <p><strong>Instructions for Admin Hero:</strong> This is meant for an intro paragraph and 3-4 action items to the right. Use it more for administrative sites that do not need fancy marketing visuals.</p>
