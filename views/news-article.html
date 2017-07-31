@@ -144,7 +144,7 @@ custom_data_attributes:
 
 <r:page:if_has_content_for region="article-media__second" always_show_in_edit_mode="true">
   <aside class="wvu-sidebar">
-      <h3>Media</h3>
+      <h2 class="wvu-h3">Media</h2>
       <ul class="article-media__sidebar">
         <li><r:edit_mode_only>Insert Image</r:edit_mode_only><r:editable_region name="article-media__second" /><br>
         <r:edit_mode_only>Insert Image Caption</r:edit_mode_only><r:editable_region name="article-media__second-caption" /></li>
@@ -157,7 +157,7 @@ custom_data_attributes:
       </ul>
 
       <div class="article__related-stories">
-        <h3>Related Articles</h3>
+        <h2 class="wvu-h3">Related Articles</h2>
         <r:blog:articles limit="5" tags="{article:tags}" exclude_ids="{article:id}">
           <r:if_articles>
             <ul>
