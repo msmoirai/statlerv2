@@ -155,6 +155,11 @@ li.manual-last{
 	  } //li
 	}
 
+	.landing-h2{
+        font-size: 4rem; line-height: .85; text-align: center; text-transform:uppercase;
+
+    }
+
 	.wvu-alert { color: $alert-color }
 	.wvu-error { color: $error-color }
 	.wvu-notice { color: $notice-color }

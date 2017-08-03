@@ -25,13 +25,14 @@
       text-shadow: 0 0.125rem #002855;
   }
   .text {
-      font-size: 1.5rem;
+      font-size: 1rem;
       color: #fff;
-      line-height: .8em;
+      line-height: 1em;
       display: block;
       -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+  text-transform: uppercase;
   }
 
   .stat-container{
