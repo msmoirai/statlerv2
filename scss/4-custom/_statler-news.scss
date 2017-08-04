@@ -62,6 +62,7 @@ li{
     }
 }
 ul{
+  padding-left: 0;
   @include mq($bp-medium){
     margin-top:0;
   }
