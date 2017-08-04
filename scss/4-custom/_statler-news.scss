@@ -1,6 +1,10 @@
 // News styles
 //==================================================
-
+.padded{
+  padding-left: 40px;
+  @include mq($bp-medium) {
+    padding-left: 0px;
+}
 
 .statler-news-grid__solo{
   width: 100%;
@@ -37,8 +41,10 @@
 .statler-news-grid__more {
 width: 100%;
 float: left;
+padding-right: 1.5em;
 @include mq($bp-medium) {
   width: 50%;
+  padding-right: 0em;
 }
 h2{
   font-size: 1em;
