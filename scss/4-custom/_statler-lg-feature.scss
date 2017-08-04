@@ -7,12 +7,13 @@
 }
   .statler-lg-feature-left__container {
     background: radial-gradient(farthest-side at 90% 155%, transparent, #fff 131%);
-    width: 24rem;
+    width: 50%;
+    height: 350px;
     padding: 4em 2.7em 4.3em 2.7em;
     max-width: 68em;
     @include mq($bp-medium) {
       width: 50%;
-
+      margin-left: 52%;
       background: none;
     }
 
@@ -39,10 +40,6 @@
   font-size:3em;
   margin:0;
   padding-bottom: 25px;
-}
-
-.statler-lg-feature__copy{
-  width:50%;
 }
 
 .statler-lg-feature__copy p {
