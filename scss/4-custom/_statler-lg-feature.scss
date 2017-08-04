@@ -11,8 +11,8 @@
     padding: 4em 2.7em 4.3em 2.7em;
     max-width: 68em;
     @include mq($bp-medium) {
-      width: 48.82117%;
-      margin-left: 52%;
+      width: 50%;
+
       background: none;
     }
 
@@ -39,6 +39,10 @@
   font-size:3em;
   margin:0;
   padding-bottom: 25px;
+}
+
+.statler-lg-feature__copy{
+  width:50%;
 }
 
 .statler-lg-feature__copy p {
