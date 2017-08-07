@@ -12,7 +12,7 @@
         float:left;
         width:50%;
         padding:80px;
-        padding-left:0;
+        padding-left: 2em;
         padding-right:0;
         padding-left:85px;
         h1{
@@ -20,7 +20,9 @@
             text-transform: uppercase;
             color:$wvu-blue;
             font-size:3em;
-            margin:0;padding:0;
+            margin:0;
+            padding:0;
+            padding-bottom: 25px;
         }
     }
     .search-left-inner{
