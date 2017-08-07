@@ -173,6 +173,13 @@ li.manual-last{
 
     }
 
+    .profile-display{
+      display:block;
+      float: left;
+      padding-right:10em;
+      padding-bottom:5em;
+    }
+
 	.wvu-alert { color: $alert-color }
 	.wvu-error { color: $error-color }
 	.wvu-notice { color: $notice-color }
