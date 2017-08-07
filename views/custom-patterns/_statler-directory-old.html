@@ -6,12 +6,9 @@
 
     <main class="main__directory">
 
-      <h1><r:page:name /></h1>
-
-
 
       <ul class="directory">
-        <r:children:each limit="{$limit}" labels="{$tags}" with_template="profile_individual">
+        <r:children:each limit="{$limit}" labels="{$tags}" with_template="profile-individual">
 
           <li>
             <div class="directory__individual-photo">
