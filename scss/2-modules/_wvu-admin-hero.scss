@@ -8,8 +8,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   @include mq($bp-medium) {
-    height: 410px;
-    background-size: auto;
+    height: 100%;
+
   }
   a {
     color: $wvu-gold;
