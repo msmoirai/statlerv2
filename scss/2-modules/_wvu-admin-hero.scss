@@ -72,7 +72,7 @@
   @include u-wvu-container-padding();
   padding: 7em 2em 7.3em 2em;
   @include mq($bp-xlarge) {
-    padding: 6em 0 7.3em 0;
+    padding: 4em 0 4em 0;
   }
   @include so-vignetting($wvu-hero-vignetting-opacity);
 }
