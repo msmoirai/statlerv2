@@ -8,6 +8,16 @@
     border: none;
     cursor: pointer;
     text-align:left;
+
+}
+.dropbtn:after {
+  background: url(../../images/system/icons.svg) -130px -25px;
+    content: '';
+    display: block;
+    float: right;
+    height: 6px;
+    margin: 5px 0 0;
+    width: 13px;
 }
 
 /* The container <div> - needed to position the dropdown content */
