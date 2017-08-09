@@ -18,18 +18,11 @@
     </div>
     <r:page:if_has_content_for region="wvu-admin-hero__links" always_show_in_edit_mode="true">
       <div class="wvu-admin-hero__links">
-        <r:editable_region name="wvu-admin-hero__links">
-          <ul>
-            <li><a href="#">Action 1</a></li>
-            <li><a href="#">Action 2</a></li>
-            <li><a href="#">Action 3</a></li>
-          </ul>
-        </r:editable_region>
-      </div>
+          <r:partial name="custom-patterns/statler-dropdown" />
     </r:page:if_has_content_for>
 
   </div>
-  <r:partial name="custom-patterns/statler-dropdown" />
+
 </div>
 <div id="wvu-main-content" >
 </div><!-- /.main -->
