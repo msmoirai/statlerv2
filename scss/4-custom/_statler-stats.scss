@@ -47,7 +47,10 @@
   display: flex;
   border-right: none;
       float: left;
-
+      width: 100%;
+      @include mq($bp-medium) {
+        width:auto;
+      }
 
   }
   .stat-layout{
