@@ -378,6 +378,10 @@ ul.show-menu {
   padding: 1em 0.8em;
 }
 
+.wvu-nav__items li a.active {
+  background-color: $wvu-gold;
+}
+
 .wvu-nav__items ul {
   @include mq($bp-medium) {
   	top: 3em;
