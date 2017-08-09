@@ -1,6 +1,6 @@
 /* Style The Dropdown Button */
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: $wvu-endeavor;
     width: 100%;
     color: white;
     padding: 16px;
@@ -14,7 +14,7 @@
 
   position: absolute;
   top: auto;
-  right: .5em;
+  right: 16px;
   bottom: auto;
   left: auto;
   content: '\25BE';
