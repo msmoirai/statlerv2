@@ -1,11 +1,16 @@
 .wvu-admin-hero {
   background-color: $pms-432-c;
   color: white;
-  overflow: hidden;
+  overflow:visible;
   position: relative;
   width:100%;
-  height: 410px;
+  height: auto;
+  background-size: cover;
   background-repeat: no-repeat;
+  @include mq($bp-large) {
+    height: 410px;
+    background-size: auto;
+  }
   a {
     color: $wvu-gold;
     position: relative;
