@@ -10,7 +10,7 @@ $black: #2C2A29;
 $pms-432-c: #333F48;
 $pms-429-c: #A2AAAD;
 $pms-warm-gray-11: #6E6259;
-$pms-warm-gray-7: #968C83;
+$pms-warm-gray-7: #7C736A;
 $pms-warm-gray-3: #BFB8AF;
 
 $wvu-white: #F9F9F9;
@@ -26,13 +26,13 @@ $pms-286-c: #0033A0;
 $pms-300-c: #005EB8;
 $pms-629-c: #9BD3DD;
 $pms-7554-c: #4B3D2A;
-$pms-7557-c: #9F7D23;
+$pms-7557-c: #8F701E;
 $pms-144-c: #ED8B00;
 $pms-7476-c: #0D5257;
-$pms-5625-c: #708573;
+$pms-5625-c: #657A68;
 $pms-558-c: #9ABEAA;
 $pms-180-c: #BE3A34;
-$pms-166-c: #E35205;
+$pms-166-c: #CD4C08;
 $pms-115-c: #FDDA24;
 
 $wvu-smalt: $pms-286-c;
@@ -62,7 +62,9 @@ $wvu-candelight: $pms-115-c;
                              (reef-gold, $wvu-reef-gold),
                              (well-read, $wvu-well-read),
                              (judge-gray, $wvu-judge-gray),
-                             (trinidad, $wvu-trinidad) {
+                             (tangerine, $wvu-tangerine),
+                             (trinidad, $wvu-trinidad),
+                             (summer-green, $wvu-summer-green) {
   .wvu-#{$color} {
     color: $text-color;
     border-color: $text-color;
@@ -96,9 +98,7 @@ $wvu-candelight: $pms-115-c;
                              (gray-chateau, $wvu-gray-chateau),
                              (tide, $wvu-tide),
                              (morning-glory, $wvu-morning-glory),
-                             (tangerine, $wvu-tangerine),
-                             (candelight, $wvu-candelight),
-                             (summer-green, $wvu-summer-green) {
+                             (candelight, $wvu-candelight) {
   .wvu-#{$color} {
     color: $text-color;
     border-color: $text-color;
