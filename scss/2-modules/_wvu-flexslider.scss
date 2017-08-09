@@ -100,7 +100,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 .flex-control-nav li:first-child {margin: 0;}
 .flex-control-nav li a {opacity: .5; width: 13px; height: 13px; display: block; background: url(https://patterns.wvu.edu/bg_control_nav.png) no-repeat 0 0; cursor: pointer; text-indent: -9999px;}
 .flex-control-nav li a:hover {background-position: 0 -13px;}
-.flex-control-nav li a.active {background-position: 0 -26px; cursor: default;}
+.flex-control-nav li a.active {background-position: 0 -26px; cursor: default; background-color: $wvu-gold;}
 
 .flex-control-nav li a {
   background: #fff;
