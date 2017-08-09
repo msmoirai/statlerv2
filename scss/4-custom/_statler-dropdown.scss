@@ -11,13 +11,15 @@
 
 }
 .dropbtn:after {
-  background: url(../../images/system/icons.svg) -130px -25px;
-    content: '';
-    display: block;
-    float: right;
-    height: 6px;
-    margin: 5px 0 0;
-    width: 13px;
+
+  content: '';
+  border: 4px solid transparent;
+  border-top: 4px solid white;
+  margin-left: 2px;
+  margin-bottom: 3px;
+  display: inline-block;
+  vertical-align: bottom;
+}
 }
 
 /* The container <div> - needed to position the dropdown content */
