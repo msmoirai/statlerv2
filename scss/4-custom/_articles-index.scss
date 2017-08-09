@@ -6,11 +6,11 @@
 	    @include mq($bp-medium){border-bottom: none;}
 }
 .article__image{
-	margin-top: 20px;
+	margin-top: 5px;
 	@include span-columns(12);
 	@include mq($bp-medium){
 		@include span-columns(4);
-		margin-top: 30px;
+		margin-top: 5px;
 	}
 }
 .article__info{
