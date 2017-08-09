@@ -181,6 +181,36 @@ li.manual-last{
       padding-bottom:2em;
     }
 
+    .button-fix{
+      margin: auto;
+  }
+  .button-fix a {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      text-size:  1.25em;
+  }
+
+  .greybox-font{
+        font-size: 1.25em;
+    text-align: center;
+
+    }
+    .greybox-h2{
+        color: #EAAA00;
+    }
+
+    .center-button{
+        margin:0 auto;
+        display: table;
+        margin-bottom: 2em;
+    }
+
+    .center-button:hover{
+        color: white;
+    }
+
+    
 	.wvu-alert { color: $alert-color }
 	.wvu-error { color: $error-color }
 	.wvu-notice { color: $notice-color }
