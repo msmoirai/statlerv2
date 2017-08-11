@@ -1,0 +1,69 @@
+$statler-blocks-padding: 6%;
+
+.statler-blocks {
+  @include mq($bp-medium) {
+    overflow-x: hidden;
+  }
+}
+
+.statler-blocks__container {
+  @include outer-container();
+  position: relative;
+  @include mq($bp-medium) {
+    display: flex;
+  }
+}
+
+.statler-blocks__copy {
+  box-sizing: content-box;
+  @include pms-432-c-background();
+  padding: 4em 0;
+  position: relative;
+  h2 {
+    margin-top: 0;
+  }
+  @include mq($bp-medium) {
+    float: left;
+    left: 50%;
+    margin: 0 -999em 0 0;
+    padding: $statler-blocks-padding 999em $statler-blocks-padding $statler-blocks-padding;
+    width: 44%;
+  }
+}
+
+.statler-blocks__photo {
+  background-color: $black;
+  background-position: 50% 50%;
+  background-size: cover;
+  min-height: 66vw;
+  @include mq($bp-medium) {
+    float: left;
+    left: 50%;
+    margin-left: -50vw;
+    min-height: 33vw;
+    padding-left: 50vw;
+    position: relative;
+    width: 0;
+  }
+}
+
+.statler-blocks__blocks--right {
+  .statler-blocks__copy {
+    @include mq($bp-medium) {
+      left: 0;
+      margin: 0 0 0 -999em;
+      padding: $statler-blocks-padding $statler-blocks-padding $statler-blocks-padding 999em;
+    }
+  }
+
+  .statler-blocks__photo {
+    @include mq($bp-medium) {
+      float: right;
+      left: 0;
+      margin-left: 0;
+      padding-left: 0;
+      margin-right: -50vw;
+      padding-right: 50vw;
+    }
+  }
+}

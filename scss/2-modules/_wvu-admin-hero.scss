@@ -134,7 +134,7 @@ $i: 90;
 
 .wvu-admin-hero__links {
   @include mq($bp-medium) {
-    @include span-columns(4);
-    @include shift(1);
+    display:block;
+    width: 33%;
   }
 }
