@@ -83,10 +83,7 @@
 			padding: 1em;
 			width: 100%;
 			text-decoration: none;
-      &:hover {
-				background: $wvu-gold;
-				color: $wvu-blue;
-			}
+
     }
   }
 
@@ -120,10 +117,7 @@
 		color: white;
 	}
   &:hover {
-		text-decoration: none;
-		background-color: $wvu-gold;
-		color: $wvu-blue;
-	}
+
 } //.nav-toggle
 
 .wvu-nav__items {
