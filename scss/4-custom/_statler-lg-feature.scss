@@ -9,7 +9,7 @@
   background-position: right 0px top 0px;
 }
   .statler-lg-feature-left__container {
-    background: radial-gradient(farthest-side at 90% 155%, transparent, #fff 131%);
+    background: radial-gradient(farthest-side at 90% 155%, transparent, #fff 120%);
 
       padding: 4em 2.7em 4.3em 2.7em;
     max-width: 40em;
@@ -22,7 +22,7 @@
 }
 
 .statler-lg-feature-right__container {
-  background: radial-gradient(farthest-side at 90% 155%, transparent, #fff 131%);
+  background: radial-gradient(farthest-side at 90% 155%, transparent, #fff 120%);
 
   padding: 4em 2.7em 4.3em 2em;
   max-width: 40em;
@@ -47,5 +47,5 @@
 }
 
 .statler-lg-feature__copy p {
-    color: #333F48;
+    color: $wvu-blue;
 }
