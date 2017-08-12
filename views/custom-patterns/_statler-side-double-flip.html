@@ -1,0 +1,42 @@
+<div class="statler-search">
+
+  <div class="search-right float-right" style="background-image: url(<r:page:content name="right__background-label-2"><r:file:image_url  /></r:page:content>);
+    background-color: <r:page:content name="right__background-color-2" />;">
+
+
+
+        <h1><r:editable_region name="statler-title-right-2"/></h1>
+        <p><r:editable_region name="statler-desc-right-2"/></p>
+        <r:page:if_has_content_for region="right-side__action-item-url-2">
+          <a href="<r:page:content name="right-side__action-item-url-2" />" class="button button--white event-button <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="right-side__action-item-text-2" /></a>
+        </r:page:if_has_content_for>
+        <r:edit_mode_only>
+
+          <p class="button"><r:editable_region name="right-side__action-item-text-2" type="simple">Action Item Text</r:editable_region></p>
+          <p><r:editable_region name="right-side__action-item-url-2" type="simple"></r:editable_region></p>
+          <p><r:editable_region name="right__background-label-2" type="simple">Background Image URL</r:editable_region></p>
+          <p><r:editable_region name="right__background-color-2" type="simple">Background Color</r:editable_region></p>
+        </r:edit_mode_only>
+
+  </div>
+
+  <div class="search-left float-right">
+      <div class="search-left-inner">
+      <h1><r:editable_region name="statler-left-title-2"/></h1>
+      <p><r:editable_region name="statler-left-desc-2"/></p>
+      <r:page:if_has_content_for region="left-side__action-item-url-2">
+        <a href="<r:page:content name="left-side__action-item-url-2" />" class="button button--wvu-blue-fill event-button <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="left-side__action-item-text-2" /></a>
+      </r:page:if_has_content_for>
+      <r:edit_mode_only>
+
+        <p class="button"><r:editable_region name="left-side__action-item-text-2" type="simple">Action Item Text</r:editable_region></p>
+        <p><r:editable_region name="left-side__action-item-url-2" type="simple"></r:editable_region></p>
+      </r:edit_mode_only>
+      </div>
+  </div>
+
+
+
+
+
+</div>
