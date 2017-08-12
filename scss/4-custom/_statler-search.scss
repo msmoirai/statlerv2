@@ -4,6 +4,9 @@
 .float-right{
   float:right;
 }
+.clear-both{
+  clear:both;
+}
 
 .statler-search{
     overflow:auto;
@@ -15,7 +18,7 @@
     padding-top:30px;
     padding-bottom:30px;
     .search-left{
-        clear:both;
+
 
         width:50%;
         padding:80px;
