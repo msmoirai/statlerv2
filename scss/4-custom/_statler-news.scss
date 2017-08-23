@@ -55,14 +55,22 @@ img{
   object-fit:cover;
 }
 h2{
-  font-size: 1em;
+  font-size: .9em;
+  color: #005EB8;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 li{
   list-style-type: none;
   padding-left: 0;
   width: 100%;
-    float: left;
-    padding-left: 0em;
+  height: 275px;
+  float: left;
+  padding-left: 0em;
     @include mq($bp-medium) {
       width: 50%;
       padding-left: 1em;
