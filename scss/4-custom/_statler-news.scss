@@ -186,7 +186,7 @@ p.statler-article__lede:first-letter {
     text-indent: -0.5em;
     color: #CD4C08;
     @include mq($bp-large) {
-      margin: 2em -3em;
+      margin: 2em 1em;
       max-width: 20em;
     }
   }
