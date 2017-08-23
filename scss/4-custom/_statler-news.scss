@@ -39,7 +39,14 @@
     object-fit:cover;
   }
 }
-
+.news-index-article__image
+{
+  img{
+    width:100%;
+    height:375px;
+    object-fit:cover;
+  }
+}
 
 .statler-news-grid__more {
 width: 100%;
