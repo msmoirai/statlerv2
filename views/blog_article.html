@@ -76,7 +76,7 @@ custom_data_attributes:
 
   <r:comment><!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb --></r:comment>
 
-  <article id="wvu-main-content" class="main wvu-article wvu-article--individual" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  <article class="main wvu-article wvu-article--individual" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 
     <h1 class="wvu-article__title" itemprop="headline"><r:page:name /></h1>
     <p class="wvu-article__meta">
@@ -87,7 +87,7 @@ custom_data_attributes:
       </span> <!-- /itemprop="author" -->
       | <time class="wvu-article__date" datetime="<r:date_format format="iso8601" value="{article:published_at}" />"><r:date_format format="%A, %B %d, %Y" value="{article:published_at}" error_msg="Not Yet Published" /></time>
     </p> <!-- /.wvu-article__meta -->
-    <div class="wvu-article__body" itemprop="articleBody">
+    <div id="wvu-main-content" class="wvu-article__body" itemprop="articleBody">
       <r:editable_region name="article-body" />
     </div> <!-- /.wvu-article__body -->
   </article> <!-- /.wvu-article -->
