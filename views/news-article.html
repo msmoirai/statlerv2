@@ -142,8 +142,10 @@ custom_data_attributes:
     Use this sidebar to place additional media associated with the story - this text is only visible in edit mode
   </r:edit_mode_only>
 
-<r:page:if_has_content_for region="article-media__second" always_show_in_edit_mode="true">
+
   <aside class="wvu-sidebar">
+
+<r:page:if_has_content_for region="article-media__second" always_show_in_edit_mode="true">
       <h2 class="wvu-h3">Media</h2>
       <ul class="article-media__sidebar">
         <li><r:edit_mode_only>Insert Image</r:edit_mode_only><r:editable_region name="article-media__second" /><br>
@@ -155,6 +157,7 @@ custom_data_attributes:
 
         <li><r:edit_mode_only>Insert Image</r:edit_mode_only><r:editable_region name="article-media__fifth" /><br><r:edit_mode_only>Insert Image Caption</r:edit_mode_only><r:editable_region name="article-media__fifth-caption" /></li>
       </ul>
+</r:page:if_has_content_for>
 
       <div class="article__related-stories">
         <h2 class="wvu-h3">Related Articles</h2>
@@ -181,6 +184,6 @@ custom_data_attributes:
       </div>
 
   </aside> <!-- /.wvu-sidebar -->
-</r:page:if_has_content_for>
+
 
 </div>
