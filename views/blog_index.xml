@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <articles>
-  <r:set_var name="wvu_blog_region_name" value="{$wvu_blog_region_name}" default="article-body"/>
   <r:blog:articles:each limit="10" tags="{$tags}" year="{$year}" month="{$month}" day="{$day}">
     <item>
       <title><![CDATA[<r:article:name />]]></title>
       <link><r:article:path /></link>
       <image><![CDATA[<r:article:content name="article-media__first" />]]></image>
       <description>
-        <![CDATA[<r:select_html css_selector="p" limit="2"><r:article:content name="{$wvu_blog_region_name}" absolute_urls="true" /></r:select_html>]]>
+        <![CDATA[<r:select_html css_selector="p" limit="2"><r:article:content name="article-copy" absolute_urls="true" /></r:select_html>]]>
       </description>
       <pubDate><r:date_format format="httpdate" value="{article:published_at}" /></pubDate>
     </item>
