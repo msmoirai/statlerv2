@@ -4,7 +4,7 @@
     <item>
       <title><![CDATA[<r:article:name />]]></title>
       <link><r:article:path /></link>
-      <image><![CDATA[<r:article:content name="article-media__first" />]]></image>
+      <image><![CDATA[<r:article:content name="article-media__first" absolute_urls="true" />]]></image>
       <description>
         <![CDATA[<r:select_html css_selector="p" limit="2"><r:article:content name="article-copy" absolute_urls="true" /></r:select_html>]]>
       </description>
