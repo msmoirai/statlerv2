@@ -8,6 +8,36 @@
   </xsl:template>
 
   <xsl:template match="item">
+
+    <li>
+      <div class="statler-sub-story" role="article">
+            <div class="statler-sub-article__body">
+
+              <a>
+                <xsl:attribute name="href">
+                  <xsl:value-of select="link"/>
+                </xsl:attribute>
+                <xsl:value-of select="image"/>
+              </a>
+
+              <h2 class="statler-sub-story">
+                <a class="statler-sub-story">
+                <xsl:attribute name="href">
+                  <xsl:value-of select="link"/>
+                </xsl:attribute>
+                <xsl:value-of select="title"/>
+              </a></h2>
+
+
+
+            </div> <!-- /.statler-sub-article__body -->
+
+        </div><!-- statler-sub-story -->
+
+    </li>
+
+
+
     <li>
       <h2>
       <a class="item-title">
@@ -29,4 +59,3 @@
     </li>
   </xsl:template>
 </xsl:stylesheet>
-
