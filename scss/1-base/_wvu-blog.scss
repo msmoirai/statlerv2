@@ -17,5 +17,5 @@
   &:after { content: '|'; margin-left: 8px; color: $pms-warm-gray-3; }
 } //.wvu-pagination__older
 .wvu-pagination__disabled {
-  a, a:hover { color: $pms-warm-gray-7; cursor: not-allowed; text-decoration: none; }
+  a, a:hover { color: $pms-warm-gray-3; cursor: not-allowed; text-decoration: none; }
 } //.wvu-pagination__disabled
