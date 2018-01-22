@@ -27,13 +27,13 @@
       border-bottom: 1px solid #f2f2f2;
       &:last-child{border-bottom: none;}
       @include mq($bp-medium) {
-        @include span-columns(3);
+        @include span-columns(4);
         //@include omega(3n);
         border-bottom: none;
       } //mq
       @include mq($bp-xlarge) {
       //  @include omega-reset(3n);
-        @include span-columns(5);
+        @include span-columns(4);
         @include omega(5n);
       } //mq
       } //li
