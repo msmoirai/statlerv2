@@ -132,6 +132,17 @@ $i: 90;
   }
 }
 
+.wvu-dept-hero__copy {
+  margin-bottom: 2em;
+  max-width: 100em;
+  width: 80%;
+  @include mq($bp-medium) {
+    @include span-columns(7);
+    max-width: 100em;
+
+  }
+}
+
 .wvu-admin-hero__links {
   @include mq($bp-medium) {
     display:block;
