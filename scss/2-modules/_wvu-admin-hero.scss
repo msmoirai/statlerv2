@@ -139,6 +139,7 @@ $i: 90;
   @include mq($bp-medium) {
     @include span-columns(7);
     max-width: 100em;
+    width: 80%;
 
   }
 }
