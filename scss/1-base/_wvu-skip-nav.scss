@@ -3,10 +3,11 @@
 // This file contains styles for that feature.
 
 .wvu-skip-nav {
+  color:002855;
   background: white;
   left: -99999em;
   padding: 0.5em;
   position: absolute;
-  z-index: 10; 
+  z-index: 10;
   &:focus { left: 0; }
 } //.wvu-skip-nav
