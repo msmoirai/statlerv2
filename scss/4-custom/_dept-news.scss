@@ -1,0 +1,47 @@
+.statler-dept-article{
+  margin: 0;
+  padding: 0;
+  list-style-type:none;
+    ul{ margin: 0; padding: 0; }
+    @include mq($bp-medium) {
+      @include span-columns(12);
+      li {
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #f2f2f2;
+      &:last-child{border-bottom: none;}
+      @include mq($bp-medium) {
+        @include span-columns(3);
+        //@include omega(3n);
+        border-bottom: none;
+      } //mq
+      @include mq($bp-xlarge) {
+      //  @include omega-reset(3n);
+        @include span-columns(3);
+        @include omega(5n);
+      } //mq
+      } //li
+    } //mq
+ h2{
+  font-size: 1.25rem;
+    @include mq($bp-medium){
+    font-size: 1.35em;
+    line-height: 1.5em;
+    }//mq
+  }//h2
+  p{line-height: 1.75rem;}//p
+}//.statler-dept-article
+
+a.rss {
+    position: relative;
+    left: 8px;
+    top: -1px;
+}
+
+.sub-article__section-title{
+  border-bottom: 3px solid #333F48;
+}
+
+.item-description{
+  margin-bottom: 2em;
+}
