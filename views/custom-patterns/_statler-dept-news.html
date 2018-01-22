@@ -6,22 +6,48 @@
 
       <div class="statler-news-grid">
 
-<r:set_var name="department_news_rss_url"><r:site:data name="department_news_rss_url" /></r:set_var>
+        <r:xslt_transform url="{$department_news_xml_url}">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <xsl:output method="html"/>
+        <xsl:template match="/">
+        <ul class="statler-dept-article">
+          <xsl:apply-templates select="//item[position() &lt; 4]"/>
+          <li>
+            <a class="button button--pms-300-c button--big button--pms-286-c-fill" href="<r:site:data name="department_news_url" />">View More News</a>
+          </li>
+        </ul>
+        </xsl:template>
 
-        <div class="statler-news-grid__flat">
-            <ul class="statler-sub-article">
-              <r:blog id="8581"> <r:comment><!-- Change to your blog's page ID --></r:comment>
-                <r:set_var name="tags"><r:page:slug />,feature</r:set_var>
-                <r:articles:each tags="{$tags}" limit="4"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
-<r:xslt_transform url="{$department_news_rss_url}" xslt_file="/util/rss_1.xslt" />
+        <xsl:template match="item">
+        <li>
+          <a>
+            <xsl:attribute name="href">
+              <xsl:value-of select="link"/>
+            </xsl:attribute>
+            <img>
+              <xsl:attribute name="src">
+                <xsl:value-of select="image"/>
+              </xsl:attribute>
+              <xsl:attribute name="alt">
+                <xsl:value-of select="image_alt"/>
+              </xsl:attribute>
+            </img>
+          </a>
+          <h2 class="statler-sub-story">
+          <a>
+            <xsl:attribute name="href">
+              <xsl:value-of select="link"/>
+            </xsl:attribute>
+            <xsl:value-of select="title"/>
+          </a>
+          </h2>
 
-                </r:articles:each>
-                <li>
-                  <a class="button button--pms-300-c button--big button--pms-286-c-fill" href="http://www.statler.wvu.edu/news">View All News</a>
-                </li>
-              </r:blog>
-            </ul><!--/.statler-sub-article-->
-          </div><!--end news-grid__more-->
+        </li>
+
+        </xsl:template>
+        </xsl:stylesheet>
+        </r:xslt_transform>
 
 
 
