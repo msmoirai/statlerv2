@@ -1,0 +1,64 @@
+<r:if v1="{$backpage_main}" v2="false" op="!=">
+
+  <div class="wvu-container">
+
+    <div id="wvu-main-content" class="<r:page:data name="bgcolor_backpage" /> background main <r:if v1="{$backpage_has_sidebar}" v2="false" op="=">main--wide</r:if> <r:edit_mode_only>main--edit-mode</r:edit_mode_only>">
+
+
+    <div>
+      <h1><r:page:name /></h1>
+    </div>
+
+    <div><!-- begin info bar -->
+
+      <div id="photo">
+        <r:edit_mode_only>
+          <p class="alert">Enter the Profile Image</p>
+        </r:edit_mode_only>
+        <r:editable_region name="profile-image" />
+      </div><!-- end photo -->
+
+      <div id="info">
+          <r:edit_mode_only>
+            <p class="alert">Enter the induction year</p>
+          </r:edit_mode_only>
+          <p class="induction-date"><h4 id="alumni-profile">Inducted:</h4><strong><r:editable_region name="induction-date" /></strong></p>
+
+          <r:edit_mode_only>
+            <p class="alert">Enter their degrees</p>
+          </r:edit_mode_only>
+          <p class="degrees"><h4 id="alumni-profile">Degrees:</h4> <strong><r:editable_region name="degrees" /></strong></p>
+      </div><!-- end info -->
+
+    </div><!-- end info bar -->
+    <div style="clear: both;">
+
+        <r:edit_mode_only>
+        <br>
+          <p class="alert">Enter the main profile information from the induction - DO NOT EDIT THIS INFORMATION AFTER INITIAL ENTRY!</p>
+        </r:edit_mode_only>
+        <br>
+        <r:editable_region name="main"/>
+
+        <r:edit_mode_only>
+          <p class="alert">Enter updates to the profile</p>
+        </r:edit_mode_only>
+        <p><r:editable_region name="updates"/></p>
+
+    </div>
+
+
+
+    </div>
+
+
+
+  </div> <!-- /.wvu-container -->
+
+  <r:edit_mode_only>
+    <div class="wvu-instructions">
+      <p><strong>Instructions for Backpage:</strong> You can put whatever you want in the main content region. The sidebar and sub-nav are optional. Just set either the <code>backpage_has_sidebar</code> or <code>backpage_has_subnav</code> attributes to <code>false</code> in Page Properties > Data.</p>
+    </div>
+  </r:edit_mode_only>
+
+</r:if>
