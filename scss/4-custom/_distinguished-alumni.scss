@@ -12,7 +12,7 @@
     &:last-child { border-bottom: none; }
     @include mq($bp-medium) {
       @include span-columns(3);
-      @include omega(3n);
+      @include omega(4n);
       border-bottom: none;
     }
   }
