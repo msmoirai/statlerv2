@@ -72,12 +72,18 @@ custom_data_attributes:
 ---
 
 
-<!-- Slots 01 - 03 -->
+<r:partial name="custom-patterns/so-backpage-partials--top" />
 
-<r:partial name="patterns/wvu-backpage-partials--top" />
+<div class="wvu-container">
+
+  <div id="wvu-main-content" class="main <r:if v1="{$backpage_has_sidebar}" v2="false" op="=">main--wide</r:if> <r:edit_mode_only>main--edit-mode</r:edit_mode_only>">
 
 <r:partial name="custom-patterns/statler-alumni-profile" />
 
-<!-- Slots 04 - 10 -->
 
-<r:partial name="patterns/wvu-backpage-partials--bottom" />
+
+</div><!-- /.main -->
+
+<r:partial name="custom-patterns/wvu-sidebar" />
+
+</div> <!-- /.wvu-container -->
