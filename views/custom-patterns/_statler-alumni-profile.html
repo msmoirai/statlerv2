@@ -5,7 +5,6 @@
     <div id="wvu-main-content" class="<r:page:data name="bgcolor_backpage" /> background main <r:if v1="{$backpage_has_sidebar}" v2="false" op="=">main--wide</r:if> <r:edit_mode_only>main--edit-mode</r:edit_mode_only>">
 
 
-
     <div><!-- begin info bar -->
 
       <div id="photo">
@@ -46,16 +45,20 @@
 
 
 
+
+
+
+
+    <div>
+
+        <r:partial name="patterns/wvu-sidebar" />
     </div>
+      </div> <!-- /.wvu-container -->
 
+      <r:edit_mode_only>
+        <div class="wvu-instructions">
+          <p><strong>Instructions for Backpage:</strong> You can put whatever you want in the main content region. The sidebar and sub-nav are optional. Just set either the <code>backpage_has_sidebar</code> or <code>backpage_has_subnav</code> attributes to <code>false</code> in Page Properties > Data.</p>
+        </div>
+      </r:edit_mode_only>
 
-
-  </div> <!-- /.wvu-container -->
-
-  <r:edit_mode_only>
-    <div class="wvu-instructions">
-      <p><strong>Instructions for Backpage:</strong> You can put whatever you want in the main content region. The sidebar and sub-nav are optional. Just set either the <code>backpage_has_sidebar</code> or <code>backpage_has_subnav</code> attributes to <code>false</code> in Page Properties > Data.</p>
-    </div>
-  </r:edit_mode_only>
-
-</r:if>
+    </r:if>
