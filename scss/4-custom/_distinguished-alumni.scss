@@ -11,7 +11,7 @@
     border-bottom: 1px solid $pms-429-c;
     &:last-child { border-bottom: none; }
     @include mq($bp-medium) {
-      @include span-columns(4);
+      @include span-columns(3);
       @include omega(3n);
       border-bottom: none;
     }
