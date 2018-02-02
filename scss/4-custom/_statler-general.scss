@@ -251,7 +251,7 @@ li.manual-last{
 .wvu-landing-hero__links {
   @include mq($bp-medium) {
     display:block;
-    width: 33%;
+    width: 100%;
 
   }
 }
