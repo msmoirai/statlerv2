@@ -7,7 +7,7 @@
   height: auto;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
+  
   @include mq($bp-medium) {
     height: 100%;
 

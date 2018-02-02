@@ -7,7 +7,7 @@
   height: auto;
   background-size: cover;
   background-repeat: no-repeat;
-
+background-position: right;
   @include mq($bp-medium) {
     height: 100%;
 
@@ -148,7 +148,7 @@ $i: 90;
 .wvu-admin-hero__links {
   @include mq($bp-medium) {
     display:block;
-    width: 33%;
-    float: right;
+    width: 80%;
+    float: left;
   }
 }
