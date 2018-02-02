@@ -247,11 +247,3 @@ li.manual-last{
   text-align:center;
   margin: 2px;
 }
-
-.wvu-landing-hero__links {
-  @include mq($bp-medium) {
-    display:block;
-    width: 100%;
-
-  }
-}

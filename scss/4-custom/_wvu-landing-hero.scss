@@ -1,4 +1,4 @@
-.wvu-admin-hero {
+.wvu-landing-hero {
   background-color: $pms-432-c;
   color: white;
   overflow:visible;
@@ -7,7 +7,7 @@
   height: auto;
   background-size: cover;
   background-repeat: no-repeat;
-
+  background-position: right;
   @include mq($bp-medium) {
     height: 100%;
 
@@ -74,14 +74,14 @@
   }
 }
 
-.wvu-admin-hero__container {
+.wvu-landing-hero__container {
   @include u-wvu-container-padding();
   padding: 7em 2em 7.3em 2em;
 
   @include so-vignetting($wvu-hero-vignetting-opacity);
 }
 
-.wvu-admin-hero__links {
+.wvu-landing-hero__links {
   ul {
     list-style-type: none;
     padding-left: 0;
@@ -89,14 +89,14 @@
 }
 
 .page--edit-mode {
-  .wvu-admin-hero {
+  .wvu-landing-hero {
     h1 {
       &:before {
         display: none;
       }
     }
   }
-  .wvu-admin-hero__container {
+  .wvu-landing-hero__container {
     &:before {
       display: none;
     }
@@ -105,8 +105,8 @@
 
 $i: 90;
 @while $i > 0 {
-  .wvu-admin-hero__container {
-    &.wvu-admin-hero__container--vignetting-#{$i} {
+  .wvu-landing-hero__container {
+    &.wvu-landing-hero__container--vignetting-#{$i} {
       &:before {
         opacity: $i * .01;
       }
@@ -119,11 +119,11 @@ $i: 90;
 // Layout
 // =====================================
 
-.wvu-admin-hero__container {
+.wvu-landing-hero__container {
   @include outer-container();
 }
 
-.wvu-admin-hero__copy {
+.wvu-landing-hero__copy {
   margin-bottom: 2em;
   max-width: 20em;
   @include mq($bp-medium) {
@@ -145,7 +145,7 @@ $i: 90;
   }
 }
 
-.wvu-admin-hero__links {
+.wvu-landing-hero__links {
   @include mq($bp-medium) {
     display:block;
     width: 33%;
