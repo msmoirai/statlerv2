@@ -28,10 +28,11 @@
   max-width: 40em;
 
   @include mq($bp-medium) {
-    width: 48.82117%;
-    margin-left: 9em;
+    width: 50%;
+
         background: none;
-        padding-left: 2em;
+        padding-left: 4.5em;
+        padding-right: 5em;
   }
 }
 
