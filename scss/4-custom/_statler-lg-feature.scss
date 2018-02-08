@@ -36,7 +36,7 @@
   }
 }
 .statler-lg-feature__copy{
-  @include mq($bp-large) {
+  @include mq($bp-xlarge) {
     padding-left:3em;
   }
 }
