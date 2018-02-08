@@ -35,7 +35,11 @@
         padding-right: 5em;
   }
 }
-
+.statler-lg-feature__copy{
+  @include mq($bp-large) {
+    padding-left:3em;
+  }
+}
 
 
 .statler-lg-feature__copy h2 {
