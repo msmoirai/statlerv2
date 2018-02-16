@@ -51,6 +51,8 @@
         <r:partial name="{$patternNameMasthead}" />
       </r:if>
 
+        </header>
+
     <r:if expr="{{ NOT(BLANK(slot_00_nav)) }}">
       <r:set_var name="patternNameNav">
         patterns/wvu-<r:site:data name="slot_00_nav" />
