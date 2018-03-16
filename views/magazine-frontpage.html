@@ -1,157 +1,85 @@
 ---
 layout: default
 custom_data_attributes:
- - thumbnail_tags
- - enable_horizontal_advert
- - enable_vertical_advert
+  - agenda_id
+  - alternate_url
+  - backpage_has_sidebar
+  - backpage_has_subnav
+  - backpage_header
+  - backpage_header_badge
+  - bgcolor_adverts
+  - bgcolor_backpage
+  - bgcolor_calendar_widget
+  - bgcolor_diptych
+  - bgcolor_diptych_2
+  - bgcolor_diptych_3
+  - bgcolor_featurettes
+  - bgcolor_featurettes_2
+  - bgcolor_gallery
+  - bgcolor_lede_text
+  - bgcolor_media_object
+  - bgcolor_pentaptych
+  - bgcolor_pentaptych_2
+  - bgcolor_pentaptych_3
+  - bgcolor_polyptych
+  - bgcolor_profiles
+  - bgcolor_profiles_index
+  - bgcolor_quadriptych
+  - bgcolor_quadriptych_2
+  - bgcolor_quadriptych_3
+  - bgcolor_quicklinks
+  - bgcolor_social_media
+  - bgcolor_super_nav
+  - bgcolor_statler_news
+  - bgcolor_testimonials
+  - bgcolor_triptych
+  - bgcolor_triptych_2
+  - bgcolor_triptych_3
+  - bgcolor_video
+  - calendar_url_page
+  - directory_id
+  - featurettes_id
+  - featurettes_2_id
+  - hero_has_video
+  - hero_text_alignment
+  - hero_vignetting
+  - jquery_defer_page
+  - link_text
+  - polyptych_items
+  - profile_quote
+  - profile_quote_author
+  - profiles_id
+  - rss_url
+  - search_action
+  - search_index_id
+  - show_instructions
+  - slot_01
+  - slot_02
+  - slot_03
+  - slot_04
+  - slot_05
+  - slot_06
+  - slot_07
+  - slot_07
+  - slot_08
+  - slot_09
+  - slot_10
+  - staff_directory_id
+  - testimonials_id
+  - thumbnail_alt
+  - thumbnail_url
+  - thumbnail_url_sq
 ---
 
 <div class="u-full-width wvu-magazine-masthead">
   <div class="wvu-magazine-masthead__container">
-    <a class="wvu-magazine-masthead__logo" href="/">WVU Magazine</a>
-  </div>
-</div>
-
-<r:get_page id="5257">
-  <r:partial name="patterns/wvu-flexslider-slides" />
-</r:get_page>
-
-<div class="wvu-container wvu-container--nav-container">
-  <r:partial name="layouts/nav" />
-</div>
-
-<div class="wvu-container">
-
-  <div class="wvu-magazine-backpage-content-wrapper">
-    <div class="sub-features">
-
-      <r:set_var name="tags">
-        <r:page:data name="thumbnail_tags" />
-      </r:set_var>
-
-      <r:get_page id="5256">
-
-        <r:descendants:each by="name" order="asc" labels="sub-feature" labels_match="any">
-          <div class="sub-features__sub-feature">
-            <div class="sub-features__department-label"><a href="<r:page:parent:url />"><r:page:parent:first_non_blank_attr names="alternate_name,name" /></a></div>
-            <div class="disqus-comment-count">
-              <a href="<r:page:url />#disqus_thread"></a>
-            </div>
-            <r:partial name="patterns/wvu-spotlight--auto" />
-          </div>
-        </r:descendants:each>
-
-      </r:get_page>
-    </div>
-
-  </div>
-
-  <r:partial name="custom-patterns/wvu-magazine-advert-vertical" />
-
-</div>
-
-<div id="homepage__sparked-feature">
-  <div class="wvu-container">
-    <div class="sparked-feature-logo">
-      <img src="../images/sparked-logo.png" alt="Sparked Podcast logo">
-    </div>
-    <r:blog id="54781">
-      <r:blog:articles limit="1" page="{$page}" tags="sparked-featured" tags_op="{$tags_op}" year="{$year}" month="{$month}" day="{$day}">
-        <r:set_var name="article_count" value="{count}" />
-        <r:if_no_articles>
-          <p>No blog posts found. Try again later, perhaps?</p>
-        </r:if_no_articles>
-        <r:comment><!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb --></r:comment>
-        <r:if_articles>
-          <div>
-            <r:each>
-              <article itemscope="" itemtype="http://schema.org/BlogPosting">
-
-                <div class="sparked-feature-column-one">
-                  <div class="wvu-spotlight__image">
-                    <a href="<r:page:url />"><r:page:content name="wvu-magazine-thumbnail" /></a>
-                  </div>
-                </div>
-
-                <div class="sparked-feature-column-two">
-                  <h2 itemprop="headline"><a href="<r:article:path />"><r:article:name /></a></h2>
-                  <p class="sparked-feature-column-two__date">
-                    <time itemprop="datePublished" datetime="<r:date_format format="iso8601" value="{article:published_at}" />"><r:date_format format="%A, %B %d, %Y" value="{article:published_at}" /></time>
-                  </p> <!-- /.wvu-article__meta -->
-                  <div class="sparked-feature-column-two__description" itemprop="articleBody">
-                    <p itemprop="articleBody">
-                      <r:select_html css_selector="p" limit="1">
-                        <r:page:meta_description name="article-body" />
-                      </r:select_html>
-                    </p>
-                    <div class="sparked-button">
-                      <a class="button" href="<r:article:path />">Listen <r:page:content name="sparked-podcast-duration" /> &#8594;</a>
-                    </div>
-                  </div> <!-- /.wvu-article__body -->
-                </div>
-
-              </article> <!-- /.wvu-article -->
-            </r:each>
-          </div> <!-- /.wvu-articles -->
-        </r:if_articles>
-
-      </r:blog:articles>
-    </r:blog>
-  </div>
-</div>
-
-<div class="wvu-container department-features">
-  <r:get_page id="5256">
-    <r:children:each>
-      <div class="department department--<r:page:slug />">
-        <h3><r:page:first_non_blank_attr names="alternate_name,name" /></h3>
-        <r:children:each limit="1">
-          <div class="disqus-comment-count">
-            <a href="<r:page:url />#disqus_thread"></a>
-          </div>
-          <p><r:page:meta_description /></p>
-          <a href="<r:page:url />">Read <r:page:parent:name /></a>
-        </r:children:each>
-      </div>
-    </r:children:each>
-  </r:get_page>
-</div>
-
-<r:partial name="custom-patterns/wvu-magazine-instagram" />
-
-<div class="wvu-magazine-postscript">
-  <div class="wvu-magazine-postscript__container">
-    <div class="wvu-magazine-postscript__action wvu-magazine-postscript__action--feedback">
-      <h5>Send Us Feedback</h5>
-      <r:editable_region name="send-us-feedback" />
-      <a class="button" href="/send-a-comment-to-wvu-magazine">Give Feedback</a>
-    </div>
-    <div class="wvu-magazine-postscript__action  wvu-magazine-postscript__action--share">
-      <h5>Class Notes</h5>
-      <r:editable_region name="class-notes" />
-      <a class="button" href="https://wvualumni.wufoo.com/forms/class-chatter/">Share Your Story</a>
-    </div>
-    <div class="wvu-magazine-postscript__action wvu-magazine-postscript__action--subscribe omega">
-      <h5>Subscribe for Updates</h5>
-      <r:editable_region name="subscribe-for-updates" />
-      <a class="button" href="http://www.connecttowvu.com/alumni_association">Subscribe</a>
-    </div>
+    <a class="wvu-magazine-masthead__logo" href="/">Engineering West Virginia Magazine</a>
   </div>
 </div>
 
 
-<r:content_for name="page_js">
-  <r:partial name="demo/javascripts-wvu-flexslider" />
-  <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'wvumagazine'; // required: replace example with your forum shortname
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-  </script>
-</r:content_for>
+<div id="wvu-main-content">
+   <r:yield />
+   <r:partial name="patterns/wvu-slots" />
+</div>
