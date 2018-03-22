@@ -1,0 +1,99 @@
+.mag-footer h2{
+  color: #EAAA00;
+  font-size: 1.25em;
+  line-height: 1em;
+}
+
+.mag-footer p{
+  color: white;
+      font-size: .8em;
+      line-height: 1rem;
+
+}
+
+.mag-footer button {
+  font-size: .75em;
+}
+
+
+
+.ewv-magazine-masthead__logo {
+  @include mq($bp-medium) { @include span-columns(2.25); }
+  @include mq($bp-large) { @include span-columns(1.65); }
+}
+
+.ewv-magazine-nav {
+  @include mq($bp-medium) { @include span-columns(9.75); }
+  @include mq($bp-large) { @include span-columns(10.35); }
+}
+
+.ewv-magazine-masthead {
+  float: left;
+  background: $black;
+  a {
+    color: white;
+  }
+}
+
+.page-frontpage .ewv-magazine-masthead {
+  position: absolute;
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.3)), color-stop(100%,rgba(0,0,0,0.3))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#b3000000',GradientType=0 ); /* IE6-9 */
+  z-index: 9999999;
+  text-align: center;
+  a {
+    color: $black;
+  }
+}
+
+.ewv-magazine-masthead__logo {
+  background: url(../images/ewvMagazineLogo.png) no-repeat 50% 50%;
+  background-size: 100px;
+  text-indent: -999em;
+  padding: 2em;
+  float: left;
+  width: 50%;
+  @include mq($bp-medium) {
+    background-position: 1em 50%;
+  }
+  @include mq($bp-xlarge) {
+    padding: 2em 0;
+    background-position: 0 50%;
+  }
+}
+
+.page-frontpage .ewv-magazine-masthead__logo {
+  background-position: 50% 50%;
+  background-size: 130px;
+  width: 150px;
+  display: inline-block;
+  float: none;
+}
+
+
+.ewv-masthead__search-bar {
+  padding: 1em;
+  @include mq($bp-xlarge) {
+    padding: 0;
+  }
+  .form-search__field {
+    padding-left: 0;
+  }
+}
+
+.ewv-masthead__search-and-submit {
+  padding: 1em;
+  padding-top: 0;
+  @include mq($bp-xlarge) {
+    padding: 0;
+  }
+}
+
+.ewv-magazine-masthead__container {
+  @include outer-container();
+}
