@@ -32,14 +32,7 @@ a.mag-footer button{
   z-index: 9999999;
 }
 
-.ewv-magazine-masthead__logo {
 
-  @include mq($bp-medium) {
-  }
-  @include mq($bp-xlarge) {
-
-  }
-}
 
 
 
@@ -59,8 +52,4 @@ a.mag-footer button{
   @include mq($bp-xlarge) {
     padding: 0;
   }
-}
-
-.ewv-magazine-masthead__container {
-  @include outer-container();
 }
