@@ -15,15 +15,7 @@ a.mag-footer button{
 
 
 
-.ewv-magazine-masthead__logo {
-  @include mq($bp-medium) { @include span-columns(2.25); }
-  @include mq($bp-large) { @include span-columns(1.65); }
-}
 
-.ewv-magazine-nav {
-  @include mq($bp-medium) { @include span-columns(9.75); }
-  @include mq($bp-large) { @include span-columns(10.35); }
-}
 
 
 
@@ -40,14 +32,12 @@ a.mag-footer button{
 
 .ewv-magazine-masthead__logo {
   padding: 2em;
-  float: left;
   width: 100%;
+  margin:auto;
   @include mq($bp-medium) {
-    background-position: 1em 50%;
   }
   @include mq($bp-xlarge) {
     padding: 2em 0;
-    background-position: 0 50%;
   }
 }
 
