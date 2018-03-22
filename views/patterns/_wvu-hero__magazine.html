@@ -10,8 +10,8 @@
   <div class="wvu-hero wvu-hero--<r:site:id /> <r:if value1="{$hero_text_alignment}" value2="right" operator="=">wvu-hero--right</r:if> wvu-hero--big-photo" style="background-image: url(<r:files:each labels="{$bgurl}" limit="1" types="image" random="true"><r:file:image_url size="1780x580" /></r:files:each>);">
     <div class="wvu-hero__container wvu-hero__container--vignetting-<r:page:data name="hero_vignetting" />">
     <div class="wvu-hero__copy <r:edit_mode_only>wvu-hero__copy--edit-mode</r:edit_mode_only>">
-      <h1><r:page:content name="wvu-hero__header" /></h1>
-      <p><r:page:content name="wvu-hero__text" /></p>
+      <h1 class="ewv-magazine"><r:page:content name="wvu-hero__header" /></h1>
+      <p class="ewv-magazine"><r:page:content name="wvu-hero__text" /></p>
       <r:page:if_has_content_for region="wvu-hero__action-item-url">
         <a href="<r:page:content name="wvu-hero__action-item-url" />" class="button button--white <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="wvu-hero__action-item-text" /></a>
       </r:page:if_has_content_for>
