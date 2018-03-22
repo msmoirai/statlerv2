@@ -16,17 +16,21 @@ a.mag-footer button{
 
 
 
-
+.ewv-magazine-masthead__container {
+  @include clearfix;
+  margin:auto;
+  max-width:45em;
+}
 
 
 .ewv-magazine-masthead {
-  background: -moz-linear-gradient(top,  rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.3)),
-  color-stop(100%,rgba(0,0,0,0.3))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%); /* W3C */
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.5)),
+  color-stop(100%,rgba(0,0,0,0.5))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#b3000000',
   GradientType=0 ); /* IE6-9 */
   z-index: 9999999;
@@ -46,6 +50,33 @@ a.mag-footer button{
 }
 
 
+h1.ewv-magazine {
+  margin-top:3.5em;
+  text-align:center;
+  font-size:5em;
+  line-height:1.25em;
+  font-weight:normal;
+  text-transform:uppercase;
+  text-shadow: 1px 1px 1px #000000;
+  font-family: "HelveticaNeueW01-97Blac","Helvetica Neue",Helvetica,"Helvetica LT Std","Helvetica CY",Arial,"Lucida Grande",sans-serif;
+  color:white;
+}
+
+p.ewv-magazine{
+  margin:auto;
+  text-align:center;
+  font-size:1.25em;
+  line-height:1.25em;
+  font-weight:normal;
+  text-transform:uppercase;
+  text-shadow: 1px 1px 1px #000000;
+  font-family: "HelveticaNeueW01-97Blac","Helvetica Neue",Helvetica,"Helvetica LT Std","Helvetica CY",Arial,"Lucida Grande",sans-serif;
+  color:white;
+}
+
+
+
+
 
 .ewv-masthead__search-bar {
   padding: 1em;
@@ -63,10 +94,4 @@ a.mag-footer button{
   @include mq($bp-xlarge) {
     padding: 0;
   }
-}
-
-.ewv-magazine-masthead__container {
-  @include clearfix;
-  margin:auto;
-  max-width:45em;
 }
