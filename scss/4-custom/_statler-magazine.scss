@@ -1,5 +1,5 @@
 h2.mag-footer {
-  color: #EAAA00;
+  color: #EAAA00!important;
   font-size: 1.25em;
   line-height: 1em;
 }
@@ -11,8 +11,9 @@ p.mag-footer {
 
 }
 
-button.mag-footer {
+a.mag-footer button{
   font-size: .75em;
+  color:white;
 }
 
 
