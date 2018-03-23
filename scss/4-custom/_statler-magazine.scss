@@ -65,7 +65,6 @@ h1.ewv-magazine {
   font-weight:normal;
   text-transform:uppercase;
   text-shadow: 1px 1px 1px #000000;
-      font-family: "Helvetica Neue",Helvetica,"Helvetica LT Std","Helvetica CY",Arial,"Lucida Grande",sans-serif;
       color:white;
       z-index:3;
 }
@@ -81,9 +80,20 @@ p.ewv-magazine{
       font-family: "Helvetica Neue",Helvetica,"Helvetica LT Std","Helvetica CY",Arial,"Lucida Grande",sans-serif;
       color:#EAAA00;
       z-index:3;
+      padding-bottom:1em;
 }
 
+.ewv-magazine-button{
+  background: #2C2A29;
+  border: 2px solid white;
+  color: white;
+}
 
+.ewv-magazine-button:hover{
+  background:white;
+  border: 2px solid white;
+  color: #2C2A29;
+}
 
 
 
