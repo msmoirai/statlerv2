@@ -17,6 +17,10 @@ h1.mag:before{
   content:none;
 }
 
+.mag-button-div{
+  margin:auto;
+  text-align:center;
+}
 
 .ewv-magazine-masthead__container {
   @include clearfix;
