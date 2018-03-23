@@ -13,13 +13,15 @@ a.mag-footer button{
   color:#EAAA00;
 }
 
-
+.mag:before{
+  content:none;
+}
 
 
 .ewv-magazine-masthead__container {
   @include clearfix;
   margin:auto;
-  max-width:45em;
+  max-width:30em;
 }
 
 
