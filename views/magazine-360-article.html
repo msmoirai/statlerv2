@@ -88,14 +88,7 @@ custom_data_attributes:
     <div class="wvu-hero__container wvu-hero__container--vignetting-<r:page:data name="hero_vignetting" />">
     <div class="wvu-hero__copy <r:edit_mode_only>wvu-hero__copy--edit-mode</r:edit_mode_only>">
       <h1><span><r:editable_region name="wvu-hero__header" type="simple">Header Goes Here</r:editable_region></span></h1>
-      <p><r:editable_region name="wvu-hero__text" type="simple">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</r:editable_region></p>
-      <r:page:if_has_content_for region="wvu-hero__action-item-url">
-        <a href="<r:page:content name="wvu-hero__action-item-url" />" class="button button--white <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="wvu-hero__action-item-text" /></a>
-      </r:page:if_has_content_for>
-      <r:edit_mode_only>
-        <p class="button"><r:editable_region name="wvu-hero__action-item-text" type="simple">Action Item Text</r:editable_region></p>
-        <p><r:editable_region name="wvu-hero__action-item-url" type="simple">URL for action item goes here. If you don't want the hero unit to show up at all, delete the content in this editable region.</r:editable_region></p>
-      </r:edit_mode_only>
+      <p><r:editable_region name="article__hero-url" type="simple">Hero Image URL</r:editable_region></p>
     </div>
   </div>
 </div>
@@ -105,9 +98,6 @@ custom_data_attributes:
 
   <r:edit_mode_only>
 
-    <p class="button"><r:editable_region name="right-side__action-item-text" type="simple">Action Item Text</r:editable_region></p>
-    <p><r:editable_region name="right-side__action-item-url" type="simple"></r:editable_region></p>
-    <p><r:editable_region name="article__hero-url" type="simple">Hero Image URL</r:editable_region></p>
     <p><r:editable_region name="article__hero-color" type="simple">Hero Text Color</r:editable_region></p>
     <p><r:editable_region name="article__hero-text-family" type="simple">Hero Text Family</r:editable_region></p>
   </r:edit_mode_only>
@@ -123,13 +113,6 @@ custom_data_attributes:
   <h1><r:article:name /></h1>
   <div id="wvu-main-content" class="main-back" role="article">
 
-
-
-      <div class="statler-article__featured-media">
-
-        <r:editable_region name="article-media__first" >
-          <img src="http://statler.sandbox.wvu.edu/files/2ce04ceb-78eb-469e-9b3c-2874a24b63a6/876x493?cb=1449698045" alt="This is an image of the flying WV logo used when a media article has no media accompanying it.">
-        </r:editable_region>
 
 <r:page:if_has_content_for region="article-media__caption" always_show_in_edit_mode="true">
         <p class="statler-article__featured-media-caption">
