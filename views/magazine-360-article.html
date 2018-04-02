@@ -72,31 +72,31 @@ custom_data_attributes:
 <r:content_for name="header-extras">
 
 </r:content_for>
+
 <style>
 .article-accent{
   color: <r:page:content name="article__hero-color" />!important;
-  font-family: <r:page:content name="article__hero-text-family" />!important;
 }
 </style>
 
 
-<r:edit_mode_only>
-    <p><r:editable_region name="article__hero-color" type="simple">Hero Text Color</r:editable_region></p>
-    <p><r:editable_region name="article__hero-text-family" type="simple">Hero Text Family</r:editable_region></p>
-  </r:edit_mode_only>
 
 
 
 <div class="wvu-container statler-article__title">
   <h1 class="article-accent"><r:page:slug /></h1>
-  <div id="wvu-main-content" class="main-back" role="article">
+  <div class="center" id="wvu-main-content" class="main-back" role="article">
 
-    <div class="statler-article__featured-media">
+    <div class="statler-article__featured-media center">
 
       <r:editable_region name="article-media__first" >
-        <img src="http://statler.sandbox.wvu.edu/files/2ce04ceb-78eb-469e-9b3c-2874a24b63a6/876x493?cb=1449698045" alt="This is an image of the flying WV logo used when a media article has no media accompanying it.">
+        <img class="article-center"src="http://statler.sandbox.wvu.edu/files/2ce04ceb-78eb-469e-9b3c-2874a24b63a6/876x493?cb=1449698045"
+        alt="This is an image of the flying WV logo used when a media article has no media accompanying it.">
       </r:editable_region>
 
+      <r:edit_mode_only>
+          <p><r:editable_region name="article__hero-color" type="simple">Hero Text Color</r:editable_region></p>
+      </r:edit_mode_only>
 
 <r:page:if_has_content_for region="article-media__caption" always_show_in_edit_mode="true">
         <p class="statler-article__featured-media-caption">
