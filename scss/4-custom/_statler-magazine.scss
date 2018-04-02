@@ -170,11 +170,12 @@ img.article-center{
 }
 
 ul.in-memoriam{
-  background-color:gainsboro;
+
    li {
-       width:50%;
+    background-color:gainsboro;
+    width:33%;
     border-bottom: 1px solid #a2aaad;
-    h2{ font-size: 1.4rem; text-align: center;}
+    h2{ font-size: 1.4rem; text-align: left;}
     margin-top: 2rem;
     margin-bottom: 2.5rem;
     &:last-child{border-bottom: none;}
