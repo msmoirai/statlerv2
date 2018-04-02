@@ -28,6 +28,15 @@ h1.mag:before{
   max-width:30em;
 }
 
+.ewv-magazine-masthead__container-small {
+  @include clearfix;
+  margin:auto;
+  max-width:75em;
+}
+
+img.ewv-magazine-masthead-small{
+  max-width:25%;
+}
 
 .ewv-magazine-masthead {
   background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6+ */
@@ -42,6 +51,20 @@ h1.mag:before{
   z-index: 9999999;
   width:100%;
   position:absolute;
+}
+.ewv-magazine-masthead-small {
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.75) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.75)),
+  color-stop(100%,rgba(0,0,0,0.75))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.75) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.75) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.75) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.75) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#b3000000',
+  GradientType=0 ); /* IE6-9 */
+  z-index: 9999999;
+  width:100%;
+
 }
 
 .ewv-magazine-masthead__logo {
