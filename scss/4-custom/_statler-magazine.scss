@@ -34,9 +34,7 @@ h1.mag:before{
   max-width:75em;
 }
 
-img.ewv-magazine-masthead-small{
-  max-width:25%;
-}
+
 
 .ewv-magazine-masthead {
   background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6+ */
@@ -70,6 +68,17 @@ img.ewv-magazine-masthead-small{
 .ewv-magazine-masthead__logo {
   padding: 2em;
   width: 100%;
+  margin:auto;
+  @include mq($bp-medium) {
+  }
+  @include mq($bp-xlarge) {
+    padding: 2em 0;
+  }
+}
+
+.ewv-magazine-masthead__logo-small {
+  padding: 2em;
+  width: 25%;
   margin:auto;
   @include mq($bp-medium) {
   }
