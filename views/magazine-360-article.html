@@ -85,7 +85,12 @@ blockquote{
 
 
 
-
+<div class="u-full-width ewv-magazine-masthead">
+  <div class="ewv-magazine-masthead__container">
+    <a class="ewv-magazine-masthead__logo" href="/">
+      <img src="https://statlerv2.sandbox.wvu.edu/files/d/d22b679a-02da-48eb-86b7-f8c2523467c5/engineeringmagazinemasthead-01.png"></a>
+  </div>
+</div>
 <div class="wvu-container statler-article__title">
   <h1 class="article-accent"><r:page:name /></h1>
   <div class="center" id="wvu-main-content" class="main-back" role="article">
@@ -111,10 +116,16 @@ blockquote{
         </div>
 <div class="sharethis-inline-share-buttons"></div>
 
-<r:page:if_has_content_for region="article-media__location" always_show_in_edit_mode="true">
-<p>
+<r:page:if_has_content_for region="author-name" always_show_in_edit_mode="true">
 <r:edit_mode_only>Enter the Author's name</r:edit_mode_only>
+<p>
   Written by <strong><r:editable_region name="author-name" class="statler-author-name"/><strong>
+</p>
+</r:page:if_has_content_for>
+<r:page:if_has_content_for region="photographer-name" always_show_in_edit_mode="true">
+<r:edit_mode_only>Enter the Photographer's name</r:edit_mode_only>
+<p>
+  Photos by <strong><r:editable_region name="photographer-name" class="statler-author-name"/><strong>
 </p>
 </r:page:if_has_content_for>
 
