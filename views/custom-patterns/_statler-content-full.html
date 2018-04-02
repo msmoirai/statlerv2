@@ -8,7 +8,12 @@
 
          <r:editable_region name="main-content-full"  />
 
-
+         <r:page:if_has_content_for region="article-media__caption" always_show_in_edit_mode="true">
+                 <p class="statler-article__featured-media-caption">
+                   <r:edit_mode_only>Enter the featured image caption</r:edit_mode_only>
+                   <r:editable_region name="article-media__caption" />
+                 </p>
+         </r:page:if_has_content_for>
 
 
 
