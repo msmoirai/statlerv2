@@ -169,9 +169,26 @@ img.article-center{
   color:white;
 }
 
-.in-memoriam{
+ul.in-memoriam{
   background-color:gainsboro;
-  }
-  li.in-memoriam{
-    width:50%;
-  }
+   li {
+       width:50%;
+    border-bottom: 1px solid #a2aaad;
+    h2{ font-size: 1.4rem; text-align: center;}
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+    &:last-child{border-bottom: none;}
+    @include mq($bp-medium) {
+      border-bottom: none;
+      border-radius: 6px;
+      @include span-columns(5.75);
+      @include omega(2n);
+    padding: 1rem;
+    } //mq
+    @include mq($bp-large) {
+      @include span-columns(3);
+      @include u-omega-reset(2n);
+      @include omega(4n);
+    } //mq
+  } //li
+}
