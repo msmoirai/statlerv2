@@ -73,14 +73,6 @@ custom_data_attributes:
 
 </r:content_for>
 
-<style>
-.article-accent{
-  color: <r:page:content name="article__hero-color" />!important;
-}
-blockquote{
-  color: <r:page:content name="article__hero-color" />!important;
-}
-</style>
 
 
 
@@ -93,21 +85,14 @@ blockquote{
       </div>
   </div>
 </div>
-<div class="wvu-container">
-<ul class="in-memoriam">
-  <r:children:each limit="{$limit}" labels="{$tags}" with_template="magazine-in-memoriam">
 
-    <li>
-      <div>
-          <h2><r:page:name /></h2>
-      </div>
-
-      <div>
-        <r:page:content name="article-copy" />
-      </div>
-    </li>
-
-    </r:children:each>
-</ul>
-
-</div>
+  <div class="wvu-container department-features">
+    <r:blog id="67616"> <r:comment><!-- Change to your blog's page ID --></r:comment>
+      <r:articles:each tags="in-memoriam" tags_match="any" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
+        <div class="department department--memoriam">
+          <h3><r:page:first_non_blank_attr names="alternate_name,name" /></h3>
+            <p><r:page:content name="article-copy" /></p>
+                    </div>
+      </r:articles:each>
+    </r:blog>
+</div><!-- end wvu-container -->
