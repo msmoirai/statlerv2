@@ -81,7 +81,7 @@ custom_data_attributes:
   <div class="ewv-magazine-masthead__container-small">
     <a href="/">
       <img class="ewv-magazine-masthead__logo-small" src="https://statlerv2.sandbox.wvu.edu/files/d/d22b679a-02da-48eb-86b7-f8c2523467c5/engineeringmagazinemasthead-01.png"></a>
-      <div class="mag-section-title">Engineering <strong>&#176;</strong>
+      <div class="mag-section-title">Engineering <strong>360&#176;</strong>
       </div>
   </div>
 </div>
@@ -106,3 +106,30 @@ custom_data_attributes:
       </r:articles:each>
     </r:blog>
 </div><!-- end wvu-container -->
+
+<div class="statler-news-grid__more">
+    <ul class="statler-sub-article">
+      <r:blog id="67616"> <r:comment><!-- Change to your blog's page ID --></r:comment>
+        <r:articles:each tags="engineering-360"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
+            <li>
+              <div class="statler-sub-story" role="article">
+                    <div class="statler-sub-article__body">
+
+                          <a href="<r:article:path />">
+                            <r:article:content name="article-media__first" />
+                          </a>
+
+                      <h2 class="statler-sub-story"><a href="<r:article:path />"><r:article:name /></a></h2>
+
+
+
+                    </div> <!-- /.statler-sub-article__body -->
+
+                </div><!-- statler-sub-story -->
+
+            </li>
+
+        </r:articles:each>
+      </r:blog>
+    </ul><!--/.statler-sub-article-->
+  </div><!--end news-grid__more-->
