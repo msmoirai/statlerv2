@@ -4,13 +4,11 @@
 
       <h1>In this Issue</h1>
 
-      <div class="statler-news-grid">
-
-
-        <div class="statler-news-grid__solo">
-          <ul class="statler-sub-article">
-            <r:blog id="67616"> <r:comment><!-- Change to your blog's page ID --></r:comment>
-                <r:articles:each tags="spring-2018,engineering-360" tags_op="all"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
+      <div class="wvu-container">
+        <div class="statler-360-grid">
+            <ul class="statler-sub-article">
+              <r:blog id="67616"> <r:comment><!-- Change to your blog's page ID --></r:comment>
+              <r:articles:each tags="spring-2018, rnd" tags_op="all"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
                   <li>
                     <div class="statler-sub-story" role="article">
                           <div class="statler-sub-article__body">
@@ -21,23 +19,16 @@
 
                             <h2 class="statler-sub-story"><a href="<r:article:path />"><r:article:name /></a></h2>
 
-<a class="button button--pms-286-c button--big button--pms-286-c-fill" href="http://www.statler.wvu.edu/news">View All News</a>
 
-                          </div> <!-- statler-sub-article__body -->
 
-                  </div><!-- statler-sub-story -->
+                          </div> <!-- /.statler-sub-article__body -->
 
-                </li>
+                      </div><!-- statler-sub-story -->
+
+                  </li>
 
               </r:articles:each>
-            </r:blog>
-          </ul><!--/.statler-sub-article-->
-        </div><!--end news-grid__solo-->
-
-        <div class="statler-news-grid__more">
-            <ul class="statler-sub-article">
-              <r:blog id="67616"> <r:comment><!-- Change to your blog's page ID --></r:comment>
-                <r:articles:each tags="spring-2018,in-memoriam" tags_op="all"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
+                <r:articles:each tags="spring-2018, engineering-360" tags_op="all"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
                     <li>
                       <div class="statler-sub-story" role="article">
                             <div class="statler-sub-article__body">
@@ -60,6 +51,7 @@
               </r:blog>
             </ul><!--/.statler-sub-article-->
           </div><!--end news-grid__more-->
+      </div><!-- end wvu-container -->
 
 
 
@@ -71,12 +63,8 @@
           <r:articles:each tags="spring-2018, in-memoriam" tags_op="all"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
             <div class="department department--memoriam">
               <h3><r:page:first_non_blank_attr names="alternate_name,name" /></h3>
-                <p><r:page:meta_description /></p>
-                <a href="<r:page:url />">Read <r:page:parent:name /></a>
-            </div>
+                <p><r:page:content name="article-copy" /></p>
+                        </div>
           </r:articles:each>
         </r:blog>
-      </div>
-
-  </div><!-- end wvu-container -->
-</div>
+    </div><!-- end wvu-container -->
