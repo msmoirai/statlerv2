@@ -213,3 +213,19 @@ ul.in-memoriam{
 .department--memoriam {
   border-color: #9ABEAA;
 }
+
+.department {
+  @include mq($bp-medium) {
+    @include span-columns(3);
+    @include omega(4n);
+  }
+}
+
+.page-wvu-magazine-department--memoriam, {
+  .wvu-magazine-department__sub-features {
+    @include mq($bp-medium) {
+      @include span-columns(12);
+      @include shift(0);
+    }
+  }
+}
