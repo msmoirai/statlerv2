@@ -66,5 +66,18 @@
 
       </div><!--end news-grid-->
 
+      <div class="wvu-container department-features">
+        <r:blog id="67616"> <r:comment><!-- Change to your blog's page ID --></r:comment>
+          <r:articles:each tags="spring-2018,in-memoriam" tags_match="all" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
+            <div class="department department--memoriam">
+              <h3><r:page:first_non_blank_attr names="alternate_name,name" /></h3>
+                <p><r:page:meta_description /></p>
+                <a href="<r:page:url />">Read <r:page:parent:name /></a>
+              </r:children:each>
+            </div>
+          </r:articles:each>
+        </r:blog>
+      </div>
+
   </div><!-- end wvu-container -->
 </div>

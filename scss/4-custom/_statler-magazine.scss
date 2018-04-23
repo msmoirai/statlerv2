@@ -194,3 +194,22 @@ ul.in-memoriam{
     } //mq
   } //li
 }
+
+.wvu-container.department-features {
+  padding-top: 0;
+}
+
+.department { border-left: 2px solid; padding-left: 1em; font-size: 0.8em; margin-bottom: 3em; position: relative;
+
+}
+
+.department-features {
+  padding: 0 1em;
+  @include mq($bp-xlarge) {
+    padding: 0;
+  }
+}
+
+.department--memoriam {
+  border-color: #9ABEAA;
+}
