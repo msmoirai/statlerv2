@@ -79,36 +79,38 @@ custom_data_attributes:
 </style>
 
 
+
+
+
+
+
+<div class="u-full-width ewv-magazine-masthead-small">
+  <div class="ewv-magazine-masthead__container-small">
+    <a href="/">
+      <img class="ewv-magazine-masthead__logo-small" src="https://statlerv2.sandbox.wvu.edu/files/d/d22b679a-02da-48eb-86b7-f8c2523467c5/engineeringmagazinemasthead-01.png"></a>
+      <div class="mag-section-title">Dean's <strong>Message</strong>
+      </div>
+  </div>
+</div>
+
 <r:partial name="custom-patterns/statler-magazine-hero__individual" />
 
-
-
-
-  <r:edit_mode_only>
-
-    <p><r:editable_region name="article__hero-color" type="simple">Hero Text Color</r:editable_region></p>
-    <p><r:editable_region name="article__hero-text-family" type="simple">Hero Text Family</r:editable_region></p>
-  </r:edit_mode_only>
-
-
-<r:edit_mode_only>
-  <div class="wvu-instructions">
-    <p><strong>Instructions for Hero:</strong> This is where you feature your most important content and user action. It requires marketing copy for a headline and brief description, a call to action, and a photo. If you cannot provide all of these items, consider omitting this section. See our <a href="http://brand.wvu.edu/brand-guide/voice">guidelines for marketing copy</a> and <a href="http://brand.wvu.edu/brand-guide/graphic-language/photo">using photos</a>. If you want to use a large background image, upload your own background image. Label the image with the page slug of the page that contains the hero and a &ldquo;-hero-background&rdquo; suffix. For example, if the hero is being used on the Home page, label the photo with &ldquo;home-hero-background&rdquo;.</p>
-  </div>
-</r:edit_mode_only>
-
 <div class="wvu-container statler-article__title">
-  <h1><r:article:name /></h1>
-  <div id="wvu-main-content" class="main-back" role="article">
+  <h1 class="article-accent"><r:page:name /></h1>
+  <div class="center" id="wvu-main-content" class="main-back" role="article">
 
+    <div class="statler-article__featured-media center">
+
+
+      <r:edit_mode_only>
+          <p><r:editable_region name="article__hero-color" type="simple">Hero Text Color</r:editable_region></p>
+      </r:edit_mode_only>
 
 <r:page:if_has_content_for region="article-media__caption" always_show_in_edit_mode="true">
         <p class="statler-article__featured-media-caption">
           <r:edit_mode_only>Enter the featured image caption</r:edit_mode_only>
           <r:editable_region name="article-media__caption" />
         </p>
-</r:page:if_has_content_for>
-        </div>
 <div class="sharethis-inline-share-buttons"></div>
 
 <r:page:if_has_content_for region="article-media__location" always_show_in_edit_mode="true">
