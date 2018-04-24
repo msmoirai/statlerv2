@@ -3,9 +3,9 @@
   <div class="wvu-hero wvu-hero--<r:site:id /> <r:if value1="{$hero_text_alignment}" value2="right" operator="=">wvu-hero--right</r:if> wvu-hero--big-photo" style="background-image: url(<r:page:content name="article__hero-url">
   <r:file:image_url size="1780x750" /></r:page:content>);">
     <div class="wvu-hero__container wvu-hero__container--vignetting-<r:page:data name="hero_vignetting" />">
-    <div class="wvu-hero__copy <r:edit_mode_only>wvu-hero__copy--edit-mode</r:edit_mode_only>">
+    <div class="mag-button-div <r:edit_mode_only>wvu-hero__copy--edit-mode</r:edit_mode_only>">
       <h1 class="ewv-magazine mag"><span><r:editable_region name="wvu-hero__header" type="simple">Header Goes Here</r:editable_region></span></h1>
-      <p><r:editable_region name="wvu-hero__text" type="simple">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</r:editable_region></p>
+      <p class="ewv-magazine"><r:editable_region name="wvu-hero__text" type="simple">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</r:editable_region></p>
       <r:page:if_has_content_for region="wvu-hero__action-item-url">
         <a href="<r:page:content name="wvu-hero__action-item-url" />" class="button button--white <r:edit_mode_only>button--edit-mode</r:edit_mode_only>"><r:page:content name="wvu-hero__action-item-text" /></a>
       </r:page:if_has_content_for>
