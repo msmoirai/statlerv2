@@ -5,42 +5,22 @@
       <h1>In this Issue</h1>
 
 
-        <div class="statler-360-grid">
-            <ul class="statler-sub-article">
-              <r:blog id="67616"> <r:comment><!-- Change to your blog's page ID --></r:comment>
-              <r:articles:each tags="spring-2018, rnd" tags_op="all"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
-                  <li>
-                    <div class="statler-sub-story" role="article">
-                          <div class="statler-sub-article__body">
-
-                                <a href="<r:article:path />">
-                                  <r:article:content name="article-media__first" />
-                                </a>
-
-                            <h2 class="statler-sub-story"><a href="<r:article:path />"><r:article:name /></a></h2>
-
-
-
-                          </div> <!-- /.statler-sub-article__body -->
-
-                      </div><!-- statler-sub-story -->
-
-                  </li>
-
-              </r:articles:each>
-
-              </r:blog>
-            </ul><!--/.statler-sub-article-->
-          </div><!--end news-grid__more-->
 
 
 
 
 
-
-
+      <div class="wvu-container department-features">
+        <r:blog id="67616"> <r:comment><!-- Change to your blog's page ID --></r:comment>
+          <r:articles:each tags="in-memoriam" tags_match="any" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
+            <div class="department department--memoriam">
+              <h3><r:page:first_non_blank_attr names="alternate_name,name" /></h3>
+                <p><r:page:content name="article-copy" /></p>
+                        </div>
+          </r:articles:each>
+        </r:blog>
+    </div><!-- end wvu-container -->
 
 
       </div><!-- end wvu-container -->
-
-    </div>
+    </div><!-- end wvu-section -->
