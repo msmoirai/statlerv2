@@ -12,7 +12,7 @@
 
       <div class="wvu-container department-features">
         <r:blog id="67616"> <r:comment><!-- Change to your blog's page ID --></r:comment>
-          <r:articles:each tags="in-memoriam" tags_match="any" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
+          <r:articles:each tags="spring-2018,in-memoriam" tags_op="all" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
             <div class="department department--memoriam">
               <h3><r:page:first_non_blank_attr names="alternate_name,name" /></h3>
                 <p><r:page:content name="article-copy" /></p>
