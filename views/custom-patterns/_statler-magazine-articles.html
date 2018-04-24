@@ -6,7 +6,7 @@
 
 
 
-
+<h2>Research and Development</h2>
       <div class="wvu-container">
         <div class="statler-360-grid">
             <ul class="statler-sub-article">
@@ -31,33 +31,44 @@
                     </li>
 
                 </r:articles:each>
-                
-                  <r:articles:each tags="spring-2018,engineering-360" tags_op="all" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
-                      <li>
-                        <div class="statler-sub-story" role="article">
-                              <div class="statler-sub-article__body">
 
-                                    <a href="<r:article:path />">
-                                      <r:article:content name="article-media__first" />
-                                    </a>
-
-                                <h2 class="statler-sub-story"><a href="<r:article:path />"><r:article:name /></a></h2>
-
-
-
-                              </div> <!-- /.statler-sub-article__body -->
-
-                          </div><!-- statler-sub-story -->
-
-                      </li>
-
-                  </r:articles:each>
               </r:blog>
             </ul><!--/.statler-sub-article-->
           </div><!--end news-grid__more-->
       </div><!-- end wvu-container -->
 
+<h2>Engineering 360&#176;</h2>
+            <div class="wvu-container">
+              <div class="statler-360-grid">
+                  <ul class="statler-sub-article">
+                    <r:blog id="67616"> <r:comment><!-- Change to your blog's page ID --></r:comment>
+                      <r:articles:each tags="spring-2018,engineering-360" tags_op="all" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
+                          <li>
+                            <div class="statler-sub-story" role="article">
+                                  <div class="statler-sub-article__body">
 
+                                        <a href="<r:article:path />">
+                                          <r:article:content name="article-media__first" />
+                                        </a>
+
+                                    <h2 class="statler-sub-story"><a href="<r:article:path />"><r:article:name /></a></h2>
+
+
+
+                                  </div> <!-- /.statler-sub-article__body -->
+
+                              </div><!-- statler-sub-story -->
+
+                          </li>
+
+                      </r:articles:each>
+
+                    </r:blog>
+                  </ul><!--/.statler-sub-article-->
+                </div><!--end news-grid__more-->
+            </div><!-- end wvu-container -->
+
+<h2>In Memoriam</h2>
       <div class="wvu-container department-features">
         <r:blog id="67616"> <r:comment><!-- Change to your blog's page ID --></r:comment>
           <r:articles:each tags="spring-2018,in-memoriam" tags_op="all" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
