@@ -264,7 +264,6 @@ li{
   padding-left: 0em;
     @include mq($bp-medium) {
       width: 50%;
-      padding-left: 1em;
       margin-top: 0;
     }
 }
