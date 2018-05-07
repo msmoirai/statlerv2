@@ -69,15 +69,17 @@
 
       <div class="magazine-container">
         <div class="statler-360-grid">
-          <div class="rnd-head">
-          <p class="article-sm-head"><strong>Research </strong>and Development</p>
-          </div>
             <ul class="statler-sub-article">
+              <li>
+                <div class="rnd-head">
+                <p class="article-sm-head"><strong>Research </strong>and Development</p>
+              </div>
+            </li>
               <r:blog id="67616"> <r:comment><!-- Change to your blog's page ID --></r:comment>
                 <r:articles:each tags="spring-2018,rnd" tags_op="all" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
                     <li>
                       <div class="statler-sub-story" role="article">
-                          <p ><a class="article-foot" href="<r:article:path />"><r:article:name /></a></p>
+                          <p ><a href="<r:article:path />"><r:article:name /></a></p>
                       </div><!-- statler-sub-story -->
 
                     </li>
