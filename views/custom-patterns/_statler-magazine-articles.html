@@ -64,13 +64,13 @@
                 <div class="rnd-head">
                 <p class="article-lg-head"><strong>Research </strong>and Development</p>
                 </div>
+                <ul>
           <r:articles:each tags="spring-2018,rnd" tags_op="all" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
               <li>
-                <div class="statler-sub-story" role="article">
-                    <p ><a href="<r:article:path />"><r:article:name /></a></p>
-                </div><!-- statler-sub-story -->
+                <p ><a href="<r:article:path />"><r:article:name /></a></p>
               </li>
-              </r:articles:each>
+          </r:articles:each>
+        </ul>
             </div>
           </div>
         </li>
