@@ -277,20 +277,6 @@ ul{
 
 }
 
-li.article{
-  li{
-    width:50%;
-    height:2em;
-    float:none;
-    list-style-type: none;
-    padding-left: 0;
-    @include mq($bp-medium) {
-        margin-top: 0;
-      }
-  }
-}
-
-
 .statler-360-grid {
 width: 100%;
 float: left;
@@ -334,6 +320,19 @@ ul{
   }
 }
 
+}
+
+li.article{
+  li{
+    width:50%;
+    height:2em;
+    float:none;
+    list-style-type: none;
+    padding-left: 0;
+    @include mq($bp-medium) {
+        margin-top: 0;
+      }
+  }
 }
 
 .magazine-container{
