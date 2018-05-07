@@ -277,6 +277,17 @@ ul{
 
 }
 
+li.article{
+  li{
+    list-style-type: none;
+    padding-left: 0;
+    float: left;
+    @include mq($bp-medium) {
+        margin-top: 0;
+      }
+  }
+}
+
 
 .statler-360-grid {
 width: 100%;
