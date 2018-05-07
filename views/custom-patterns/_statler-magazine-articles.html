@@ -58,25 +58,6 @@
 
             </r:articles:each>
 
-            <li>
-              <div class="statler-sub-story" role="article">
-              <div class="statler-sub-article__body">
-                <div class="rnd-head">
-                <p class="article-lg-head"><strong>Research </strong>and Development</p>
-                </div>
-                <ul>
-          <r:articles:each tags="spring-2018,rnd" tags_op="all" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
-              <li class="article">
-                <p ><a href="<r:article:path />"><r:article:name /></a></p>
-              </li>
-          </r:articles:each>
-        </ul>
-            </div>
-          </div>
-        </li>
-
-
-
           </r:blog>
         </ul><!--/.statler-sub-article-->
       </div><!--end news-grid__solo-->
@@ -91,44 +72,40 @@
         <div class="statler-360-grid">
             <ul class="statler-sub-article">
               <li>
-                <div class="rnd-head">
-                <p class="article-sm-head"><strong>Research </strong>and Development</p>
+                <div class="statler-sub-story" role="article">
+                <div class="statler-sub-article__body">
+                  <div class="rnd-head">
+                  <p class="article-lg-head"><strong>Research </strong>and Development</p>
+                  </div>
+                  <ul>
+            <r:articles:each tags="spring-2018,rnd" tags_op="all" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
+                <li class="article">
+                  <p ><a href="<r:article:path />"><r:article:name /></a></p>
+                </li>
+            </r:articles:each>
+          </ul>
               </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="statler-sub-story" role="article">
+            <div class="statler-sub-article__body">
+              <div class="eng-head">
+              <p class="article-sm-head">Engineering <strong>360&#176;</strong></p>
+              </div>
+              <ul>
+        <r:articles:each tags="spring-2018,360" tags_op="all" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
+            <li class="article">
+              <p ><a href="<r:article:path />"><r:article:name /></a></p>
             </li>
-              <r:blog id="67616"> <r:comment><!-- Change to your blog's page ID --></r:comment>
-                <r:articles:each tags="spring-2018,rnd" tags_op="all" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
-                    <li>
-                      <div class="statler-sub-story" role="article">
-                          <p ><a href="<r:article:path />"><r:article:name /></a></p>
-                      </div><!-- statler-sub-story -->
+        </r:articles:each>
+      </ul>
+          </div>
+        </div>
+      </li>
 
-                    </li>
-
-                </r:articles:each>
-
-                      <r:articles:each tags="spring-2018,360" tags_op="all" > <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
-                          <li>
-                            <div class="statler-sub-story" role="article">
-                                  <div class="statler-sub-article__body">
-
-                                    <div class="eng-head">
-                                    <p class="article-sm-head">Engineering <strong>360&#176;</strong></p>
-                                    </div>
-                                    <div>
-                                      <a href="<r:article:path />">
-                                        <r:article:content name="article-media__first" />
-                                      </a>
-                                    </div>
-                                    <div class="article-foot-bg">
-                                    <p class="article-foot"><a class="article-foot" href="<r:article:path />"><r:article:name /></a></p>
-                                    </div>
-</div> <!-- /.statler-sub-article__body -->
-
-                              </div><!-- statler-sub-story -->
-
-                          </li>
-
-                      </r:articles:each>
+                      
 
                     </r:blog>
                   </ul><!--/.statler-sub-article-->
