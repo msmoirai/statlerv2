@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <r:comment><!-- meta charset gets set automatically by CleanSlate --></r:comment>
+    <r:page:if_site_default>
+      <title><r:site:name /> at West Virginia University</title>
+      <link rel="canonical" href="http://<r:site:domain />">
+    </r:page:if_site_default>
+    <r:page:unless_site_default>
+      <title><r:page:first_non_blank_attr names="alternate_name, name" /> | <r:site_name /> | West Virginia University</title>
+      <link rel="canonical" href="<r:page:url />" >
+    </r:page:unless_site_default>
+    <meta name="description" content="<r:page:meta_description />" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="<r:site:data name="google_site_verification" />" />
+
+    <meta property="og:title" content="<r:site_name /> | <r:page:first_non_blank_attr names="alternate_name, name" />" />
+    <meta property="og:description" content="<r:page:meta_description />" />
+    <r:set_var name="thumbnailurl">
+      <r:page:slug />-thumbnail
+    </r:set_var>
+    <r:files:each limit="1" labels="{$thumbnailurl}" types="image" random="true">
+      <meta property="og:image" content="<r:file:image_url size="1200x630" />" />
+      <meta name="twitter:image" content="<r:page:">
+    </r:files:each>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="<r:page:url />" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="<r:site_name />">
+    <meta name="twitter:creator" content="<r:site:data name="twitter_handle" />">
+    <meta name="twitter:title" content="<r:page:first_non_blank_attr names="alternate_name, name" />">
+    <meta name="twitter:description" content="<r:page:meta_description />">
+
+    <r:include_stylesheet name="styles" />
+    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=58b5a68b3dfd4300120a0e3e&product=inline-share-buttons' async='async'></script>
+<link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+<script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+<script type="text/javascript">
+  // The TL.Timeline constructor takes at least two arguments:
+  // the id of the Timeline container (no '#'), and
+  // the URL to your JSON data file or Google spreadsheet.
+  // the id must refer to an element "above" this code,
+  // and the element must have CSS styling to give it width and height
+  // optionally, a third argument with configuration options can be passed.
+  // See below for more about options.
+  timeline = new TL.Timeline('timeline-embed',
+    'https://docs.google.com/spreadsheets/d/1cWqQBZCkX9GpzFtxCWHoqFXCHg-ylTVUWlnrdYMzKUI/pubhtml');
+</script>
+  </head>
+
+  <body class="<r:page:template:name /> page--<r:page:id /> page--<r:page:slug /> <r:edit_mode_only>page--edit-mode page--hide-instructions-<r:site:data name="hide_instructions" /></r:edit_mode_only>">
+
+    <header>
+      <a class="wvu-skip-nav" href="#wvu-main-content">Skip to main content</a>
+
+      <r:if expr="{{ NOT(BLANK(slot_00_masthead)) }}">
+        <r:set_var name="patternNameMasthead">
+          patterns/wvu-<r:site:data name="slot_00_masthead" />
+        </r:set_var>
+        <r:partial name="{$patternNameMasthead}" />
+      </r:if>
+
+        </header>
+
+    <r:if expr="{{ NOT(BLANK(slot_00_nav)) }}">
+      <r:set_var name="patternNameNav">
+        patterns/wvu-<r:site:data name="slot_00_nav" />
+      </r:set_var>
+      <r:partial name="{$patternNameNav}" />
+    </r:if>
+
+    <main>
+      <r:comment><!-- What are layouts and <r:yield />? http://goo.gl/DFAsPv --></r:comment>
+      <r:yield />
+
+      <r:partial name="patterns/wvu-slots--sitewide" />
+    </main>
+
+    <footer>
+      <r:if value1="{$has_standard_footer}" value2="false" operator="!=">
+        <r:partial name="patterns/wvu-footer" />
+      </r:if>
+    </footer>
+
+    <r:edit_mode_only>
+      <div class="wvu-instructions">
+        <p><strong>Instructions for Footer:</strong> Put your organization&rsquo;s contact info here.</p>
+      </div>
+    </r:edit_mode_only>
+
+    <r:set_var name="jqueryDefer">
+      <r:site:data name="jquery_defer" />
+    </r:set_var>
+
+    <r:if expr="{{ NOT(BLANK(jquery_defer_page)) }}">
+      <r:set_var name="jqueryDefer">
+        <r:page:data name="jquery_defer_page" />
+      </r:set_var>
+    </r:if>
+
+    <r:if value1="{$jqueryDefer}" value2="false" operator="=">
+      <script src="https://fast.fonts.net/jsapi/3f7b1335-4c99-4404-92cf-3ba0e32e8f17.js"></script> <r:comment><!-- Helvetica Neue Light & Bold Condensed web font, valid for *.wvu.edu, *.wvutech.edu, & localhost --></r:comment>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="https://code.wvu.edu/public/vendor/jquery/1.11.1/jquery.min.js"><\/script>')</script>
+      <r:include_javascript name="all" />
+    </r:if>
+
+    <r:if value1="{$jqueryDefer}" value2="false" operator="!=">
+      <script src="https://fast.fonts.net/jsapi/3f7b1335-4c99-4404-92cf-3ba0e32e8f17.js" defer></script> <r:comment><!-- Helvetica Neue Light & Bold Condensed web font, valid for *.wvu.edu, *.wvutech.edu, & localhost --></r:comment>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+      <script>window.jQuery || document.write('<script src="https://code.wvu.edu/public/vendor/jquery/1.11.1/jquery.min.js" defer><\/script>')</script>
+      <r:include_javascript name="all" defer="true" />
+    </r:if>
+
+    <r:yield name="page_js">
+      <r:content />
+    </r:yield>
+
+  </body>
+</html>
