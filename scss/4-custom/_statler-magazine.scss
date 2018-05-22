@@ -67,7 +67,7 @@ h1.mag:before{
 }
 
 .ewv-magazine-masthead__logo {
-  padding: 2em;
+
   width: 100%;
   margin:auto;
   @include mq($bp-medium) {
@@ -78,19 +78,20 @@ h1.mag:before{
 }
 
 .ewv-magazine-masthead__logo-small {
-  padding: 2em;
-  width: 25%;
+
+  width: 75%;
   margin:auto;
   @include mq($bp-medium) {
   }
   @include mq($bp-xlarge) {
-    padding: .5em 0;
+    padding: 2em;
+    width: 25%;
   }
 }
 
 
 h1.ewv-magazine {
-  max-width:45em;
+
   margin-top:3.5em;
   text-align:center;
   font-size:5em;
@@ -100,6 +101,10 @@ h1.ewv-magazine {
   text-shadow: 1px 1px 1px #000000;
       color:white;
       z-index:3;
+      @include mq($bp-medium) {
+        max-width:45em;
+        font-size:3em;
+      }
 }
 
 p.ewv-magazine{
@@ -117,15 +122,15 @@ p.ewv-magazine{
 }
 
 .ewv-magazine-button{
-  background: #2C2A29;
-  border: 2px solid white;
-  color: white;
+  background: white;
+  border: 2px solid #0033A0;
+  color: #2C2A29;
 }
 
 .ewv-magazine-button:hover{
   background:white;
-  border: 2px solid white;
-  color: #2C2A29;
+  border: 2px solid #0033A0;
+  color: #0033A0;
 }
 
 
