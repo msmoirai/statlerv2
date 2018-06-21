@@ -39,10 +39,10 @@
     margin-top: 0;
 }
 
-@media (min-width: 48em)
+@include mq($bp-medium) {
 [role="presentation"] {
     display: inline-block;
-}
+} }
 [role="presentation"] {
     display: block;
 }
