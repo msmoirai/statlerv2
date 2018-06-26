@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://stash.development.wvu.edu/scm/cst/brand-patterns.git"
   },
-  "author": "May Day <may.day@mail.wvu.edu>",
+  "author": "Michelle Moirai",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -19,6 +19,7 @@
     "gulp-sass": "^2.1.1"
   },
   "dependencies": {
+    "babel-core": "^6.26.3",
     "critical": "^0.7.2"
   }
 }
