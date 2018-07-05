@@ -4,7 +4,7 @@
         <div class="tab-list-container">
           <ul class="tab-list" role="tablist">
             <li class="tab-item" role="presentation" data-tab-active="">
-              <a class="tab-link" href="#section-0" role="tab" id="tab0" aria-selected="true">Overview</a>
+              <a class="tab-link" href="#section-0" role="tab" id="tab0" aria-selected="true"><r:page:content name="tab-0-name" /></a>
             </li>
             <li class="tab-item" role="presentation">
               <a class="tab-link" href="#section-1" role="tab" id="tab1" tabindex="-1">Faculty</a>
@@ -25,6 +25,25 @@
         </div> <!-- /.tab-list-container -->
         <div class="main">
           <section id="section-0" class="tab-panel" role="tabpanel" aria-labelledby="tab0" tabindex="-1">
+
+            <h1>
+              <r:edit_mode_only><br>Enter tab name</r:edit_mode_only>
+              <r:editable_region name="tab-0-name" />
+            </h1>
+
+            <h2>
+              <r:edit_mode_only><br>Enter tab heading</r:edit_mode_only>
+              <r:editable_region name="tab-0-heading" />
+            </h2>
+
+
+              <p>
+                <r:edit_mode_only>Enter the this tab's copy</r:edit_mode_only>
+                <r:editable_region name="tab-0-copy" />
+              </p>
+
+
+
             <h2>h2: Heading Two</h2>
             <p class="wvu-lede-small">To have small lede text, use the class <code>.wvu-lede-small</code>. The Entrepreneurship and Innovation major will prepare graduates for starting new ventures, as well as positions in organizations that propose, analyze, and implement entrepreneurial growth strategies.</p>
             <p>WVU is <strong>required</strong> to have accessible web pages and web applications for individuals with disabilities according to Section 504 of the Rehabilitation Act of 1973 and Title II of the Americans with Disabilities Act of 1990.</p>
