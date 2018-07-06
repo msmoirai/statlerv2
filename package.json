@@ -1,31 +1,19 @@
 {
-  "name": "brand-patterns",
+  "name": "engineering-statlerv2",
   "version": "0.1.0",
-  "description": "WVU Brand Patterns",
+  "description": "Theme for WVU Statler College of Engineering",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "https://stash.development.wvu.edu/scm/cst/brand-patterns.git"
+    "url": "https://bitbucket.org/wvudigital/engineering-statlerv2/"
   },
-  "author": "Michelle Moirai",
+  "author": "Michelle Moirai <michelle.moirai@mail.wvu.edu>",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.24.5",
     "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-babel": "^7.0.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-replace": "^0.5.4",
-    "gulp-sass": "^2.1.1",
-    "gulp-uglify": "^3.0.0"
-  },
-  "dependencies": {
-    "babel-core": "^6.26.3",
-    "critical": "^0.7.2"
+    "gulp-sass": "4.0.1"
   }
 }

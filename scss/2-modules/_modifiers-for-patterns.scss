@@ -9,7 +9,7 @@
   }
 }
 
-&.wvu-masthead--gold { background-color: $wvu-gold; color: $wvu-blue; background-image: none;
+.wvu-masthead--gold { background-color: $wvu-gold; color: $wvu-blue; background-image: none;
   input[type="submit"] {
     &.form-search__submit {
       &:hover { background-color: $wvu-blue; border-color: $wvu-blue; }
