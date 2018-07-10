@@ -3,40 +3,62 @@
     <div data-tab-component>
       <div class="tab-list-container">
         <ul class="tab-list">
+          <r:page:if_has_content_for region="tab-0-name" always_show_in_edit_mode="true">
           <li class="tab-item">
             <a class="tab-link" href="#section-0"><r:page:content name="tab-0-name" /></a>
           </li>
+        </r:page:if_has_content_for>
+        <r:page:if_has_content_for region="tab-1-name" always_show_in_edit_mode="true">
           <li class="tab-item">
             <a class="tab-link" href="#section-1"><r:page:content name="tab-1-name" /></a>
           </li>
+        </r:page:if_has_content_for>
+        <r:page:if_has_content_for region="tab-2-name" always_show_in_edit_mode="true">
           <li class="tab-item">
             <a class="tab-link" href="#section-2"><r:page:content name="tab-2-name" /></a>
           </li>
+        </r:page:if_has_content_for>
+        <r:page:if_has_content_for region="tab-3-name" always_show_in_edit_mode="true">
           <li class="tab-item">
             <a class="tab-link" href="#section-3"><r:page:content name="tab-3-name" /></a>
           </li>
+        </r:page:if_has_content_for>
+        <r:page:if_has_content_for region="tab-4-name" always_show_in_edit_mode="true">
           <li class="tab-item">
             <a class="tab-link" href="#section-4"><r:page:content name="tab-4-name" /></a>
           </li>
+        </r:page:if_has_content_for>
+        <r:page:if_has_content_for region="tab-5-name" always_show_in_edit_mode="true">
           <li class="tab-item">
             <a class="tab-link" href="#section-5"><r:page:content name="tab-5-name" /></a>
           </li>
+        </r:page:if_has_content_for>
+        <r:page:if_has_content_for region="tab-6-name" always_show_in_edit_mode="true">
           <li class="tab-item">
             <a class="tab-link" href="#section-6"><r:page:content name="tab-6-name" /></a>
           </li>
+        </r:page:if_has_content_for>
+        <r:page:if_has_content_for region="tab-7-name" always_show_in_edit_mode="true">
           <li class="tab-item">
             <a class="tab-link" href="#section-7"><r:page:content name="tab-7-name" /></a>
           </li>
+        </r:page:if_has_content_for>
+        <r:page:if_has_content_for region="tab-8-name" always_show_in_edit_mode="true">
           <li class="tab-item">
             <a class="tab-link" href="#section-8"><r:page:content name="tab-8-name" /></a>
           </li>
+        </r:page:if_has_content_for>
+        <r:page:if_has_content_for region="tab-9-name" always_show_in_edit_mode="true">
           <li class="tab-item">
             <a class="tab-link" href="#section-9"><r:page:content name="tab-9-name" /></a>
           </li>
+          </r:page:if_has_content_for>
         </ul>
       </div> <!-- /.tab-list-container -->
 
             <div class="main">
+
+            <r:page:if_has_content_for region="tab-0-name" always_show_in_edit_mode="true">
               <section id="section-0" class="tab-panel">
                 <r:edit_mode_only><p>
                   Enter Tab 0 Name <r:editable_region name="tab-0-name" />
@@ -51,7 +73,8 @@
                     <r:editable_region name="tab-0-copy" />
                   </p>
               </section>
-
+            </r:page:if_has_content_for>
+            <r:page:if_has_content_for region="tab-1-name" always_show_in_edit_mode="true">
               <section id="section-1" class="tab-panel">
                 <r:edit_mode_only><p>
                   Enter Tab 1 Name <r:editable_region name="tab-1-name" />
@@ -66,7 +89,8 @@
                     <r:editable_region name="tab-1-copy" />
                   </p>
               </section>
-
+            </r:page:if_has_content_for>
+            <r:page:if_has_content_for region="tab-2-name" always_show_in_edit_mode="true">
               <section id="section-2" class="tab-panel">
                 <r:edit_mode_only><p>
                   Enter Tab 2 Name <r:editable_region name="tab-2-name" />
@@ -81,7 +105,8 @@
                     <r:editable_region name="tab-2-copy" />
                   </p>
               </section>
-
+            </r:page:if_has_content_for>
+            <r:page:if_has_content_for region="tab-3-name" always_show_in_edit_mode="true">
               <section id="section-3" class="tab-panel">
                 <r:edit_mode_only><p>
                   Enter Tab 3 Name <r:editable_region name="tab-3-name" />
@@ -96,7 +121,8 @@
                     <r:editable_region name="tab-3-copy" />
                   </p>
               </section>
-
+            </r:page:if_has_content_for>
+            <r:page:if_has_content_for region="tab-4-name" always_show_in_edit_mode="true">
               <section id="section-4" class="tab-panel">
                 <r:edit_mode_only><p>
                   Enter Tab 4 Name <r:editable_region name="tab-4-name" />
@@ -111,7 +137,8 @@
                     <r:editable_region name="tab-4-copy" />
                   </p>
               </section>
-
+            </r:page:if_has_content_for>
+            <r:page:if_has_content_for region="tab-5-name" always_show_in_edit_mode="true">
               <section id="section-5" class="tab-panel">
                 <r:edit_mode_only><p>
                   Enter Tab 5 Name <r:editable_region name="tab-5-name" />
@@ -126,7 +153,8 @@
                     <r:editable_region name="tab-5-copy" />
                   </p>
               </section>
-
+            </r:page:if_has_content_for>
+            <r:page:if_has_content_for region="tab-6-name" always_show_in_edit_mode="true">
               <section id="section-6" class="tab-panel">
                 <r:edit_mode_only><p>
                   Enter Tab 6 Name <r:editable_region name="tab-6-name" />
@@ -141,7 +169,8 @@
                     <r:editable_region name="tab-6-copy" />
                   </p>
               </section>
-
+            </r:page:if_has_content_for>
+            <r:page:if_has_content_for region="tab-7-name" always_show_in_edit_mode="true">
               <section id="section-7" class="tab-panel">
                 <r:edit_mode_only><p>
                   Enter Tab 7 Name <r:editable_region name="tab-7-name" />
@@ -156,7 +185,8 @@
                     <r:editable_region name="tab-7-copy" />
                   </p>
               </section>
-
+            </r:page:if_has_content_for>
+            <r:page:if_has_content_for region="tab-8-name" always_show_in_edit_mode="true">
               <section id="section-8" class="tab-panel">
                 <r:edit_mode_only><p>
                   Enter Tab 8 Name <r:editable_region name="tab-8-name" />
@@ -171,7 +201,8 @@
                     <r:editable_region name="tab-8-copy" />
                   </p>
               </section>
-
+            </r:page:if_has_content_for>
+            <r:page:if_has_content_for region="tab-9-name" always_show_in_edit_mode="true">
               <section id="section-9" class="tab-panel">
                 <r:edit_mode_only><p>
                   Enter Tab 9 Name <r:editable_region name="tab-9-name" />
@@ -186,10 +217,19 @@
                     <r:editable_region name="tab-9-copy" />
                   </p>
               </section>
-
+            </r:page:if_has_content_for>
+          
             </div> <!-- /.main -->
 
-      <r:partial name="patterns/wvu-sidebar" />
+            <r:page:if_has_content_for region="wvu-sidebar-content-2" always_show_in_edit_mode="true">
+
+              <r:edit_mode_only>
+                <h3>More Sidebar Content:</h3>
+              </r:edit_mode_only>
+
+              <r:editable_region name="wvu-sidebar-content-2" />
+
+            </r:page:if_has_content_for>
           </div> <!-- /[data-tab-component] -->
 
           </div> <!-- /.wvu-container -->
