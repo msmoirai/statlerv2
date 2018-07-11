@@ -45,9 +45,10 @@
   padding: 1rem;
 }
 
-[role="tabpanel"] h2 {
-  margin-top: 0;
-}
+//[role="tabpanel"] h2 {
+//  margin-top: 0;
+//}
+// Note: Interfering with wvu-h2 margins
 
 [role="tabpanel"][aria-hidden="true"] {
   display: none;
