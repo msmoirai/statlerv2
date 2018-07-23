@@ -2,7 +2,7 @@
   <div class="catalog-tabs-container wvu-container">
     <div data-tab-component>
       <div class="tab-list-container">
-  
+
         <ul class="tab-list">
           <r:page:if_has_content_for region="tab-0-name" always_show_in_edit_mode="true">
           <li class="tab-item">
@@ -56,6 +56,7 @@
           </r:page:if_has_content_for>
         </ul>
       </div> <!-- /.tab-list-container -->
+      <div><!-- container for breadcrumbs -->
 <r:partial name="patterns/wvu-breadcrumbs" />
             <div class="main">
 
@@ -207,7 +208,7 @@
 
             </r:page:if_has_content_for>
           </aside>
-
+      </div><!-- container for breadcrumbs -->
           </div> <!-- /[data-tab-component] -->
 
           </div> <!-- /.wvu-container -->
