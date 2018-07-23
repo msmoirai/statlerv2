@@ -1,107 +1,108 @@
 .hero-tabs{position: relative; z-index: 10;}
+#breadcrumbs{position: relative; z-index: 11;}
 div#breadcrumbs ul{margin-top:0;}
 div#breadcrumbs li {padding-top: 24px;}
 .catalog-tabs{overflow:hidden}
 .catalog-tabs-container{padding-top:0}
 .tab-list-container{float:left;position:relative}
 .tab-list-container::before{background-color:#2C2A29;content:'';height:100%;left:-100vw;
-  position:absolute;right:-100vw;width:200vw;z-index:-1}
-  .tab-list{background-color:transparent;list-style-type:none;padding-top:2.5rem}
-  .tab-item{float:left;margin-bottom:0;margin-right:2px;margin-top:0}
-  .tab-item.tab-item{background:transparent}
-  .tab-link{background:#454342;border-top:7px solid transparent;color:#F9F9F9;
-    display:inline;float:left;font-family:Impact,"Helvetica Neue",Helvetica,
-    "Helvetica LT Std","Helvetica CY",Arial,"Lucida Grande",sans-serif;letter-spacing:1px;
-    padding:1rem 1.5rem;text-transform:uppercase}.fonts-loaded
-    .tab-link{font-family:"HelveticaNeueW01-97Blac","Helvetica Neue",Helvetica,
-      "Helvetica LT Std","Helvetica CY",Arial,"Lucida Grande",sans-serif}
-      .tab-link:visited{color:#F9F9F9}
-      .tab-link:hover{background-color:#555353;border-top-color:#747272;color:#F9F9F9;text-decoration:none}
-      .tab-link:hover:active{border-top-color:#FDDA24;color:#F9F9F9}
-      .tab-link:focus{background:#454342;-webkit-box-shadow:none;box-shadow:none;outline:0;
-        text-decoration:underline}[data-tab-active]
-        .tab-link{background-color:#fff;border-top-color:#EAAA00;color:#2C2A29}[data-tab-active]
-        .tab-link:active{color:#2C2A29}[data-tab-active]
-        .tab-link:focus{text-decoration:underline}
-        @media (min-width: 48em){.tab-link.tab-link.tab-link::after{border-top-color:transparent}}
-        .tab-panel{background:transparent}.tab-panel:focus{-webkit-box-shadow:inset 0 0 0 2px #e5e4e4;
-          box-shadow:inset 0 0 0 2px #e5e4e4}
-          .main,.wvu-sidebar{float:left;margin-top:2rem}
-          @media (min-width: 48em){.main,.wvu-sidebar{margin-top:3rem}}
+position:absolute;right:-100vw;width:200vw;z-index:-1}
+.tab-list{background-color:transparent;list-style-type:none;padding-top:2.5rem}
+.tab-item{float:left;margin-bottom:0;margin-right:2px;margin-top:0}
+.tab-item.tab-item{background:transparent}
+.tab-link{background:#454342;border-top:7px solid transparent;color:#F9F9F9;
+display:inline;float:left;font-family:Impact,"Helvetica Neue",Helvetica,
+"Helvetica LT Std","Helvetica CY",Arial,"Lucida Grande",sans-serif;letter-spacing:1px;
+padding:1rem 1.5rem;text-transform:uppercase}.fonts-loaded
+.tab-link{font-family:"HelveticaNeueW01-97Blac","Helvetica Neue",Helvetica,
+"Helvetica LT Std","Helvetica CY",Arial,"Lucida Grande",sans-serif}
+.tab-link:visited{color:#F9F9F9}
+.tab-link:hover{background-color:#555353;border-top-color:#747272;color:#F9F9F9;text-decoration:none}
+.tab-link:hover:active{border-top-color:#FDDA24;color:#F9F9F9}
+.tab-link:focus{background:#454342;-webkit-box-shadow:none;box-shadow:none;outline:0;
+text-decoration:underline}[data-tab-active]
+.tab-link{background-color:#fff;border-top-color:#EAAA00;color:#2C2A29}[data-tab-active]
+.tab-link:active{color:#2C2A29}[data-tab-active]
+.tab-link:focus{text-decoration:underline}
+@media (min-width: 48em){.tab-link.tab-link.tab-link::after{border-top-color:transparent}}
+.tab-panel{background:transparent}.tab-panel:focus{-webkit-box-shadow:inset 0 0 0 2px #e5e4e4;
+box-shadow:inset 0 0 0 2px #e5e4e4}
+.main,.wvu-sidebar{float:left;margin-top:2rem}
+@media (min-width: 48em){.main,.wvu-sidebar{margin-top:3rem}}
 
-          // Tables
-          //==================================================
-          // Custom styles and modifiers for tables.
+// Tables
+//==================================================
+// Custom styles and modifiers for tables.
 
-          // NOTE: Apply to a <div> that directly wraps the table.
-          .wvu-table-responsive {
-            display: block;
-            overflow-x: auto;
-            width: 100%;
-          } //.wvu-table-responsive
+// NOTE: Apply to a <div> that directly wraps the table.
+.wvu-table-responsive {
+display: block;
+overflow-x: auto;
+width: 100%;
+} //.wvu-table-responsive
 
-          // <table class="wvu-table">
-          .wvu-table {
-            max-width: 100%;
-            width: 100%;
-            caption {
-              margin-bottom: 1rem;
-              margin-top: 1rem;
-              text-align: left;
-            } //caption
-            tbody {
-              [scope="row"] {
-                font-weight: normal;
-              } //[scope="row"]
-            } //tbody
-            td,
-            th {
-              padding: .75rem;
-            } //td, th
-            th {
-              border-bottom: 0;
-            } //th
-            td {
-              display: table-cell;
-            } //td
-            tfoot {
-              font-weight: bold;
-              tr:first-child {
-                td,
-                th {
-                  border-top: 0;
-                } //td, th
-              } //tr:first-child
-            } //tfoot
-          } //.wvu-table
+// <table class="wvu-table">
+.wvu-table {
+max-width: 100%;
+width: 100%;
+caption {
+margin-bottom: 1rem;
+margin-top: 1rem;
+text-align: left;
+} //caption
+tbody {
+[scope="row"] {
+font-weight: normal;
+} //[scope="row"]
+} //tbody
+td,
+th {
+padding: .75rem;
+} //td, th
+th {
+border-bottom: 0;
+} //th
+td {
+display: table-cell;
+} //td
+tfoot {
+font-weight: bold;
+tr:first-child {
+td,
+th {
+border-top: 0;
+} //td, th
+} //tr:first-child
+} //tfoot
+} //.wvu-table
 
-          // <table class="wvu-table wvu-table-striped">
-          .wvu-table-striped {
-            tbody {
-              tr {
-                &:nth-of-type(odd) {
-                  background-color: mix($wvu-dune, $white, 7%);
-                } //&:nth-of-type(odd)
-              } //tr
-            } //tbody
-          } //.table-striped
+// <table class="wvu-table wvu-table-striped">
+.wvu-table-striped {
+tbody {
+tr {
+&:nth-of-type(odd) {
+background-color: mix($wvu-dune, $white, 7%);
+} //&:nth-of-type(odd)
+} //tr
+} //tbody
+} //.table-striped
 
-          // <table class="wvu-table wvu-table-hover">
-          .wvu-table-hover {
-            tbody,
-            tfoot {
-              tr {
-                transition: all 100ms ease-in-out;
-                &:hover {
-                  background-color: mix($pms-115-c, $white, 7%);
-                } //&:hover
-              } //tr
-            } //tbody, tfoot
-          } //.wvu-table-hover
+// <table class="wvu-table wvu-table-hover">
+.wvu-table-hover {
+tbody,
+tfoot {
+tr {
+transition: all 100ms ease-in-out;
+&:hover {
+background-color: mix($pms-115-c, $white, 7%);
+} //&:hover
+} //tr
+} //tbody, tfoot
+} //.wvu-table-hover
 
-          .wvu-table-small {
-            td,
-            th {
-              padding: .3rem;
-            } //td, th
-          } //.wvu-table-small
+.wvu-table-small {
+td,
+th {
+padding: .3rem;
+} //td, th
+} //.wvu-table-small
