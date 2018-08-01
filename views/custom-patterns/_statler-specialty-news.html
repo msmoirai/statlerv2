@@ -11,7 +11,7 @@
             <ul class="statler-sub-article">
               <r:blog id="8581"> <r:comment><!-- Change to your blog's page ID --></r:comment>
                 <r:set_var name="tags"><r:page:slug />,feature</r:set_var>
-                <r:articles:each tags="{$tags}" limit="8"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
+                <r:articles:each tags="{$tags}" limit="9"> <r:comment><!-- Change the tag(s) to what you want to feature. Comma separate multiple tags. --></r:comment>
                     <li>
                       <div class="statler-sub-story" role="article">
                             <div class="statler-sub-article__body">
@@ -32,7 +32,7 @@
 
                 </r:articles:each>
                 <li>
-                  <a class="button button--pms-300-c button--big button--pms-286-c-fill" href="http://www.statler.wvu.edu/news?tags=<r:page:slug />">View All News</a>
+                  <a class="button button--big button--wvu-blue-fill" href="http://www.statler.wvu.edu/news?tags=<r:page:slug />">View All News</a>
                 </li>
               </r:blog>
             </ul><!--/.statler-sub-article-->
