@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<!--[if gte mso 12]><style type="text/css">
+        .mso-right { padding-left: 20px; }
+      </style><![endif]--><!--[if gte mso 9]><style>
+        li { text-indent: -1em; /* Normalise space between bullets and text */ }
+      </style><![endif]-->
+<style><!--
+a:link.wvu-tex-a__muted{color:#161819}
+      a:visited.wvu-tex-a__muted{color:#161819}
+      a:hover.wvu-tex-a__muted{color:#161819}
+      a:active.wvu-tex-a__muted{color:#161819}
+      a:link.wvu-tex-a__success{color:#06282b}
+      a:visited.wvu-tex-a__success{color:#06282b}
+      a:hover.wvu-tex-a__success{color:#06282b}
+      a:active.wvu-tex-a__success{color:#06282b}
+      a:link.wvu-tex-a__info{color:#001930}
+      a:visited.wvu-tex-a__info{color:#001930}
+      a:hover.wvu-tex-a__info{color:#001930}
+      a:active.wvu-tex-a__info{color:#001930}
+      a:link.wvu-tex-a__warning{color:#30250a}
+      a:visited.wvu-tex-a__warning{color:#30250a}
+      a:hover.wvu-tex-a__warning{color:#30250a}
+      a:active.wvu-tex-a__warning{color:#30250a}
+      a:link.wvu-tex-a__danger{color:#531917}
+      a:visited.wvu-tex-a__danger{color:#531917}
+      a:hover.wvu-tex-a__danger{color:#531917}
+      a:active.wvu-tex-a__danger{color:#531917}
+      a:link.wvu-tex-a{color:#0033A0}
+      a:link.wvu-tex-a__blue-vibrant{color:#0033A0}
+      a:visited.wvu-tex-a{color:#0033A0}
+      a:visited.wvu-tex-a__blue-vibrant{color:#0033A0}
+      a:hover.wvu-tex-a{color:#0033A0}
+      a:hover.wvu-tex-a__blue-vibrant{color:#0033A0}
+      a:active.wvu-tex-a{color:#0033A0}
+      a:active.wvu-tex-a__blue-vibrant{color:#0033A0}
+      a:link.wvu-tex-a__white{color:#ffffff}
+      a:visited.wvu-tex-a__white{color:#ffffff}
+      a:hover.wvu-tex-a__white{color:#ffffff}
+      a:active.wvu-tex-a__white{color:#ffffff}
+      a:link.wvu-tex-a__blue{color:#002855}
+      a:visited.wvu-tex-a__blue{color:#002855}
+      a:hover.wvu-tex-a__blue{color:#002855}
+      a:active.wvu-tex-a__blue{color:#002855}
+      a:link.wvu-tex-a__gold{color:#EAAA00}
+      a:visited.wvu-tex-a__gold{color:#EAAA00}
+      a:hover.wvu-tex-a__gold{color:#EAAA00}
+      a:active.wvu-tex-a__gold{color:#EAAA00}
+      a:link.wvu-tex-a__black{color:#2c2a29}
+      a:visited.wvu-tex-a__black{color:#2c2a29}
+      a:hover.wvu-tex-a__black{color:#2c2a29}
+      a:active.wvu-tex-a__black{color:#2c2a29}
+      a:link.wvu-button__blue{background-color:#002855;border:1px #002855 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:visited.wvu-button__blue{background-color:#002855;border:1px #002855 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:hover.wvu-button__blue{background-color:#002855;border:1px #002855 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:active.wvu-button__blue{background-color:#002855;border:1px #002855 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:link.wvu-button__blue-vibrant{background-color:#0033A0;border:1px #0033A0 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:visited.wvu-button__blue-vibrant{background-color:#0033A0;border:1px #0033A0 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:hover.wvu-button__blue-vibrant{background-color:#0033A0;border:1px #0033A0 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:active.wvu-button__blue-vibrant{background-color:#0033A0;border:1px #0033A0 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:link.wvu-button__gold{background-color:#EAAA00;border:1px #EAAA00 solid;color:#002855;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:visited.wvu-button__gold{background-color:#EAAA00;border:1px #EAAA00 solid;color:#002855;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:hover.wvu-button__gold{background-color:#EAAA00;border:1px #EAAA00 solid;color:#002855;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:active.wvu-button__gold{background-color:#EAAA00;border:1px #EAAA00 solid;color:#002855;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:link.wvu-button__black{background-color:#2c2a29;border:1px #2c2a29 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:visited.wvu-button__black{background-color:#2c2a29;border:1px #2c2a29 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:hover.wvu-button__black{background-color:#2c2a29;border:1px #2c2a29 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:active.wvu-button__black{background-color:#2c2a29;border:1px #2c2a29 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:link.wvu-button__slate{background-color:#333F48;border:1px #333F48 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:visited.wvu-button__slate{background-color:#333F48;border:1px #333F48 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:hover.wvu-button__slate{background-color:#333F48;border:1px #333F48 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:active.wvu-button__slate{background-color:#333F48;border:1px #333F48 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:link.wvu-button__green{background-color:#0D5257;border:1px #0D5257 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:visited.wvu-button__green{background-color:#0D5257;border:1px #0D5257 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:hover.wvu-button__green{background-color:#0D5257;border:1px #0D5257 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:active.wvu-button__green{background-color:#0D5257;border:1px #0D5257 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:link.wvu-button__brown{background-color:#624700;border:1px #624700 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:visited.wvu-button__brown{background-color:#624700;border:1px #624700 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:hover.wvu-button__brown{background-color:#624700;border:1px #624700 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:active.wvu-button__brown{background-color:#624700;border:1px #624700 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:link.wvu-button__red{background-color:#7b2622;border:1px #7b2622 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:visited.wvu-button__red{background-color:#7b2622;border:1px #7b2622 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:hover.wvu-button__red{background-color:#7b2622;border:1px #7b2622 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+      a:active.wvu-button__red{background-color:#7b2622;border:1px #7b2622 solid;color:#ffffff;border-radius:3px;display:inline-block;padding:12px 24px 12px 24px;text-decoration:none}
+--></style>
+<style type="text/css"><!--
+/* CLIENT SPECIFIC STYLES
+      ========================== */
+           /* Prevent WebKit and Windows mobile changing default text sizes */
+           /* Remove spacing between tables in Outlook 2007 and up */
+           /* Allow smoother rendering of resized image in Internet Explorer */
+          /* RESET STYLES */
+          /* iOS BLUE LINKS */
+          a[x-apple-data-detectors] {
+              color: inherit !important;
+              text-decoration: none !important;
+              font-size: inherit !important;
+              font-family: inherit !important;
+              font-weight: inherit !important;
+              line-height: inherit !important;
+          }
+      /* TYPOGRAPHY
+      ======================== */
+          /* default-text */
+      /* LISTS
+      ======================== */
+      /* NOTIFICATION
+      ======================== */
+      /* LINKS
+      ======================== */
+          /* BLUE VIBRANT TEXT LINK (DEFAULT) */
+          /* WHITE TEXT LINK */
+          /* BLUE TEXT LINK */
+          /* GOLD TEXT LINK */
+       	/* BLACK TEXT LINK */
+      /* SECTION / LAYOUT
+      ===========================*/
+      /* IMAGES
+      ===========================*/
+      /* PREHEADER
+      ========================== */
+      /* VIEW ONLINE
+      ========================== */
+      /* MASTHEAD
+      ======================== */
+      /* BUTTONS
+      ======================== */
+          /* To change colors of the buttons use the selectors
+          listed in the COLORS section. You will need to use
+          .wvu-bg__color on the parent <td> */
+          /* BUTTON CONTAINER */
+          /* BLUE BUTTON (Default) */
+          /* BLUE VIBRANT BUTTON */
+          /* GOLD BUTTON */
+          /* BLACK BUTTON */
+          /* SLATE BUTTON */
+          /* GREEN BUTTON */
+          /* GOLD-30 BUTTON */
+          /* RED-30 BUTTON */
+      /* DIPTYCH FEATURE
+      ======================== */
+      /* STATISTICS / NUMBERS
+      ======================== */
+      /* TEXT COLORS
+      ======================== */
+          /* Color variations are created using the 0to255.com generator.
+          Use the variations only when you need to make text accessible.
+          TODO: Check out http://www.color-hex.com/color */
+          /* WHITE TEXT */
+          /* BLUE TEXT - http://www.0to255.com/002855 */
+          /* GOLD TEXT - http://www.0to255.com/EAAA00 */
+          /* BLACK TEXT - http://www.0to255.com/2c2a29 */
+          /* SLATE TEXT - http://www.0to255.com/333F48 */
+          /* COOL GRAY TEXT - http://www.0to255.com/A2AAAD */
+          /* WARM GRAY DARK TEXT - http://www.0to255.com/6E6259 */
+          /* WARM GRAY MED TEXT - http://www.0to255.com/968C83 */
+          /* WARM GRAY LIGHT TEXT - http://www.0to255.com/BFB8AF */
+          /* BLUE VIBRANT TEXT - http://www.0to255.com/0033A0 */
+          /* BLUE MED TEXT - http://www.0to255.com/005EB8 */
+          /* AQUA TEXT - http://www.0to255.com/9BD3DD */
+          /* BROWN TEXT - http://www.0to255.com/4B3D2A */
+          /* OLD GOLD TEXT - http://www.0to255.com/9F7D23 */
+          /* YELLOW TEXT - http://www.0to255.com/FDDA24 */
+          /* ORANGE TEXT - http://www.0to255.com/E35205 */
+          /* ORANGE LIGHT TEXT - http://www.0to255.com/ED8B00 */
+          /* RED TEXT - http://www.0to255.com/BE3A34 */
+          /* GREEN TEXT - http://www.0to255.com/0D5257 */
+          /* GREEN MED TEXT - http://www.0to255.com/708573 */
+          /* GREEN LIGHT TEXT - http://www.0to255.com/9ABEAA */
+      /* BACKGROUND COLORS
+      ======================== */
+          /* Color variations are created using the 0to255.com generator.
+          Use the variations only when you need to make text accessible.
+          TODO: Check out http://www.color-hex.com/color */
+          /* WHITE BG */
+          /* BLUE BG - http://www.0to255.com/002855 */
+          /* GOLD BG - http://www.0to255.com/EAAA00 */
+          /* BLACK BG - http://www.0to255.com/2c2a29 */
+          /* SLATE BG - http://www.0to255.com/333F48 */
+          /* COOL GRAY BG - http://www.0to255.com/A2AAAD */
+          /* WARM GRAY DARK BG - http://www.0to255.com/6E6259 */
+          /* WARM GRAY MED BG - http://www.0to255.com/968C83 */
+          /* WARM GRAY LIGHT BG - http://www.0to255.com/BFB8AF */
+          /* BLUE VIBRANT BG - http://www.0to255.com/0033A0 */
+          /* BLUE MED BG - http://www.0to255.com/005EB8 */
+          /* AQUA BG - http://www.0to255.com/9BD3DD */
+          /* BROWN BG - http://www.0to255.com/4B3D2A */
+          /* OLD GOLD BG - http://www.0to255.com/9F7D23 */
+          /* YELLOW BG - http://www.0to255.com/FDDA24 */
+          /* ORANGE BG - http://www.0to255.com/E35205 */
+          /* ORANGE LIGHT BG - http://www.0to255.com/ED8B00 */
+          /* RED BG - http://www.0to255.com/BE3A34 */
+          /* GREEN BG - http://www.0to255.com/0D5257 */
+          /* GREEN MED BG - http://www.0to255.com/708573 */
+          /* GREEN LIGHT BG - http://www.0to255.com/9ABEAA */
+      /* PADDING */
+      	/* REMOVING PADDING */
+          /* MOBILE STYLES */
+          @media screen and (max-width: 525px) {
+              /* Allows for fluid tables on mobile */
+              .mobile-wrapper {
+                  width: 100% !important;
+                  max-width: 100% !important;
+              }
+              /* Adjusts layout of logo image on mobile */
+              .mobile-logo img { margin: 0 auto !important; }
+              /* Hides content on mobile */
+              .mobile-hide { display: none !important; }
+              /* Full-width images for mobile */
+              .mobile-img-max {
+                  max-width: 100% !important;
+                  width: 100% !important;
+                  height: auto !important;
+              }
+              /* Full-width tables for mobile */
+              .mobile-responsive-table { width: 100% !important; }
+              /* Adjusts general padding on mobile */
+              .mobile-padding { padding: 6px 5% 6px 5% !important; }
+              .mobile-padding-bottom { padding-bottom: 18px !important; }
+              /* TODO: Write out what this does... padding on mobile */
+              .mobile-padding-meta {
+                  padding: 28px 5% 0px 5% !important;
+                  text-align: center;
+              }
+              /* Adjusts text padding on mobile */
+              .mobile-padding-text { padding: 12px 5% 12px 5% !important; }
+              /* Removes padding on mobile */
+              .mobile-no-padding { padding: 0 !important; }
+              /* Adjusts the sectional padding on mobile */
+              .mobile-section-padding {
+                  padding: 30px 15px 30px 15px !important;
+              }
+              /* Full-width buttons for mobile */
+              .mobile-button-container {
+                  margin: 0 auto;
+                  width: 100% !important;
+              }
+              /* Changes button styles for mobile */
+              .mobile-button {
+                  padding: 18px !important;
+                  border: 0 !important;
+                  font-size: 16px !important;
+                  display: block !important;
+              }
+              .mobile-diptych-direction { display: block !important; }
+              .mobile-diptych-padding { padding: 6px 0 6px 0 !important; }
+              /* REMOVING PADDING */
+              .mobile-padding__none { padding: 0 0 0 0 !important; }
+              .mobile-padding-top__none { padding-top: 0 !important; }
+              .mobile-padding-right__none { padding-right: 0 !important; }
+              .mobile-padding-bottom__none { padding-bottom: 0 !important; }
+              .mobile-padding-left__none { padding-left: 0 !important; }
+          }
+          /* Android center fix */
+--></style>
+<div class="wvu-preheader-text" style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Helvetica Neue', Helvetica, 'Helvetica LT Std', 'Helvetica CY', Arial, 'Lucida Grande', sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;"></div>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse !important; width: 100%;">
+<tbody>
+<tr>
+<td class="wvu-bg__blue" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #002855;" align="center"><!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="500">
+              <tr>
+                <td align="center" valign="top" width="500">
+          <![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="wvu-section__max-width mobile-wrapper" style="max-width: 500px; border-collapse: collapse !important; width: 100%;">
+<tbody>
+<tr>
+<td class="wvu-masthead__padding mobile-logo" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 24px 15px 24px 15px;" align="center" valign="top"><a style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;" href="http://www.statler.wvu.edu/" target="_blank" rel="noopener"><img alt="West Virginia University Benjamin M. Statler College of Engineering and Mineral Resources" border="0" class="wvu-masthead--logo wvu-masthead--logo__blue" src="https://www.mountaineerconnection.com/image/responsive-temp-logos/cemr-r-logo.jpg" style="-ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; display: block; font-family: 'Helvetica Neue', Helvetica, 'Helvetica LT Std', 'Helvetica CY', Arial, 'Lucida Grande', sans-serif; font-size: 16px; text-transform: uppercase; color: #ffffff;" width="250" /></a></td>
+</tr>
+</tbody>
+</table>
+<!--[if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+      </table>
+          <![endif]--></td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse !important; width: 100%;">
+<tbody>
+<tr>
+<td class="wvu-section__padding mobile-section-padding wvu-bg__white" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 48px 15px 48px 15px; background-color: #ffffff;" align="center"><!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="500">
+              <tr>
+                <td align="center" valign="top" width="500">
+          <![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="wvu-section__max-width mobile-responsive-table" style="max-width: 500px; border-collapse: collapse !important; width: 100%;">
+<tbody>
+<tr>
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse !important; width: 100%;">
+<tbody>
+<tr>
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse !important; width: 100%;">
+<tbody>
+<tr>
+<td class="mobile-padding" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" align="center"><img alt="WVU Football Player - Tailgating engineering style. Let's go." class="wvu-img mobile-img-max" height="288" src="https://www.mountaineerconnection.com/view.image?Id=6752" style="height: auto; line-height: 100%; outline: none; text-decoration: none; color: #6a6562; display: block; font-family: 'Helvetica Neue', Helvetica, 'Helvetica LT Std', 'Helvetica CY', Arial, 'Lucida Grande', sans-serif; font-size: 12px; padding: 0px;" width="400" /></td>
+</tr>
+<tr>
+<td class="mobile-padding-copy wvu-text wvu-text--h1 wvu-text__strong wvu-text__spacing wvu-text__blue" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #002855; font-family: 'Helvetica Neue', Helvetica, 'Helvetica LT Std', 'Helvetica CY', Arial, 'Lucida Grande', sans-serif; font-size: 24px; line-height: 36px; padding: 36px 0 6px 0; font-weight: bold; letter-spacing: -1px;" align="left">MOUNTAINEER FOOTBALL SEASON IS HERE</td>
+</tr>
+<tr>
+<td class="wvu-text wvu-text--p wvu-text__black mobile-padding-copy" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #2c2a29; font-family: 'Helvetica Neue', Helvetica, 'Helvetica LT Std', 'Helvetica CY', Arial, 'Lucida Grande', sans-serif; font-size: 16px; line-height: 24px; padding: 16px 0 0 0;" align="left">
+<p style="font-family: arial,helvetica,sans-serif; font-size: 16px; color: #444444; text-align: left;"><span style="font-size: 14pt;">Reconnect with Statler College alumni, friends, faculty and staff at our annual football tailgate celebration!</span><br /> <br /> <span style="color: #eaaa00; font-weight: bold; font-size: 18pt; line-height: 28pt;">HOMECOMING GAME VS. KANSAS</span><br /> <span style="font-weight: bold; color: #002855; font-size: 14pt; line-height: 18pt;">Coca-Cola Hospitality Village - Main Tent City<br /> Saturday, October 6th<br /> Two hours prior to kick-off</span> <br /> <br /> <span style="font-family: Arial,Helvetica,sans-serif; font-size: 14px; text-align: left;">For more information call <a style="font-family: Arial,Helvetica,sans-serif; color: #0079c1; text-align: left;" href="tel:304-293-4432">304-293-4432</a> or email <a style="font-family: Arial,Helvetica,sans-serif; color: #0079c1; text-align: left;" href="mailto:Statler-DevOffice@mail.wvu.edu">Statler-DevOffice@mail.wvu.edu</a>.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse ! important; width: 100%;">
+<tbody>
+<tr>
+<td class="wvu-section__padding mobile-section-padding-inner wvu-bg__white" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0px 15px 0px 15px; background-color: #ffffff;" align="center"><!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="500">
+              <tr>
+                <td align="center" valign="top" width="500">
+          <![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="wvu-section__max-width mobile-responsive-table" style="max-width: 500px; border-collapse: collapse ! important; width: 100%;">
+<tbody>
+<tr>
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse ! important; width: 100%;">
+<tbody>
+<tr>
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><!-- CONTENT -->
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse ! important; width: 100%;"><!-- BUTTON - LARGE -->
+<tbody>
+<tr>
+<td class="wvu-button__padding-top-2" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding-top: 36px;" align="center">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse ! important; width: 100%;">
+<tbody>
+<tr><!-- Modify align="(left, right, or center)" on the following <td> to change alignment of button -->
+<td class="mobile-padding" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" align="center">
+<table border="0" cellpadding="0" cellspacing="0" class="mobile-button-container" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important;">
+<tbody>
+<tr><!-- .wvu-bg__"color" on the following <td> needs to match the button background-color used on the <a> child element -->
+<td class="wvu-text wvu-button-container wvu-bg__blue" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #333f48; font-family: 'Helvetica Neue', Helvetica, 'Helvetica LT Std', 'Helvetica CY', Arial, 'Lucida Grande', sans-serif; font-size: 16px; line-height: 24px; border-radius: 3px; background-color: #002855;" align="center">
+<div><a class="wvu-button__blue wvu-button__large mobile-button" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #002855; border: 1px #002855 solid; color: #ffffff; border-radius: 3px; display: inline-block; padding: 18px 28px 18px 28px !important; text-decoration: none; font-size: 21px;" href="https://wvuf.wufoo.com/forms/mdeqmep0itera7/" target="_blank" rel="noopener">RSVP &rarr;</a></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- END BUTTON - LARGE --></tbody>
+</table>
+<!-- END CONTENT --></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+      </table>
+          <![endif]--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+      </table>
+          <![endif]--></td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse !important; width: 100%;">
+<tbody>
+<tr>
+<td class="wvu-section__padding wvu-bg__warm-gray-dark-90 mobile-section-padding" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 54px 0 54px 0; background-color: #e6e2e0;" align="center"><!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="500">
+              <tr>
+                <td align="center" valign="top" width="500">
+          <![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="wvu-section__max-width mobile-responsive-table" style="max-width: 500px; border-collapse: collapse !important; width: 100%;">
+<tbody>
+<tr>
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse !important; width: 100%;">
+<tbody>
+<tr>
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse !important; width: 100%;">
+<tbody>
+<tr>
+<td class="padding-copy wvu-text wvu-text__black wvu-text--p wvu-text__small wvu-text__no-padding-top" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #2c2a29; font-family: 'Helvetica Neue', Helvetica, 'Helvetica LT Std', 'Helvetica CY', Arial, 'Lucida Grande', sans-serif; font-size: 13px; line-height: 18px; padding: 16px 0 0 0; padding-top: 0px;" align="center"><strong>WVU Benjamin M. Statler College of Engineering and Mineral Resources</strong><br />1374 Evansdale Drive, P.O. Box 6070<br /> Morgantown, WV 26506-6070</td>
+</tr>
+<tr>
+<td class="padding-copy wvu-text wvu-text__black wvu-text--p wvu-text__small" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #2c2a29; font-family: 'Helvetica Neue', Helvetica, 'Helvetica LT Std', 'Helvetica CY', Arial, 'Lucida Grande', sans-serif; font-size: 13px; line-height: 18px; padding: 16px 0 0 0;" align="center"><a class="wvu-text--a__black" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #2c2a29;" href="mailto:statler-info@mail.wvu.edu">statler-info@mail.wvu.edu</a></td>
+</tr>
+<tr>
+<td class="padding-copy wvu-text wvu-text__black wvu-text--p wvu-text__small" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #2c2a29; font-family: 'Helvetica Neue', Helvetica, 'Helvetica LT Std', 'Helvetica CY', Arial, 'Lucida Grande', sans-serif; font-size: 13px; line-height: 18px; padding: 16px 0 0 0;" align="center">&copy; 2018 West Virginia University.<br />West Virginia University is an Equal Opportunity/Affirmative Action Institution.</td>
+</tr>
+<tr>
+<td class="padding-copy wvu-text wvu-text__black wvu-text--p wvu-text__small" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #2c2a29; font-family: 'Helvetica Neue', Helvetica, 'Helvetica LT Std', 'Helvetica CY', Arial, 'Lucida Grande', sans-serif; font-size: 13px; line-height: 18px; padding: 16px 0 0 0;" align="center"><a class="wvu-text--a__black" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #2c2a29;" href="http://wvuf.convio.net/unsubscribe">Unsubscribe</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="wvu-text--a__black" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #2c2a29;" href="target=&amp;pid=254&amp;did=0&amp;tab=0">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="wvu-text--a__black" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #2c2a29;" href="http://www.connecttowvu.com/engineering">Update Your Information</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+      </table>
+          <![endif]--></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
