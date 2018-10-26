@@ -320,10 +320,9 @@ li{
   list-style-type: none;
   padding-left: 0;
   width: 100%;
-  float: left;
   padding-left: 0em;
       @include mq($bp-medium) {
-      width: 50%;
+      width: 45%;
       padding-left: 1em;
       margin-top: 0;
     }
