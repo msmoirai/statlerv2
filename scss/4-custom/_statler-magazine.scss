@@ -295,7 +295,6 @@ ul{
 
 .statler-360-grid {
 width: 100%;
-float: left;
 padding-right: 1.5em;
 @include mq($bp-medium) {
   width: 100%;
@@ -321,6 +320,7 @@ li{
   padding-left: 0;
   width: 100%;
   padding-left: 0em;
+  display:inline-block;
       @include mq($bp-medium) {
       width: 45%;
       padding-left: 1em;
