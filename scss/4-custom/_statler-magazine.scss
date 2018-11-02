@@ -397,7 +397,7 @@ a.article-foot:visited{
 }
 
 .article-list{
-  margin:0 10px;
+  margin:0 0 0 20px;
 }
 
 
@@ -418,4 +418,11 @@ a.article-foot:visited{
 }
 .support-head{
   background-color:#FA9200;
+}
+
+.wvu-nav__apply-links{
+  width:16%!important;
+}
+.wvu-nav--buttons .wvu-nav__nav{
+  width:80%!important;
 }
