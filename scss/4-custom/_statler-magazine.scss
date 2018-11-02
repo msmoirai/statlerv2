@@ -322,7 +322,7 @@ li{
   padding-left: 0em;
   display:inline-block;
   vertical-align:top;
-  
+
       @include mq($bp-medium) {
       width: 45%;
       padding-left: 1em;
@@ -398,7 +398,6 @@ a.article-foot:visited{
 
 
 
-
 .dean-head{
   background-color:#E35205;
 }
@@ -411,6 +410,18 @@ a.article-foot:visited{
 .rnd-head{
   background-color:#8F701E;
 }
+p.rnd-head{
+  margin:0 10px;
+}
 .eng-head{
   background-color:#0D5257;
+}
+p.eng-head{
+  margin:0 10px;
+}
+.support-head{
+  background-color:#FA9200;
+}
+p.support-head{
+  margin:0 10px;
 }
