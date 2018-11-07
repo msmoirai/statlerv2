@@ -13,7 +13,7 @@
 
       padding: 4em 2.7em 4.3em 2.7em;
     max-width: 40em;
-    @include mq($bp-medium) {
+    @include mq($bp-large) {
       margin-left: 52%;
       width: 48.82117%;
       background: none;
@@ -27,7 +27,7 @@
   padding: 4em 2.7em 4.3em 2em;
   max-width: 40em;
 
-  @include mq($bp-medium) {
+  @include mq($bp-large) {
     width: 50%;
 
         background: none;
