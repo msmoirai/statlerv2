@@ -135,7 +135,7 @@ custom_data_attributes:
           </p>
         </div>
 </div>
-
+</div>
 <div>
 <r:page:if_has_content_for region="full-image-1" always_show_in_edit_mode="true">
 <r:editable_region name="full-image-1"  />
@@ -160,9 +160,11 @@ custom_data_attributes:
 
 
 
-
-
-
-
-
 </div>
+
+
+
+<r:page:if_has_content_for region="tab-0-name" always_show_in_edit_mode="true">
+<r:partial name="custom-patterns/statler-tabs" />
+
+</r:page:if_has_content_for>
