@@ -135,6 +135,25 @@ custom_data_attributes:
           </p>
         </div>
 
+<r:page:if_has_content_for region="full-image-1" always_show_in_edit_mode="true">
+<r:editable_region name="full-image-1"  />
+</r:page:if_has_content_for>
+
+<r:page:if_has_content_for region="full-image-1__caption" always_show_in_edit_mode="true">
+<p class="statler-article__featured-media-caption center">
+<r:edit_mode_only>Enter the featured image caption</r:edit_mode_only>
+<r:editable_region name="full-image-1__caption" />
+</p>
+</r:page:if_has_content_for>
+
+<r:page:if_has_content_for region="article-copy-1" always_show_in_edit_mode="true">
+<div class="statler-article__copy">
+  <p>
+    <r:edit_mode_only>Enter the rest of the story copy</r:edit_mode_only>
+    <r:editable_region name="article-copy-1" />
+  </p>
+</div>
+<r:page:if_has_content_for region="article-copy-1" always_show_in_edit_mode="true">
 
 
 </div>
