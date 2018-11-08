@@ -128,13 +128,15 @@ custom_data_attributes:
           <r:editable_region name="article-lede" />
         </p>
 
-        <div class="statler-article__copy">
+        <div class="statler-article__copy article-bottom-padding">
           <p>
             <r:edit_mode_only>Enter the rest of the story copy</r:edit_mode_only>
             <r:editable_region name="article-copy" />
           </p>
         </div>
+</div>
 
+<div>
 <r:page:if_has_content_for region="full-image-1" always_show_in_edit_mode="true">
 <r:editable_region name="full-image-1"  />
 </r:page:if_has_content_for>
@@ -147,16 +149,16 @@ custom_data_attributes:
 </r:page:if_has_content_for>
 
 <r:page:if_has_content_for region="article-copy-1" always_show_in_edit_mode="true">
-<div class="statler-article__copy">
+<div class="statler-article__copy article-bottom-padding">
   <p>
     <r:edit_mode_only>Enter the rest of the story copy</r:edit_mode_only>
     <r:editable_region name="article-copy-1" />
   </p>
 </div>
 </r:page:if_has_content_for>
-
-
 </div>
+
+
 
 
 
