@@ -87,7 +87,7 @@ custom_data_attributes:
   <r:comment><!-- NOTE: Set how many blog posts you'd like to show per page. Eg: default="10" --></r:comment>
   <r:set_var name="limit" value="{$limit}" default="10"/>
 
-  <div id="wvu-main-content" class="main" role="main">
+  <div  class="main" role="main">
     <h1>In the News</h1>
 
     <r:blog:articles limit="{$limit}" page="{$page}" tags="{$tags}" tags_op="{$tags_op}" year="{$year}" month="{$month}" day="{$day}">
