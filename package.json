@@ -13,7 +13,12 @@
   "author": "Michelle Moirai <michelle.moirai@mail.wvu.edu>",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-sass": "4.0.1"
+  },
+  "dependencies": {
+    "graceful-fs": "^4.1.15",
+    "gulp-util": "^3.0.8",
+    "minimatch": "^3.0.4"
   }
 }
