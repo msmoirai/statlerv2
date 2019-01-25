@@ -82,7 +82,7 @@ custom_data_attributes:
 
   <div class="wvu-container">
 
-    <main id="maincontent" class="main backpage-header__main-overlay">
+    <div class="main backpage-header__main-overlay">
       <r:page:if_has_content_for region="image" always_show_in_edit_mode="true">
       <r:edit_mode_only>
         <p>Enter your image, it should be 900px by 350px</p>
@@ -101,7 +101,7 @@ custom_data_attributes:
         <p>Enter the main content</p>
       </r:edit_mode_only>
       <r:editable_region name="main" />
-    </main>
+    </div>
 
     <aside class="wvu-sidebar backpage-aside">
       <r:editable_region name="current-event-image" />
