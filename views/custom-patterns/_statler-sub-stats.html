@@ -1,107 +1,157 @@
 <style>
-  .facts {
-      background: url(//www.engr.washington.edu/sites/all/themes/boundless/images/stripes_dark.png?5ba7fc6064f401ccc428956107025097)!important;
-  }
-  .container {
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: 15px;
-      padding-right: 15px;
-      width:1170px;
-      margin-bottom:80px;
-  }
-    .row {
-      margin-left: -15px;
-      margin-right: -15px;
-  }
-  #fact-blocks {
-      position: relative;
-      min-height: 1px;
-      padding-left: 15px;
-      padding-right: 15px;
-      float: left;
-      width: 33.33333333%;
-  }
-  #fact-blocks .fact-block {
-      margin-left: -15px;
-      margin-right: -15px;
-      border-right: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-      background: #fff;
-      color: #85754d;
-      margin: 20px 0;
-      padding: 10px;
-      font-weight: 800;
-  }
-  #main-facts {
-      min-height: 350px;
-      padding-left: 15px;
-      padding-right: 15px;
-      position: relative;
-          float: left;
-      width: 66.66666667%;
-  }
+  .main-fact {
+        border-radius: 50%;
+        background: #EAAA00;
+        color: #002855;
+        width: 220px;
+        height: 220px;
+        position: absolute;
+        margin-left: -110px;
+        text-align: center;
+        padding: 0 10px;
+    }
 
-  #main-facts .main-fact {
-      border-radius: 50%;
-   width: 250px;
-      height: 250px;
-      margin-left: -125px;
-      color: #4b2e84;
-        left: 50%;
-      background: #fff;
-      position: absolute;
-       text-align: center;
-      padding: 0 10px;
-  }
+  .main-fact {
+          width: 250px;
+          height: 250px;
+          margin-left: -125px;
+      }
 
-  .main-fact-left {
-      top: 70px;
-      left: 20%;
-  }
+      .main-fact .number {
+    font-size: 70px;
+    line-height: 70px;
+    margin-top: 60px;
+        display: block;
+    font-weight: 800;
+}
+.main-fact .fact {
+    font-size: 30px;
+}
+      .main-fact-center {
+    top: 20px;
+    left: 50%;
+    background: #F9F9F9;
+}
+        .main-fact-left {
+                  top: 70px;
+                  left: 20%;
+              }
+            .main-fact-right {
+                  top: 70px;
+                  left: 80%;
+              }
+              #main-facts {
+    min-height: 400px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    display:inline-block;
+    width: 66.66666667%;
+}
 
-  .main-fact .number {
-      font-size: 70px;
-      line-height: 70px;
-      margin-top: 60px;
-      display: block;
-      font-weight: 800;
-  }
+.more-facts {
+    position: absolute;
+    top: 310px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+}
 
-  #main-facts .main-fact .fact {
-      font-size: 30px;
-          display: block;
-  }
+.fact-btn:before {
+    content: "";
+    width: 55px;
+    right: -53px;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #F9F9F9;
+    border-left: 5px solid rgba(0,0,0,.3);
+}
+    .fact-btn:after{
+        content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 55px;
+    height: 120%;
+    right: -53px;
+    top: 50%;
+    margin-top: -27px;
+    background: url(//www.engr.washington.edu/sites/all/themes/boundless/images/uw-sprite.svg?e69c3df…) no-repeat -36px -475px transparent;
+    }
+                .fact-btn-default {
+                color: #333;
+                background-color: #fff;
+                border-color: #ccc;
+            }
+              .fact-btn {
+                    border-radius: 0;
+    text-transform: uppercase;
+    background-color: #e8e3d3;
+    font-family: Encode Sans Compressed,sans-serif;
+    color: #444;
+    display: inline-block;
+    position: relative;
+    background-image: none!important;
+    border: none;
+    margin-right: 55px;
+    z-index: 0;
 
-  #main-facts .main-fact-right {
-      top: 70px;
-      left: 80%;
-  }
+    margin-bottom: 0;
+    font-weight: 800;
+    text-align: center;
+    vertical-align: middle;
 
-  #main-facts .main-fact .number.smaller {
-      font-size: 40px;
-  }
+    cursor: pointer;
 
-  #main-facts .main-fact .fact.smaller {
-      font-size: 20px;
-  }
-  #main-facts .more-facts {
-      top: 310px;
-      #main-facts .more-facts {
-      position: absolute;
+    white-space: nowrap;
+    padding: 9px 17px;
+    font-size: 17px;
+    line-height: 1.52941177;
 
-      left: 50%;
-      -webkit-transform: translate(-50%);
-      transform: translate(-50%);
-  }
-  }
+            }
+
+          .fact-block .number {
+                font-size: 60px;
+                line-height: 60px;
+                float: left;
+                margin-top: 5px;
+                text-align: center;
+                width: 30%;
+            }
+
+            .fact {
+            font-size: 25px;
+        }
+              .facts {
+                  background: url(/stripes_yellow.png);
+              }
+                #fact-blocks {
+                  position: relative;
+                  min-height: 1px;
+                  padding-left: 15px;
+                  padding-right: 15px;
+                  float: left;
+                  width: 33.33333333%;
+              }
+               .fact-block {
+                  margin-left: -15px;
+                  margin-right: -15px;
+                  border-right: 1px solid #EAAA00;
+                  border-bottom: 1px solid #EAAA00;
+                  background: #F9F9F9;
+                  color: #002855;
+                  margin: 20px 0;
+                  padding: 10px;
+                  font-weight: 800;
+              }
 </style>
 
 
 
 
 
-<div id="facts">
+<div class="facts">
   <div class="container">
     <div class="row">
       <div id="fact-blocks">
@@ -132,7 +182,7 @@
           <span class="fact smaller">in externally funded research</span>
         </div>
         <div class="more-facts">
-          <a class="btn btn-default" href="/about/mission">Learn more</a>
+          <a class="button button--wvu-gold-fill" href="/about/mission">Learn more</a>
         </div>
       </div>
     </div>
