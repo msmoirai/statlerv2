@@ -124,7 +124,7 @@
             font-size: 25px;
         }
               .facts {
-                  background: url(/images/stripes_yellow.png);
+                  background: url(/images/stripes_blue.png);
               }
                 #fact-blocks {
                   position: relative;
@@ -145,6 +145,9 @@
                   padding: 10px;
                   font-weight: 800;
               }
+              .facts-row{
+                max-width: 75em;
+              }
 </style>
 
 
@@ -153,36 +156,49 @@
 
 <div class="facts">
   <div class="container">
-    <div class="row">
+    <div class="facts-row">
       <div id="fact-blocks">
         <div class="fact-block">
+          <r:editable_region name="block1"  >
           <span class="number">#1</span>
           <span class="fact">source of UW startups (over half)</span>
+          </r:editable_region>
         </div>
         <div class="fact-block">
+          <r:editable_region name="block2"  >
           <span class="number">117</span>
           <span class="fact">years of engineering innovation</span>
+          </r:editable_region>
         </div>
         <div class="fact-block">
+          <r:editable_region name="block3"  >
           <span class="number">11.5</span>
           <span class="fact smaller">million dollars awarded in student scholarships</span>
+          </r:editable_region>
         </div>
       </div>
       <div id="main-facts">
         <div class="main-fact main-fact-center">
+          <r:editable_region name="circle1"  >
           <span class="number">24%</span>
           <span class="fact">female faculty members</span>
+          </r:editable_region>
         </div>
         <div class="main-fact main-fact-left">
+          <r:editable_region name="circle2"  >
           <span class="number">8134</span>
           <span class="fact">students enrolled</span>
+          </r:editable_region>
         </div>
         <div class="main-fact main-fact-right">
+          <r:editable_region name="circle3"  >
           <span class="number smaller">$153M</span>
           <span class="fact smaller">in externally funded research</span>
+          </r:editable_region>
         </div>
         <div class="more-facts">
-          <a class="button button--wvu-gold-fill" href="/about/mission">Learn more</a>
+          <r:editable_region name="fact-button"  >
+          <a class="button button--wvu-gold-fill" href="/about/mission">Learn more</a></r:editable_region>
         </div>
       </div>
     </div>
