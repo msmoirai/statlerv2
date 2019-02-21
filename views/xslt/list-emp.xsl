@@ -39,33 +39,7 @@
 
       </xsl:when>
 
-      <!-- if no entry through an error -->
-      <xsl:otherwise>
-        <xsl:choose>
 
-          <!-- if there is an error message from lambda write it out -->
-          <xsl:when test="message">
-
-            <xsl:choose>
-              <xsl:when test="code = '404NotFound'">
-                <h2>No Results</h2>
-              </xsl:when>
-              <xsl:otherwise>
-                <h2>Application Error</h2>
-              </xsl:otherwise>
-            </xsl:choose>
-
-            <p><xsl:value-of select="message" /></p>
-
-          </xsl:when>
-
-          <!-- didn't find the error so write a standard message out -->
-          <xsl:otherwise>
-            <p>There was an unknown error with the application.</p>
-          </xsl:otherwise>
-
-        </xsl:choose>
-      </xsl:otherwise>
 
     </xsl:choose>
   </xsl:template>
