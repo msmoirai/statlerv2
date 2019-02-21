@@ -1,27 +1,58 @@
 ---
 layout: default
 custom_data_attributes:
-  - advertisements_id
+  - agenda_id
   - alternate_url
   - backpage_has_sidebar
+  - backpage_has_subnav
   - backpage_header
   - backpage_header_badge
-  - calendar_feed_page
-  - agenda_id
-  - calendar_id
+  - backpage_main
+  - bgcolor_adverts
+  - bgcolor_backpage
+  - bgcolor_calendar_widget
+  - bgcolor_diptych
+  - bgcolor_diptych_2
+  - bgcolor_diptych_3
+  - bgcolor_featurettes
+  - bgcolor_featurettes_2
+  - bgcolor_gallery
+  - bgcolor_lede_text
+  - bgcolor_media_object
+  - bgcolor_pentaptych
+  - bgcolor_pentaptych_2
+  - bgcolor_pentaptych_3
+  - bgcolor_polyptych
+  - bgcolor_profiles
+  - bgcolor_profiles_index
+  - bgcolor_quadriptych
+  - bgcolor_quadriptych_2
+  - bgcolor_quadriptych_3
+  - bgcolor_quicklinks
+  - bgcolor_social_media
+  - bgcolor_super_nav
+  - bgcolor_testimonials
+  - bgcolor_triptych
+  - bgcolor_triptych_2
+  - bgcolor_triptych_3
+  - bgcolor_video
+  - calendar_url_page
   - directory_id
   - featurettes_id
   - featurettes_2_id
-  - header_background
-  - hero
+  - hero_has_video
   - hero_text_alignment
+  - hero_vignetting
   - jquery_defer_page
-  - polyptych_panel_count
+  - link_text
+  - polyptych_items
+  - profile_quote
+  - profile_quote_author
   - profiles_id
+  - rss_url
   - search_action
+  - search_index_id
   - show_instructions
-  - staff_directory_id
-  - testimonials_id
   - slot_01
   - slot_02
   - slot_03
@@ -29,31 +60,30 @@ custom_data_attributes:
   - slot_05
   - slot_06
   - slot_07
-  - subnav_start_depth
-  - media_id
-  - media_id_2
-  - media_link_text
+  - slot_07
+  - slot_08
+  - slot_09
+  - slot_10
+  - staff_directory_id
+  - testimonials_id
   - thumbnail_alt
   - thumbnail_url
+  - thumbnail_url_sq
 ---
-<r:set_var name="profileURL">http://infostations.wvu.edu/webform/wayfinding/wfbue/profilexml/<r:var name="pid" />.xml</r:set_var>
 
-<r:partial name="custom-patterns/so-backpage-partials--top" />
 
-<div class="wvu-container">
+<!-- Slots 01 - 03 -->
 
-  <div  class="main <r:if v1="{$backpage_has_sidebar}" v2="false" op="=">main--wide</r:if> <r:edit_mode_only>main--edit-mode</r:edit_mode_only>">
+<r:partial name="patterns/wvu-backpage-partials--top" />
+<r:partial name="patterns/wvu-breadcrumbs" />
 
-    <r:set_var name="awsUrl">
+<r:set_var name="awsUrl">
      https://f09bec8ldd.execute-api.us-east-1.amazonaws.com/beta/faculty-staff-statler?category=faculty&sortby=firstLetterKey&groupby=firstLetterKey&format=xml
 </r:set_var>
 
 <r:xslt_transform url="{$awsUrl}" xslt_file="/views/xslt/list.xsl" cache_for="0"/>
 
-  </div><!-- /.main -->
+<!-- Slots 04 - 10 -->
 
-  <r:partial name="custom-patterns/wvu-sidebar" />
 
-</div> <!-- /.wvu-container -->
-
-<r:partial name="custom-patterns/so-backpage-partials--bottom" />
+<r:partial name="patterns/wvu-backpage-partials--bottom" />
