@@ -1,0 +1,59 @@
+---
+layout: default
+custom_data_attributes:
+  - advertisements_id
+  - alternate_url
+  - backpage_has_sidebar
+  - backpage_header
+  - backpage_header_badge
+  - calendar_feed_page
+  - agenda_id
+  - calendar_id
+  - directory_id
+  - featurettes_id
+  - featurettes_2_id
+  - header_background
+  - hero
+  - hero_text_alignment
+  - jquery_defer_page
+  - polyptych_panel_count
+  - profiles_id
+  - search_action
+  - show_instructions
+  - staff_directory_id
+  - testimonials_id
+  - slot_01
+  - slot_02
+  - slot_03
+  - slot_04
+  - slot_05
+  - slot_06
+  - slot_07
+  - subnav_start_depth
+  - media_id
+  - media_id_2
+  - media_link_text
+  - thumbnail_alt
+  - thumbnail_url
+---
+<r:set_var name="profileURL">http://infostations.wvu.edu/webform/wayfinding/wfbue/profilexml/<r:var name="pid" />.xml</r:set_var>
+
+<r:partial name="custom-patterns/so-backpage-partials--top" />
+
+<div class="wvu-container">
+
+  <div  class="main <r:if v1="{$backpage_has_sidebar}" v2="false" op="=">main--wide</r:if> <r:edit_mode_only>main--edit-mode</r:edit_mode_only>">
+
+    <r:set_var name="awsUrl">
+     https://f09bec8ldd.execute-api.us-east-1.amazonaws.com/beta/faculty-staff-statler?category=faculty&sortby=firstLetterKey&groupby=firstLetterKey&format=xml
+</r:set_var>
+
+<r:xslt_transform url="{$awsUrl}" xslt_file="/views/xslt/list.xsl" cache_for="0"/>
+
+  </div><!-- /.main -->
+
+  <r:partial name="custom-patterns/wvu-sidebar" />
+
+</div> <!-- /.wvu-container -->
+
+<r:partial name="custom-patterns/so-backpage-partials--bottom" />
