@@ -7,117 +7,33 @@
 
         <xsl:for-each select="entry">
 
-          <div class="main--wide">
-            <h1 class="wvu-h2"><xsl:value-of select="title" /></h1>
-          </div>
+          <div class="wvu-container">
 
-          <div>
-            <div class="background main">
-              <p>
-                This career was selected by the <a href="https://careerservices.wvu.edu">Career Services Center</a> using the <a href="https://www.onetonline.org">O*NET career database</a>. The information listed here is from that database and cannot be edited.
-                To suggest a new career for your program please use the feedback form from the program page. Careers <em>must</em> be listed in the O*NET career database for inclusion in the career section of your program information.
-              </p>
-            </div>
-            <div class="wvu-sidebar">
-              <p>
-                <xsl:if test="attributes = 'Bright Outlook'"><img src="/images/bf_lg.png" alt="'Bright outlook' icon" class="career-medium-glyph" /> This career has a bright outlook&#160;<br /></xsl:if>
-                <xsl:if test="attributes = 'Green'"><img src="/images/green_lg.png" alt="'Green occupation' icon" class="career-medium-glyph" /> This is a green occupation&#160;<br /></xsl:if>
-                <xsl:if test="attributes = 'Requires Graduate Degree'"><img src="/images/diploma.png" alt="'Requires a graduate degree' icon" class="career-medium-glyph" /> This career requires a graduate degree</xsl:if>
-              </p>
-            </div>
-          </div>
+            <div  class="<r:page:data name="bgcolor_backpage" /> background main <r:if v1="{$backpage_has_sidebar}" v2="false" op="=">main--wide</r:if> <r:edit_mode_only>main--edit-mode</r:edit_mode_only>">
 
-          <div>
+            <ul class="wvu-profile">
+              <li class="wvu-profile__individual">
+                <div class="wvu-profile__individual-info">
+                  <h2 class="wvu-profile__name wvu-h3">
+                    <xsl:value-of select="fullName" />
+                  </h2>
+                  <h3 class="wvu-profile__job-title wvu-h5"><xsl:value-of select="position" /></h3>position
+                  <p class="wvu-profile__phone-icon">
+                    <a class="wvu-profile__phone" href="tel:<xsl:value-of select="phoneNumber" />"><xsl:value-of select="phoneNumber" /></a>
+                  </p>
+                  <p class="wvu-profile__email">
+                    <a href="mailto:<xsl:value-of select="emailAddress" />"><xsl:value-of select="emailAddress" /></a>
+                  </p>
+                  <p class="wvu-profile__location"><xsl:value-of select="buildingAbbreviation" /><xsl:value-of select="officeNumber2" /></p>
+                </div>
+              </li>
 
-            <div class="background main">
+            </ul>
 
-              <h2 class="wvu-h3 h3-match-sidebar">Career Description</h2>
-              <p>
-                <xsl:value-of select="description" />
-              </p>
 
-              <h2 class="wvu-h3">What Job Titles <xsl:value-of select="title" /> Might Have</h2>
-              <p>
-                <xsl:value-of select="alsoCalled" />
-              </p>
+</div>
+</div>
 
-              <h2 class="wvu-h3">What <xsl:value-of select="title" /> Do</h2>
-              <ul>
-                <xsl:for-each select="jobTasks">
-                  <xsl:sort select="."/>
-                  <li><xsl:value-of select="." /></li>
-                </xsl:for-each>
-              </ul>
-
-              <h2 class="wvu-h3">What <xsl:value-of select="title" /> Should Be Good At</h2>
-              <ul>
-                <xsl:for-each select="abilities">
-                  <xsl:sort select="title"/>
-                  <li>
-                    <strong><xsl:value-of select="title" /></strong> - <xsl:value-of select="description" />
-                  </li>
-                </xsl:for-each>
-              </ul>
-
-              <h2 class="wvu-h3">What <xsl:value-of select="title" /> Should Be Interested In</h2>
-              <ul>
-                <xsl:for-each select="interests">
-                  <xsl:sort select="title"/>
-                  <li>
-                    <strong><xsl:value-of select="title" /></strong> - <xsl:value-of select="description" />
-                  </li>
-                </xsl:for-each>
-              </ul>
-
-              <h2 class="wvu-h3">What <xsl:value-of select="title" /> Need to Learn</h2>
-              <ul>
-                <xsl:for-each select="knowledge">
-                  <xsl:sort select="title"/>
-                  <li>
-                    <strong><xsl:value-of select="title" /></strong> - <xsl:value-of select="description" />
-                  </li>
-                </xsl:for-each>
-              </ul>
-
-            </div>
-
-            <aside class="wvu-sidebar">
-
-              <h3>The Basics</h3>
-              <ul class="ul-li-tighten">
-                <li>
-                  <em>Median Salary:</em>&#160;
-                  <xsl:if test="medianSalary = 0">
-                    <abbr title="Not Available">NA</abbr>
-                  </xsl:if>
-                  <xsl:if test="not(medianSalary = 0)">
-                    <xsl:value-of select="format-number(medianSalary, '$###,###')" />
-                  </xsl:if>
-                </li>
-
-                <li> <em>O*NET Code:</em>&#160;<xsl:value-of select="code" /></li>
-                <li>
-                  <xsl:variable name="webAddress"><xsl:value-of select="webAddress" /></xsl:variable>
-                  <a href="{$webAddress}">O*NET Summary</a>
-                </li>
-              </ul>
-
-              <h3>Related Majors</h3>
-              <ul class="ul-li-tighten">
-                <xsl:for-each select="relatedMajors">
-                  <xsl:sort select="title"/>
-                  <xsl:variable name="code"><xsl:value-of select="code" /></xsl:variable>
-                  <xsl:variable name="abbr"><xsl:value-of select="degreeDesignation/abbreviation" /></xsl:variable>
-                  <li><a href="/program?pid={$code}{$abbr}"><xsl:value-of select="title" /></a></li>
-                </xsl:for-each>
-              </ul>
-
-            </aside>
-
-          </div>
-          <div class="main--wide" style="margin-top: 20px;">
-            <p style="font-size: 0.8em; max-width: 100%">This page includes information from <a href="https://www.onetonline.org/">O*NET OnLine</a> by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA). Used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license. </p>
-          </div>
 
         </xsl:for-each>
 
