@@ -19,10 +19,10 @@
                   </h2>
                   <h3 class="wvu-profile__job-title wvu-h5"><xsl:value-of select="position" /></h3>position
                   <p class="wvu-profile__phone-icon">
-                    <a class="wvu-profile__phone" href="tel:<xsl:value-of select="phoneNumber" />"><xsl:value-of select="phoneNumber" /></a>
+                    <xsl:value-of select="phoneNumber" />
                   </p>
                   <p class="wvu-profile__email">
-                    <a href="mailto:<xsl:value-of select="emailAddress" />"><xsl:value-of select="emailAddress" /></a>
+                    <xsl:value-of select="emailAddress" />
                   </p>
                   <p class="wvu-profile__location"><xsl:value-of select="buildingAbbreviation" /><xsl:value-of select="officeNumber2" /></p>
                 </div>
