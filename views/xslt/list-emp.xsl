@@ -17,7 +17,7 @@
                   <h2 class="wvu-profile__name wvu-h3">
                     <xsl:value-of select="fullName" />
                   </h2>
-                  <h3 class="wvu-profile__job-title wvu-h5"><xsl:value-of select="position" /></h3>position
+                  <h3 class="wvu-profile__job-title wvu-h5"><xsl:value-of select="position" /></h3>
                   <p class="wvu-profile__phone-icon">
                     <a class="wvu-profile__phone" href="tel:<xsl:value-of select="phoneNumber" />"><xsl:value-of select="phoneNumber" /></a>
                   </p>
